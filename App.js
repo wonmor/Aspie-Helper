@@ -17,6 +17,9 @@ import {
   Linking,
   TouchableOpacity,
 } from "react-native";
+import { Asset } from 'expo-asset';
+import React, { useEffect, useState } from "react";
+import * as FileSystem from 'expo-file-system';
 
 const data = [
   "Foreword",
@@ -56,6 +59,50 @@ const data = [
   "A Personal in depth analysis of the problem",
   "Further Reading",
 ];
+
+const content = {
+  "foreword": require('./assets/foreword.txt'),
+  "introduction": require('./assets/introduction.txt'),
+  "getting-the-best-from-this-book": require('./assets/getting-the-best-from-this-book.txt'),
+  "worrying": require('./assets/worrying.txt'),
+  "looking-on-the-bright-side": require('./assets/looking-on-the-bright-side.txt'),
+  "body-language": require('./assets/body-language.txt'),
+  "boundaries": require('./assets/boundaries.txt'),
+  "eye-contact": require('./assets/eye-contact.txt'),
+  "tone-of-voice": require('./assets/tone-of-voice.txt'),
+  "dress-sense": require('./assets/dress-sense.txt'),
+  "distortions-of-the-truth": require('./assets/distortions-of-the-truth.txt'),
+  "misunderstandings-other-people-might-have-about-you": require('./assets/misunderstandings-other-people-might-have-about-you.txt'),
+  "conversation": require('./assets/conversation.txt'),
+  "general-knowledge": require('./assets/general-knowledge.txt'),
+  "names": require('./assets/names.txt'),
+  "humour-and-conflict": require('./assets/humour-and-conflict.txt'),
+  "sexually-related-problems-and-points-about-going-out": require('./assets/sexually-related-problems-and-points-about-going-out.txt'),
+  "nights-out": require('./assets/nights-out.txt'),
+  "chat-ups": require('./assets/chat-ups.txt'),
+  "invitation": require('./assets/invitation.txt'),
+  "personal-security": require('./assets/personal-security.txt'),
+  "rape-crisis": require('./assets/rape-crisis.txt'),
+  "finding-the-right-friends": require('./assets/finding-the-right-friends.txt'),
+  "keeping-a-clean-slate": require('./assets/keeping-a-clean-slate.txt'),
+  "coming-clean": require('./assets/coming-clean.txt'),
+  "education": require('./assets/education.txt'),
+  "living-away-from-home": require('./assets/living-away-from-home.txt'),
+  "using-the-phone": require('./assets/using-the-phone.txt'),
+  "guests": require('./assets/guests.txt'),
+  "jobs-and-interviews": require('./assets/jobs-and-interviews.txt'),
+  "driving": require('./assets/driving.txt'),
+  "travelling-abroad": require('./assets/travelling-abroad.txt'),
+  "bartering": require('./assets/bartering.txt'),
+  "opportunities": require('./assets/opportunities.txt'),
+  "a-personal-in-depth-analysis-of-the-problem": require('./assets/a-personal-in-depth-analysis-of-the-problem.txt'),
+  "further-reading": require('./assets/further-reading.txt')
+};
+
+
+function getFileNameFromItem(item) {
+  return item.toLowerCase().replace(/\s+/g, "-") + ".txt";
+}
 
 function HomeScreen({ navigation }) {
   return (
@@ -111,27 +158,6 @@ function HomeScreen({ navigation }) {
   );
 }
 
-function NotificationsScreen({ navigation }) {
-  return (
-    <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
-      <TouchableOpacity
-        style={{ backgroundColor: "#2196F3", padding: 10, borderRadius: 5 }}
-        onPress={() => navigation.goBack()}
-      >
-        <Text
-          style={{
-            fontSize: 16,
-            color: "white",
-            fontFamily: "Quicksand_600SemiBold",
-          }}
-        >
-          Go back home
-        </Text>
-      </TouchableOpacity>
-    </View>
-  );
-}
-
 const Drawer = createDrawerNavigator();
 
 export default function App() {
@@ -142,18 +168,39 @@ export default function App() {
     Quicksand_600SemiBold,
     Quicksand_700Bold,
   });
-
   function ContentScreen({ route }) {
+    const [contentText, setContentText] = useState('');
     const { title } = route.params;
+    
+    const contentKey = title.toLowerCase().replace(/\s+/g, "-");
+    const filePath = Asset.fromModule(content[contentKey]).uri;
+    
+    useEffect(() => {
+      async function fetchContent() {
+        try {
+          const text = await FileSystem.readAsStringAsync(filePath);
+          setContentText(text);
+        } catch (error) {
+          console.error("Error reading the file: ", error);
+        }
+      }
+  
+      fetchContent();
+    }, [filePath]);
+  
     return (
-      <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
+      <ScrollView style={{ padding: 20 }}>
         <Text style={{ fontFamily: "Quicksand_600SemiBold", fontSize: 20 }}>
           {title}
         </Text>
-      </View>
+        <Text style={{ fontFamily: "Quicksand_400Regular", fontSize: 16, marginTop: 20 }}>
+          {contentText}
+        </Text>
+      </ScrollView>
     );
   }
-
+  
+  
   if (!fontsLoaded) {
     return <AppLoading />;
   } else {
@@ -198,7 +245,6 @@ export default function App() {
     );
   }
 }
-
 
 const styles = StyleSheet.create({
   container: {

@@ -4,8 +4,8 @@
   "main": "node_modules/expo/AppEntry.js",
   "scripts": {
     "start": "expo start",
-    "android": "expo start --android",
-    "ios": "expo start --ios",
+    "android": "expo run:android",
+    "ios": "expo run:ios",
     "web": "expo start --web"
   },
   "dependencies": {
@@ -14,14 +14,20 @@
     "@react-navigation/drawer": "^6.6.3",
     "expo": "~49.0.10",
     "expo-app-loading": "^2.1.1",
+    "expo-asset": "~8.10.1",
+    "expo-file-system": "~15.4.4",
     "expo-font": "~11.4.0",
+    "expo-haptics": "~12.4.0",
+    "expo-permissions": "~14.2.1",
+    "expo-splash-screen": "~0.20.5",
     "expo-status-bar": "~1.6.0",
     "react": "18.2.0",
     "react-native": "0.72.4",
     "react-native-gesture-handler": "~2.12.0",
+    "react-native-google-mobile-ads": "^12.1.2",
+    "react-native-pdf": "^6.7.1",
     "react-native-reanimated": "~3.3.0",
-    "expo-splash-screen": "~0.20.5",
-    "expo-haptics": "~12.4.0"
+    "expo-dev-client": "~2.4.8"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0"
