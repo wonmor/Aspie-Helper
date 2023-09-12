@@ -18,46 +18,46 @@ import {
   TouchableOpacity,
 } from "react-native";
 
-function HomeScreen({ navigation }) {
-  const data = [
-    "Foreword",
-    "Introduction",
-    "Getting the best from this book",
-    "Worrying",
-    "Looking on the bright side",
-    "Body language",
-    "Boundaries",
-    "Eye contact",
-    "Tone of voice",
-    "Dress sense",
-    "Distortions of the truth",
-    "Misunderstandings other people might have about you",
-    "Conversation",
-    "General knowledge",
-    "Names",
-    "Humour and conflict",
-    "Sexually related problems and points about going out",
-    "Nights Out",
-    "Chat ups",
-    "Invitation",
-    "Personal Security",
-    "Rape Crisis",
-    "Finding the right friends",
-    "Keeping a clean slate",
-    "Coming Clean",
-    "Education",
-    "Living Away from Home",
-    "Using the Phone",
-    "Guests",
-    "Jobs and Interviews",
-    "Driving",
-    "Travelling abroad",
-    "Bartering",
-    "Opportunities",
-    "A Personal in depth analysis of the problem",
-    "Further Reading",
-  ];
+const data = [
+  "Foreword",
+  "Introduction",
+  "Getting the best from this book",
+  "Worrying",
+  "Looking on the bright side",
+  "Body language",
+  "Boundaries",
+  "Eye contact",
+  "Tone of voice",
+  "Dress sense",
+  "Distortions of the truth",
+  "Misunderstandings other people might have about you",
+  "Conversation",
+  "General knowledge",
+  "Names",
+  "Humour and conflict",
+  "Sexually related problems and points about going out",
+  "Nights Out",
+  "Chat ups",
+  "Invitation",
+  "Personal Security",
+  "Rape Crisis",
+  "Finding the right friends",
+  "Keeping a clean slate",
+  "Coming Clean",
+  "Education",
+  "Living Away from Home",
+  "Using the Phone",
+  "Guests",
+  "Jobs and Interviews",
+  "Driving",
+  "Travelling abroad",
+  "Bartering",
+  "Opportunities",
+  "A Personal in depth analysis of the problem",
+  "Further Reading",
+];
 
+function HomeScreen({ navigation }) {
   return (
     <ScrollView style={styles.container}>
       <Text style={[styles.title, { fontFamily: "Quicksand_600SemiBold" }]}>
@@ -143,6 +143,17 @@ export default function App() {
     Quicksand_700Bold,
   });
 
+  function ContentScreen({ route }) {
+    const { title } = route.params;
+    return (
+      <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
+        <Text style={{ fontFamily: "Quicksand_600SemiBold", fontSize: 20 }}>
+          {title}
+        </Text>
+      </View>
+    );
+  }
+
   if (!fontsLoaded) {
     return <AppLoading />;
   } else {
@@ -163,25 +174,31 @@ export default function App() {
               ),
             }}
           />
-          <Drawer.Screen
-            name="Notifications"
-            component={NotificationsScreen}
-            options={{
-              headerTitleStyle: {
-                fontFamily: "Quicksand_600SemiBold",
-              },
-              drawerLabel: ({ focused, color }) => (
-                <Text style={{ fontFamily: "Quicksand_600SemiBold", color }}>
-                  Notifications
-                </Text>
-              ),
-            }}
-          />
+          {/* Loop through the data array and render screens */}
+          {data.map((item, index) => (
+            <Drawer.Screen
+              key={index}
+              name={item}
+              component={ContentScreen}
+              initialParams={{ title: item }}
+              options={{
+                headerTitleStyle: {
+                  fontFamily: "Quicksand_600SemiBold",
+                },
+                drawerLabel: ({ focused, color }) => (
+                  <Text style={{ fontFamily: "Quicksand_600SemiBold", color }}>
+                    {item}
+                  </Text>
+                ),
+              }}
+            />
+          ))}
         </Drawer.Navigator>
       </NavigationContainer>
     );
   }
 }
+
 
 const styles = StyleSheet.create({
   container: {
