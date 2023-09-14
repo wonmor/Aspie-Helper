@@ -20,6 +20,7 @@ import {
   TouchableOpacity,
 } from "react-native";
 import React from "react";
+import * as Haptics from "expo-haptics";
 import {
   Foreword,
   Introduction,
@@ -124,7 +125,12 @@ function HomeScreen({ navigation }) {
         {data.map((item, index) => (
           <TouchableOpacity
             key={index}
-            onPress={() => navigation.navigate(item)}
+            onPress={() => {
+              Haptics.notificationAsync(
+                Haptics.NotificationFeedbackType.Success
+              )
+              navigation.navigate(item)
+            }}
           >
             <View style={styles.gridItem}>
               <Text
