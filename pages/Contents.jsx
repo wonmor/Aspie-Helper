@@ -999,3 +999,37 @@ export const DistortionsOfTheTruth = () => {
     </ScrollView>
   );
 };
+
+export function MisunderstandingsOtherPeopleMightHaveAboutYou() {
+    return (
+      <ScrollView style={styles.container}>
+        <Image
+        style={styles.imageStyle}
+        source={require("../assets/alien.jpg")}
+      />
+
+      {/* Photo credit */}
+      <Text style={styles.creditText}>Photo by John Seong</Text>
+
+        <Text style={styles.text}>
+          If you have difficulties with your eye-contact or body language, some people might mistake you for being shifty or dishonest. If they think this they are probably wrong.
+        </Text>
+  
+        <Text style={styles.text}>
+          If you don’t react to other people’s body language with your own, they might mistake you for being unsympathetic.
+        </Text>
+  
+        <Text style={styles.text}>
+          Many people might make the mistake of thinking you are unintelligent. If this is because you rarely get a chance to show them signs of intelligence, there may be little you can do except to let them accidentally see you doing something you’re good at, whether they like it or not, just as a one off. They might decide not to comment, even though they have seen your talent.
+        </Text>
+  
+        <Text style={styles.text}>
+          If you try to come across as being cooler, wittier, tougher and more confident that other people, then whenever you break an unwritten rule people might mistake it for nastiness. In this case, it might be in your best interest to drop your pretence.
+        </Text>
+  
+        {/* Bottom Spacer */}
+        <View style={{ paddingBottom: 40 }} />
+      </ScrollView>
+    );
+  }
+  
