@@ -546,24 +546,152 @@ export function LookingOnTheBrightSide() {
   );
 }
 
-export function FurtherReading() {
-  return (
-    <ScrollView style={{ padding: 20 }}>
-      <Text style={{ fontFamily: "Quicksand_400Regular", fontSize: 16 }}>
-        This is the content for Further Reading.
-      </Text>
-    </ScrollView>
-  );
-}
-
 export function BodyLanguage() {
   return (
-    <ScrollView style={{ padding: 20 }}>
-      <Text style={{ fontFamily: "Quicksand_400Regular", fontSize: 16 }}>
-        This is the content about body language.
+    <ScrollView style={styles.container}>
+      <Image
+        style={styles.imageStyle}
+        source={require("../assets/maracca.jpg")}
+      />
+
+      {/* Photo credit */}
+      <Text style={styles.creditText}>Photo by John Seong</Text>
+
+      <Text style={styles.text}>
+        Body language doesn’t just include gestures, it also includes facial
+        expressions, eye contact and tone of voice and is sometimes affected by
+        what you are wearing.
       </Text>
+
+      <Text style={styles.text}>
+        Some people may have body language down to a fine art but many people
+        find it difficult.
+      </Text>
+
+      <Text style={styles.text}>
+        Many people constantly feel paranoid about their own body language,
+        including those who are extremely good at it.
+      </Text>
+
+      <Text style={styles.text}>
+        Showing the wrong emotion or laughing at the wrong time can be
+        embarrassing. You may do this if you’re thinking about one thing and the
+        people around you are talking about something else. If someone reacts to
+        this, tell them that your mind was elsewhere.
+      </Text>
+
+      <Text style={styles.text}>
+        If someone talks to you about something they find emotional and you
+        don’t respond to their body language with your own, they might think you
+        are lacking empathy or that you don’t really care.
+      </Text>
+
+      <Text style={styles.text}>
+        If someone tells you that you do not give enough body language you might
+        have to exaggerate it in order to emphasise what you say but not too
+        much. This will at first feel artificial.
+      </Text>
+
+      <Text style={styles.text}>
+        Part of body language includes courtesy things like ‘excuse me’,
+        ‘please’, ‘thanks’, ‘cheers’, ‘see ya’ and being the first to say ‘hi’.
+        It is often an effort to say these things but then perhaps courtesy is
+        supposed to be an effort. I have given informal courtesies here (not
+        over-polite) but the politeness of the courtesies you choose may have to
+        depend on the people you are with.
+      </Text>
+
+      <Text style={styles.text}>
+        We all have to be careful about standing behind someone when they can’t
+        see us because if they turn round they might get a fright. This is
+        especially important if you are large or tall. In a densely crowded bus
+        or train however you might not be able to help it.
+      </Text>
+
+      <Text style={styles.text}>
+        It can often be an effort to have a shower or a bath three times a week
+        and to wear deodorant but it is much easier to talk to people if you
+        feel you are clean and if you cannot be smelt. Remember, if you smell
+        you might not be aware of it.
+      </Text>
+
+      <Text style={styles.text}>
+        If you are too good at body language or you look too cool, people are
+        less likely to make exceptions for you if you do something wrong without
+        knowing it.
+      </Text>
+
+      <Text style={styles.text}>
+        If you are an adult and especially if you are a large one, it is better
+        to avoid running in the street unless the street is practically empty.
+        Running for a bus or a train is all right if it will save you having to
+        wait for another half an hour or you are in a hurry to get somewhere. On
+        the other hand if you are going for a jog then wear shorts or track suit
+        trousers so that people can see you are running for the purpose of
+        getting exercise and hopefully don’t feel intimidated.
+      </Text>
+
+      <Text style={styles.text}>
+        When you see someone in the street who you know it can sometimes be
+        awkward but to exchange glances, smile slightly and raise eyebrows to
+        each other is usually enough.
+      </Text>
+
+      {/* Bottom Spacer */}
+      <View style={{ paddingBottom: 40 }} />
     </ScrollView>
   );
 }
 
-// ... and so on for the rest ...
+export function Boundaries() {
+  return (
+    <ScrollView style={styles.container}>
+      <Image style={styles.imageStyle} source={require("../assets/stop.jpg")} />
+
+      {/* Photo credit */}
+      <Text style={styles.creditText}>Photo by John Seong</Text>
+
+      <Text style={styles.text}>
+        Boundaries are all about not getting too close to someone yet not being
+        too far away.
+      </Text>
+
+      <Text style={styles.text}>
+        The correct boundaries will depend on the person you are talking to and
+        also the time and place.
+      </Text>
+
+      <Text style={styles.text}>
+        If there is a physical attraction between you and someone else you will
+        need give off AND read the correct signals. To do this the simplest rule
+        to work by is that open gestures (such as open hands or arms) and
+        gestures turned towards someone tend to mean attraction, whereas closed
+        gestures (hands in fists, arms across chest) and gestures which are
+        turned away from someone tend to mean avoidance.
+      </Text>
+
+      <Text style={styles.text}>
+        There is something to be aware of called the approach-avoidance trap.
+        Quite often we need to be decisive about whether we are going to
+        approach someone, walk away or do neither.
+      </Text>
+
+      <Text style={styles.text}>
+        Also there is the problem of recognising other people’s territory. If in
+        some one-off situation you unknowingly encroach on what someone else
+        considers to be their territory this can sometimes get you into big
+        trouble. For example, at one time I lent a listening ear to a woman
+        living in a house full of children. She was distraught because her
+        over-possessive and just-out-of-prison boyfriend had just stormed out
+        for no particular reason. I didn’t realise that from his point of view
+        it was his territory. Fortunately my personal safety was spared because
+        he didn’t come back until the next day. If after you make this kind of
+        mistake you later have it explained to you it can all start to look so
+        obvious.
+      </Text>
+
+      {/* Bottom Spacer */}
+      <View style={{ paddingBottom: 40 }} />
+    </ScrollView>
+  );
+}
