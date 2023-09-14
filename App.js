@@ -1,3 +1,10 @@
+/*
+  "react-native-google-mobile-ads": {
+    "android_app_id": "ca-app-pub-6461064835542419~9356922403",
+    "ios_app_id": "ca-app-pub-6461064835542419~6855414974"
+  }
+*/
+
 import AppLoading from "expo-app-loading";
 import {
   useFonts,
