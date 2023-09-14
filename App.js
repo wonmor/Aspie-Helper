@@ -250,7 +250,7 @@ export default function App() {
               marginTop: 20,
             }}
           >
-            Default content for chapters without a specific component.
+            This chapter is not available yet. Please check back later!
           </Text>
         )}
       </ScrollView>

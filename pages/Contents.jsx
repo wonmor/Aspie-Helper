@@ -475,7 +475,7 @@ export function LookingOnTheBrightSide() {
     <ScrollView style={styles.container}>
       <Image
         style={styles.imageStyle}
-        source={require("../assets/temple.jpg")}
+        source={require("../assets/radiate.jpg")}
       />
 
       {/* Photo credit */}
@@ -765,9 +765,9 @@ export function EyeContact() {
 }
 
 export function ToneOfVoice() {
-    return (
-        <ScrollView style={styles.container}>
-            <Image
+  return (
+    <ScrollView style={styles.container}>
+      <Image
         style={styles.imageStyle}
         source={require("../assets/monkey2.jpg")}
       />
@@ -775,40 +775,227 @@ export function ToneOfVoice() {
       {/* Photo credit */}
       <Text style={styles.creditText}>Photo by John Seong</Text>
 
-            <Text style={styles.text}>
-                You might be one of these people who almost talks in a single tone without knowing it.
-            </Text>
+      <Text style={styles.text}>
+        You might be one of these people who almost talks in a single tone
+        without knowing it.
+      </Text>
 
-            <Text style={styles.text}>
-                Ask a trustworthy person if this is true and if it is you may have to exaggerate the intonation in your voice to emphasise what you say, but not too much. This will sound artificial at first.
-            </Text>
+      <Text style={styles.text}>
+        Ask a trustworthy person if this is true and if it is you may have to
+        exaggerate the intonation in your voice to emphasise what you say, but
+        not too much. This will sound artificial at first.
+      </Text>
 
-            <Text style={styles.text}>
-                If you are reading a story-book to a child then the more intonation the better.
-            </Text>
+      <Text style={styles.text}>
+        If you are reading a story-book to a child then the more intonation the
+        better.
+      </Text>
 
-            <Text style={styles.text}>
-                The intonation in our voices is extremely important in determining whether we are being enthusiastic or sarcastic about something. It is also important in telling whether we mean something seriously or just as a joke.
-            </Text>
+      <Text style={styles.text}>
+        The intonation in our voices is extremely important in determining
+        whether we are being enthusiastic or sarcastic about something. It is
+        also important in telling whether we mean something seriously or just as
+        a joke.
+      </Text>
 
-            <Text style={styles.text}>
-                To talk in a single tone can make it sound as if you’re depressed. When talking about something good or exciting you have to make yourself sound excited too, otherwise people tend to think it sounds strange.
-            </Text>
+      <Text style={styles.text}>
+        To talk in a single tone can make it sound as if you’re depressed. When
+        talking about something good or exciting you have to make yourself sound
+        excited too, otherwise people tend to think it sounds strange.
+      </Text>
 
-            <Text style={styles.text}>
-                If you are a young man whose voice is breaking, then if you find it more comfortable just let it break for good. It may sound strange at first on the inside but it will be sounding much more natural on the outside. If you are worried about what your friends might think which should only be a short term problem anyway, it may be useful to take the opportunity of letting your voice break while you are changing schools.
-            </Text>
+      <Text style={styles.text}>
+        If you are a young man whose voice is breaking, then if you find it more
+        comfortable just let it break for good. It may sound strange at first on
+        the inside but it will be sounding much more natural on the outside. If
+        you are worried about what your friends might think which should only be
+        a short term problem anyway, it may be useful to take the opportunity of
+        letting your voice break while you are changing schools.
+      </Text>
 
-            <Text style={styles.text}>
-                Finally, remember not to speak too loudly and not to speak too quietly. This should depend on the distance between you and the other person and the voice should be quieter when a bit of secrecy is needed. Whisper when everyone else is whispering (or when there is someone asleep nearby).
-            </Text>
+      <Text style={styles.text}>
+        Finally, remember not to speak too loudly and not to speak too quietly.
+        This should depend on the distance between you and the other person and
+        the voice should be quieter when a bit of secrecy is needed. Whisper
+        when everyone else is whispering (or when there is someone asleep
+        nearby).
+      </Text>
 
-            <Text style={styles.text}>
-                At times when you may need to talk extra loudly and clearly (e.g. on stage or in a play) then you may want to project your voice. To do this keep a nice straight relaxed posture and imagine that your voice is coming from your stomach, however strange this may seem.
-            </Text>
+      <Text style={styles.text}>
+        At times when you may need to talk extra loudly and clearly (e.g. on
+        stage or in a play) then you may want to project your voice. To do this
+        keep a nice straight relaxed posture and imagine that your voice is
+        coming from your stomach, however strange this may seem.
+      </Text>
 
-            {/* Bottom Spacer */}
-            <View style={{ paddingBottom: 40 }} />
-        </ScrollView>
-    );
+      {/* Bottom Spacer */}
+      <View style={{ paddingBottom: 40 }} />
+    </ScrollView>
+  );
 }
+
+export const DressSense = () => {
+  return (
+    <ScrollView style={styles.container}>
+      <Image
+        style={styles.imageStyle}
+        source={require("../assets/temple.jpg")}
+      />
+
+      {/* Photo credit */}
+      <Text style={styles.creditText}>Photo by John Seong</Text>
+
+      <Text style={styles.text}>
+        What clothes you wear gives off a message about you.
+      </Text>
+      <Text style={styles.text}>
+        If you wear bright clashing coloured clothes, perhaps intending to look
+        confident, many people are likely to lose interest in you.
+      </Text>
+      <Text style={styles.text}>
+        If you wear cowboy boots, ripped jeans, heavy metal tee shirts and a
+        studded leather jacket people might either be too scared to come near
+        you or will expect to be able to talk to you about heavy metal music
+        systems, life on the streets and various different night clubs. It is a
+        very difficult image to pull off.
+      </Text>
+      <Text style={styles.text}>
+        If you dress in natural colours such as blue, grey, dark-green, black or
+        white which people cannot laugh at but still look trendy people will
+        judge you on how you come across rather than what you are wearing which
+        is likely to be what you need.
+      </Text>
+      <Text style={styles.text}>
+        It is often a good idea to hear someone else’s opinion about what you
+        should wear (talk to someone who you can trust).
+      </Text>
+
+      {/* Bottom Spacer */}
+      <View style={{ paddingBottom: 40 }} />
+    </ScrollView>
+  );
+};
+
+export const DistortionsOfTheTruth = () => {
+  return (
+    <ScrollView style={styles.container}>
+      <Image
+        style={styles.imageStyle}
+        source={require("../assets/reality.jpg")}
+      />
+
+      {/* Photo credit */}
+      <Text style={styles.creditText}>Photo by John Seong</Text>
+
+      <Text style={styles.text}>
+        Sarcasm is when someone says one thing but means the opposite. For
+        example - in response to hearing someone burp, someone else might say
+        ‘how polite’. The easiest way of picking up on sarcasm is by listening
+        to the tone of voice. You may need to defend yourself against sarcasm at
+        times and this will be covered in the following chapters.
+      </Text>
+      <Text style={styles.text}>
+        Not knowing the truth is a common reason why people might distort it.
+      </Text>
+      <Text style={styles.text}>
+        A particularly nasty form of distorted truth is ‘scape-goating’. This is
+        setting up other people to take the blame for things which aren’t their
+        fault. What is even worse is having someone deliberately do something
+        wrong for the sole purpose of getting you blamed for it. If this happens
+        you must first work out whether it is just a joke or whether it is a
+        serious set-up. If it is serious and the blame successfully reaches you,
+        you may need to somehow prove that the wrong doing was not your fault in
+        which case you must tell the right people that you think you’ve been set
+        up and stick to your word.
+      </Text>
+      <Text style={styles.text}>
+        On the other hand someone might quite innocently create a false truth
+        for the mere purpose of fantasy play. This might apply to children
+        pretending to be comic cartoon heroes, adults dressed up in costume
+        pretending to be Father Christmas or someone who is acting in a play.
+      </Text>
+      <Text style={styles.text}>
+        If someone asks you a question and giving them the true answer might
+        upset them or cause embarrassment or unfair trouble to other people you
+        may decide to tell a ‘white lie’ which is intended to avoid
+        unpleasantness all round.
+      </Text>
+      <Text style={styles.text}>
+        If you don’t wish to lie you might still want to withhold the truth. You
+        might be keeping a secret for someone or you might be trying to keep
+        yourself or others out of trouble. In this case it may be sensible to
+        avoid certain topics of conversation, otherwise you might be forced into
+        pretending not to know something using awkward diversion tactics (which
+        often involve humour) or even lying. Also you may be expected to
+        automatically know when something is to be kept a secret.
+      </Text>
+      <Text style={styles.text}>
+        If someone tries to get a message across to you without hurting you,
+        they might decide to drop a hint. The best example of this is when a man
+        is chatting up a woman but she doesn’t want to go out with him in which
+        case instead of saying ‘I’m not interested, go away’ she might slip the
+        words ‘my boyfriend’ into the conversation.
+      </Text>
+      <Text style={styles.text}>
+        Sometimes it is possible to be misled by figures of speech (i.e.
+        metaphors). For example ‘I’m over the moon’ means I’m very happy. If
+        figures of speech are a problem for you, they can be looked up in
+        certain books or you can get someone to teach you some.
+      </Text>
+      <Text style={styles.text}>
+        Sometimes someone might lie to you if they want something from you. The
+        best example of this is a door-to-door salesman who wants your money. If
+        he sells you a television that doesn’t work then he would be conning
+        you.
+      </Text>
+      <Text style={styles.text}>
+        In conversation it is not unusual for people to exaggerate. Someone who
+        says ‘I had about ten pints last night’ might actually mean they only
+        had five. People who exaggerate too much can easily be misinterpreted.
+      </Text>
+      <Text style={styles.text}>
+        If someone says something which sounds offensive in the literal sense
+        ‘You ugly mug face’ but with a laugh and a smile, then they mean it as a
+        joke. You often need to pick up on this quite quickly.
+      </Text>
+      <Text style={styles.text}>
+        Perhaps the most awkward kind of lies you encounter are teasing lies in
+        which someone says something as a joke to see whether or not you believe
+        them. If what they have just said is highly unlikely or people around
+        them are trying not to laugh, they are probably teasing you. The correct
+        response to this would be to laughingly tell them to p*ss off. If you
+        show doubt as to whether or not they are teasing you, they may see it as
+        a sign of vulnerability. Remember they are probably never going to admit
+        that they are teasing you, no matter how seriously you ask.
+      </Text>
+      <Text style={styles.text}>
+        People might start trying to persuade you to make a spectacle of
+        yourself somehow. For example they may ask you to do a dance or sing a
+        song. Even if you can’t see anything wrong with this yourself, it is
+        important not to give in to them, no matter how persuasive they become.
+        The correct response is the same as that for a teasing lie, only perhaps
+        with a touch of anger. If you give in to such requests, you will
+        probably become an all-round target for other people’s teasing. If you
+        have already done this in the past, don’t worry, just don’t let it
+        continue.
+      </Text>
+      <Text style={styles.text}>
+        If ever joining in games like ‘truth or dare’ or ‘strip poker’ you may
+        have to decide for yourself if any given situation is acceptable.
+      </Text>
+      <Text style={styles.text}>
+        It must be remembered that not everyone is loyal to the truth. Also,
+        many people select certain parts of the truth and reject others to their
+        own advantages (e.g. in court cases).
+      </Text>
+      <Text style={styles.text}>
+        If you need to find out whether or not someone is lying and you have a
+        good reason for doing so, asking them questions might reveal faults in
+        their logic.
+      </Text>
+
+      {/* Bottom Spacer */}
+      <View style={{ paddingBottom: 40 }} />
+    </ScrollView>
+  );
+};
