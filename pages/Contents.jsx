@@ -5,6 +5,12 @@ const styles = StyleSheet.create({
     container: {
         padding: 20
     },
+    creditText: {
+        fontFamily: "Quicksand_600SemiBold",
+        fontSize: 12, // smaller font size for the credit
+        textAlign: 'center', // align the text to the right
+        marginBottom: 15 // margin for spacing
+    },
     text: {
         fontFamily: "Quicksand_600SemiBold",
         fontSize: 16,
@@ -26,6 +32,9 @@ export function Foreword() {
                 style={styles.imageStyle}
                 source={require('../assets/cat1.jpg')}
             />
+
+            {/* Photo credit */}
+            <Text style={styles.creditText}>Photo by John Seong</Text>
             
             <Text style={styles.text}>
                 So far as I know, this book is unique. A number of people who suffer with Asperger Syndrome notably Temple Grandin, Donna Williams, David Miedzianik, Therese Joliffe, Kathy Lissner and ‘Darren White’ have given us insight on their experiences, very much from a personal and sometimes idiosyncratic point of view. But Marc has gone a step further by writing an entirely practical and down to earth guide to the nitty-gritty of everyday living for fellow sufferers.
