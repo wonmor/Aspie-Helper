@@ -470,7 +470,81 @@ export function Worrying() {
   );
 }
 
-// ... continue in this pattern ...
+export function LookingOnTheBrightSide() {
+  return (
+    <ScrollView style={styles.container}>
+      <Image
+        style={styles.imageStyle}
+        source={require("../assets/temple.jpg")}
+      />
+
+      {/* Photo credit */}
+      <Text style={styles.creditText}>Photo by John Seong</Text>
+
+      <Text style={styles.text}>
+        Many things are easier for intelligent autistic people than they are for
+        non-autistic people.
+      </Text>
+
+      <Text style={styles.text}>
+        Autistic people can be especially good at learning facts, skills and
+        talents when (A) they want to and (B) when the right sources are
+        available to them. This can provide good career prospects and is
+        sometimes enough to compensate for any disabilities.
+      </Text>
+
+      <Text style={styles.text}>
+        Useful gifts that autistic people might have include photographic
+        memories, musical talent, heightened awareness of visual logic and
+        extraordinary potential for computer programming.
+      </Text>
+
+      <Text style={styles.text}>
+        To show consistent punctuality in the workplace and to produce
+        meticulously accurate high standard work, always meeting deadlines may
+        earn you extra respect from your manager or supervisor.
+      </Text>
+
+      <Text style={styles.text}>
+        Some people say that honesty is not always the best policy but if you
+        can recreate the truth accurately to the right people and yet be able to
+        withhold the truth when confidentiality is needed your unsurpassable
+        honesty might earn you great respect.
+      </Text>
+
+      <Text style={styles.text}>
+        If you are generally a quiet person who often only speaks when it is
+        worth while this can sometimes be very welcome in the workplace.
+      </Text>
+
+      <Text style={styles.text}>
+        Having not been bound all your life by the unwritten rules of society
+        may have made you a highly original thinker.
+      </Text>
+
+      <Text style={styles.text}>
+        In many situations where non-autistic people might be provoked or feel
+        intimidated , autistic people can be unaffected and keep a clear head.
+        You might be completely detached and immune to tense atmospheres and bad
+        vibes which other people have to suffer. The problem with this however,
+        will be that you are also immune to danger signals but this book might
+        help you to recognise them.
+      </Text>
+
+      <Text style={styles.text}>
+        If you wish, you might be able to get formal allowances and benefits to
+        help you out in life. Try not to see it as cheating. If you have had a
+        hard enough life then perhaps you deserve this special consideration.
+        Also, this might come in handy if ever you need to present yourself in a
+        court of law in which case it may be a good idea to get the backing of a
+        good psychologist who understands the problem.
+      </Text>
+
+      {/* Bottom Spacer */}
+      <View style={{ paddingBottom: 40 }} />
+    </ScrollView>
+  );
+}
 
 export function FurtherReading() {
   return (
