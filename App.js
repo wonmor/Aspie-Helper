@@ -114,7 +114,7 @@ function HomeScreen({ navigation }) {
 
       <Image
         style={styles.imageStyle}
-        source={require('./assets/marc.jpg')}
+        source={require('./assets/icon.png')}
     />
 
       <Text style={[styles.header, { fontFamily: "Quicksand_600SemiBold" }]}>
