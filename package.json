@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@expo-google-fonts/inter": "^0.2.3",
+    "@expo-google-fonts/love-ya-like-a-sister": "^0.2.3",
     "@expo-google-fonts/quicksand": "^0.2.3",
     "@react-navigation/drawer": "^6.6.3",
     "expo": "~49.0.10",
@@ -26,8 +27,7 @@
     "react-native-gesture-handler": "~2.12.0",
     "react-native-google-mobile-ads": "^12.1.2",
     "react-native-pdf": "^6.7.1",
-    "react-native-reanimated": "~3.3.0",
-    "expo-dev-client": "~2.4.8"
+    "react-native-reanimated": "~3.3.0"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0"

@@ -7,6 +7,7 @@ import {
   Quicksand_600SemiBold,
   Quicksand_700Bold,
 } from "@expo-google-fonts/quicksand";
+import { LoveYaLikeASister_400Regular } from "@expo-google-fonts/love-ya-like-a-sister";
 import { createDrawerNavigator } from "@react-navigation/drawer";
 import { NavigationContainer } from "@react-navigation/native";
 import {
@@ -14,12 +15,49 @@ import {
   ScrollView,
   StyleSheet,
   Text,
+  Image,
   Linking,
   TouchableOpacity,
 } from "react-native";
-import { Asset } from 'expo-asset';
-import React, { useEffect, useState } from "react";
-import * as FileSystem from 'expo-file-system';
+import React from "react";
+import {
+  Foreword,
+  Introduction,
+  GettingTheBestFromThisBook,
+  Worrying,
+  LookingOnTheBrightSide,
+  BodyLanguage,
+  Boundaries,
+  EyeContact,
+  ToneOfVoice,
+  DressSense,
+  DistortionsOfTheTruth,
+  MisunderstandingsOtherPeopleMightHaveAboutYou,
+  Conversation,
+  GeneralKnowledge,
+  Names,
+  HumourAndConflict,
+  SexuallyRelatedProblemsAndPointsAboutGoingOut,
+  NightsOut,
+  ChatUps,
+  Invitation,
+  PersonalSecurity,
+  RapeCrisis,
+  FindingTheRightFriends,
+  KeepingACleanSlate,
+  ComingClean,
+  Education,
+  LivingAwayFromHome,
+  UsingThePhone,
+  Guests,
+  JobsAndInterviews,
+  Driving,
+  TravellingAbroad,
+  Bartering,
+  Opportunities,
+  APersonalInDepthAnalysisOfTheProblem,
+  FurtherReading,
+} from "./pages/Contents";
 
 const data = [
   "Foreword",
@@ -60,56 +98,23 @@ const data = [
   "Further Reading",
 ];
 
-const content = {
-  "foreword": require('./assets/foreword.txt'),
-  "introduction": require('./assets/introduction.txt'),
-  "getting-the-best-from-this-book": require('./assets/getting-the-best-from-this-book.txt'),
-  "worrying": require('./assets/worrying.txt'),
-  "looking-on-the-bright-side": require('./assets/looking-on-the-bright-side.txt'),
-  "body-language": require('./assets/body-language.txt'),
-  "boundaries": require('./assets/boundaries.txt'),
-  "eye-contact": require('./assets/eye-contact.txt'),
-  "tone-of-voice": require('./assets/tone-of-voice.txt'),
-  "dress-sense": require('./assets/dress-sense.txt'),
-  "distortions-of-the-truth": require('./assets/distortions-of-the-truth.txt'),
-  "misunderstandings-other-people-might-have-about-you": require('./assets/misunderstandings-other-people-might-have-about-you.txt'),
-  "conversation": require('./assets/conversation.txt'),
-  "general-knowledge": require('./assets/general-knowledge.txt'),
-  "names": require('./assets/names.txt'),
-  "humour-and-conflict": require('./assets/humour-and-conflict.txt'),
-  "sexually-related-problems-and-points-about-going-out": require('./assets/sexually-related-problems-and-points-about-going-out.txt'),
-  "nights-out": require('./assets/nights-out.txt'),
-  "chat-ups": require('./assets/chat-ups.txt'),
-  "invitation": require('./assets/invitation.txt'),
-  "personal-security": require('./assets/personal-security.txt'),
-  "rape-crisis": require('./assets/rape-crisis.txt'),
-  "finding-the-right-friends": require('./assets/finding-the-right-friends.txt'),
-  "keeping-a-clean-slate": require('./assets/keeping-a-clean-slate.txt'),
-  "coming-clean": require('./assets/coming-clean.txt'),
-  "education": require('./assets/education.txt'),
-  "living-away-from-home": require('./assets/living-away-from-home.txt'),
-  "using-the-phone": require('./assets/using-the-phone.txt'),
-  "guests": require('./assets/guests.txt'),
-  "jobs-and-interviews": require('./assets/jobs-and-interviews.txt'),
-  "driving": require('./assets/driving.txt'),
-  "travelling-abroad": require('./assets/travelling-abroad.txt'),
-  "bartering": require('./assets/bartering.txt'),
-  "opportunities": require('./assets/opportunities.txt'),
-  "a-personal-in-depth-analysis-of-the-problem": require('./assets/a-personal-in-depth-analysis-of-the-problem.txt'),
-  "further-reading": require('./assets/further-reading.txt')
-};
-
-
-function getFileNameFromItem(item) {
-  return item.toLowerCase().replace(/\s+/g, "-") + ".txt";
-}
-
 function HomeScreen({ navigation }) {
   return (
     <ScrollView style={styles.container}>
-      <Text style={[styles.title, { fontFamily: "Quicksand_600SemiBold" }]}>
+      <View style={styles.nestedContainer}>
+      <Text style={[styles.title, { fontFamily: "LoveYaLikeASister_400Regular" }]}>
         Aspie Guide
       </Text>
+
+      <Text style={styles.subtitle}>
+      Designed for people who are neurodiverse; on the Autism Spectrum, ADHD, or other related conditions.
+      </Text>
+      </View>
+
+      <Image
+        style={styles.imageStyle}
+        source={require('./assets/marc.jpg')}
+    />
 
       <Text style={[styles.header, { fontFamily: "Quicksand_600SemiBold" }]}>
         Contents
@@ -138,8 +143,8 @@ function HomeScreen({ navigation }) {
       {/* Acknowledgments */}
       <Text style={styles.acknowledgment}>
         The book, ‘Coping: A Survival Guide for People with Asperger Syndrome’
-        was written by Marc Segar. Special thanks are due to Pauline
-        Greenhough for her typing.
+        was written by Marc Segar. Special thanks are due to Pauline Greenhough
+        for her typing.
       </Text>
 
       {/* App Development */}
@@ -154,6 +159,9 @@ function HomeScreen({ navigation }) {
         </Text>{" "}
         at University of California, Irvine.
       </Text>
+
+      {/* Bottom Spacer */}
+      <View style= {{ paddingBottom: 40 }} />
     </ScrollView>
   );
 }
@@ -167,40 +175,82 @@ export default function App() {
     Quicksand_500Medium,
     Quicksand_600SemiBold,
     Quicksand_700Bold,
+    LoveYaLikeASister_400Regular
   });
   function ContentScreen({ route }) {
-    const [contentText, setContentText] = useState('');
-    const { title } = route.params;
-    
-    const contentKey = title.toLowerCase().replace(/\s+/g, "-");
-    const filePath = Asset.fromModule(content[contentKey]).uri;
-    
-    useEffect(() => {
-      async function fetchContent() {
-        try {
-          const text = await FileSystem.readAsStringAsync(filePath);
-          setContentText(text);
-        } catch (error) {
-          console.error("Error reading the file: ", error);
-        }
-      }
-  
-      fetchContent();
-    }, [filePath]);
-  
+    const { title, chapterNumber } = route.params;
+
+    const chapterComponents = {
+      Foreword: Foreword,
+      Introduction: Introduction,
+      "Getting the best from this book": GettingTheBestFromThisBook,
+      Worrying: Worrying,
+      "Looking on the bright side": LookingOnTheBrightSide,
+      "Body language": BodyLanguage,
+      Boundaries: Boundaries,
+      "Eye contact": EyeContact,
+      "Tone of voice": ToneOfVoice,
+      "Dress sense": DressSense,
+      "Distortions of the truth": DistortionsOfTheTruth,
+      "Misunderstandings other people might have about you":
+        MisunderstandingsOtherPeopleMightHaveAboutYou,
+      Conversation: Conversation,
+      "General knowledge": GeneralKnowledge,
+      Names: Names,
+      "Humour and conflict": HumourAndConflict,
+      "Sexually related problems and points about going out":
+        SexuallyRelatedProblemsAndPointsAboutGoingOut,
+      "Nights Out": NightsOut,
+      "Chat ups": ChatUps,
+      Invitation: Invitation,
+      "Personal Security": PersonalSecurity,
+      "Rape Crisis": RapeCrisis,
+      "Finding the right friends": FindingTheRightFriends,
+      "Keeping a clean slate": KeepingACleanSlate,
+      "Coming Clean": ComingClean,
+      Education: Education,
+      "Living Away from Home": LivingAwayFromHome,
+      "Using the Phone": UsingThePhone,
+      Guests: Guests,
+      "Jobs and Interviews": JobsAndInterviews,
+      Driving: Driving,
+      "Travelling abroad": TravellingAbroad,
+      Bartering: Bartering,
+      Opportunities: Opportunities,
+      "A Personal in depth analysis of the problem":
+        APersonalInDepthAnalysisOfTheProblem,
+      "Further Reading": FurtherReading,
+    };
+
+    const ChapterComponent = chapterComponents[title] || null;
+
     return (
       <ScrollView style={{ padding: 20 }}>
-        <Text style={{ fontFamily: "Quicksand_600SemiBold", fontSize: 20 }}>
+        <Text style={{ fontFamily: "Quicksand_400Regular", fontSize: 20 }}>
+          <Text style={{ fontFamily: "Quicksand_600SemiBold" }}>
+            Chapter {chapterNumber}:{" "}
+          </Text>
           {title}
         </Text>
-        <Text style={{ fontFamily: "Quicksand_400Regular", fontSize: 16, marginTop: 20 }}>
-          {contentText}
-        </Text>
+
+        {/* Dynamically render the component if it exists, otherwise default content */}
+        {ChapterComponent ? (
+          <ChapterComponent />
+        ) : (
+          <Text
+            style={{
+              fontFamily: "Quicksand_400Regular",
+              fontSize: 16,
+              marginTop: 20,
+            }}
+          >
+            Default content for chapters without a specific component.
+          </Text>
+        )}
       </ScrollView>
     );
   }
-  
-  
+
   if (!fontsLoaded) {
     return <AppLoading />;
   } else {
@@ -227,7 +277,7 @@ export default function App() {
               key={index}
               name={item}
               component={ContentScreen}
-              initialParams={{ title: item }}
+              initialParams={{ title: item, chapterNumber: index + 1 }}
               options={{
                 headerTitleStyle: {
                   fontFamily: "Quicksand_600SemiBold",
@@ -252,8 +302,13 @@ const styles = StyleSheet.create({
     padding: 20,
     backgroundColor: "#f5f5f5",
   },
+  nestedContainer: {
+    flex: 1,                  // Allows the container to expand
+    alignItems: 'center',     // Centers children horizontally
+    justifyContent: 'center', // Centers children vertically
+  },
   title: {
-    fontSize: 26,
+    fontSize: 48,
     textAlign: "center",
     marginBottom: 20,
     color: "#333",
@@ -264,6 +319,16 @@ const styles = StyleSheet.create({
     marginBottom: 15,
     color: "#555",
   },
+  imageStyle: {
+    width: 200,             // Adjust the width as required
+    height: 200,            // Should be same as width to ensure a circle
+    resizeMode: 'cover',    // Adjusts the image to fit within the boundaries. Changed to 'cover' to fill the circular frame.
+    marginBottom: 20,       // Space between image and the following text
+    alignSelf: 'center',
+    borderRadius: 100,      // Half of the width & height to make it circle
+    overflow: 'hidden',     // Hide the parts of the image that exceed the borderRadius
+},
+
   gridContainer: {
     flexDirection: "row",
     flexWrap: "wrap",
@@ -290,7 +355,12 @@ const styles = StyleSheet.create({
   },
   acknowledgment: {
     fontFamily: "Quicksand_600SemiBold",
-    marginBottom: 20,
+    marginVertical: 20,
+    color: "#666",
+  },
+  subtitle: {
+    fontFamily: "Quicksand_600SemiBold",
+    marginBottom: 40,
     color: "#666",
   },
   development: {
