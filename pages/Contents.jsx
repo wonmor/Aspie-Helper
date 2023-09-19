@@ -1540,51 +1540,342 @@ export function PersonalSecurity() {
 
 export function FindingTheRightFriends() {
   return (
-      <ScrollView style={styles.container}>
-          <Text style={[styles.header, styles.text]}>
-              It is often difficult to tell the difference between a true friend and a fake friend but for autistic people, this can be many times harder. Here is a table to help you tell the difference.
-          </Text>
-          
-          <View style={styles.tableRow}>
-              <Text style={[styles.tableHeader, styles.text]}>True Friends</Text>
-              <Text style={[styles.tableHeader, styles.text]}>Fake Friends</Text>
-              <Text style={[styles.tableHeader, styles.text]}>Enemies</Text>
-          </View>
-          
-          <View style={styles.tableRow}>
-              <Text style={[styles.tableCell, styles.text]}>Treat you the same way they treat all their friends.</Text>
-              <Text style={[styles.tableCell, styles.text]}>May treat you differently to how they treat others.</Text>
-              <Text style={[styles.tableCell, styles.text]}>May ignore you most of the time.</Text>
-          </View>
+    <ScrollView style={styles.container}>
+      <Text style={[styles.header, styles.text]}>
+        It is often difficult to tell the difference between a true friend and a
+        fake friend but for autistic people, this can be many times harder. Here
+        is a table to help you tell the difference.
+      </Text>
 
-          <View style={styles.tableRow}>
-              <Text style={[styles.tableCell, styles.text]}>Will treat you as an equal.</Text>
-              <Text style={[styles.tableCell, styles.text]}>Might often make unfair requests of you.</Text>
-              <Text style={[styles.tableCell, styles.text]}>Will often treat you as a less important person than them.</Text>
-          </View>
+      <View style={styles.tableRow}>
+        <Text style={[styles.tableHeader, styles.text]}>True Friends</Text>
+        <Text style={[styles.tableHeader, styles.text]}>Fake Friends</Text>
+        <Text style={[styles.tableHeader, styles.text]}>Enemies</Text>
+      </View>
 
-          <View style={styles.tableRow}>
-              <Text style={[styles.tableCell, styles.text]}>Make you feel welcome in the long term as well as the short term.</Text>
-              <Text style={[styles.tableCell, styles.text]}>Might make you feel welcome in the short term and then drop you in the dirt.</Text>
-              <Text style={[styles.tableCell, styles.text]}>Will make you feel unwelcome and will notice all your mistakes and may bring them to the attention of other people.</Text>
-          </View>
+      <View style={styles.tableRow}>
+        <Text style={[styles.tableCell, styles.text]}>
+          Treat you the same way they treat all their friends.
+        </Text>
+        <Text style={[styles.tableCell, styles.text]}>
+          May treat you differently to how they treat others.
+        </Text>
+        <Text style={[styles.tableCell, styles.text]}>
+          May ignore you most of the time.
+        </Text>
+      </View>
 
-          <View style={styles.tableRow}>
-              <Text style={[styles.tableCell, styles.text]}>If they give you compliments they will be genuine and sincere.</Text>
-              <Text style={[styles.tableCell, styles.text]}>Might give you many compliments which are NOT genuine.</Text>
-              <Text style={[styles.tableCell, styles.text]}>May give you anything from sarcasm, put-downs and temper tantrums to the silent treatment.</Text>
-          </View>
+      <View style={styles.tableRow}>
+        <Text style={[styles.tableCell, styles.text]}>
+          Will treat you as an equal.
+        </Text>
+        <Text style={[styles.tableCell, styles.text]}>
+          Might often make unfair requests of you.
+        </Text>
+        <Text style={[styles.tableCell, styles.text]}>
+          Will often treat you as a less important person than them.
+        </Text>
+      </View>
 
-          <Text style={[styles.footer, styles.text]}>
-              You are likely to meet many people who don’t fit exactly into any one category in this table, in which case you must use your discretion.
-              {"\n\n"}
-              Don’t be living under the illusion that everyone who knows you cares about you because they don’t. People who care about you will probably fall under the category of true friends or will otherwise be family.
-              {"\n\n"}
-              Never underestimate the value of a true friend.
-          </Text>
+      <View style={styles.tableRow}>
+        <Text style={[styles.tableCell, styles.text]}>
+          Make you feel welcome in the long term as well as the short term.
+        </Text>
+        <Text style={[styles.tableCell, styles.text]}>
+          Might make you feel welcome in the short term and then drop you in the
+          dirt.
+        </Text>
+        <Text style={[styles.tableCell, styles.text]}>
+          Will make you feel unwelcome and will notice all your mistakes and may
+          bring them to the attention of other people.
+        </Text>
+      </View>
 
-          {/* Bottom Spacer */}
+      <View style={styles.tableRow}>
+        <Text style={[styles.tableCell, styles.text]}>
+          If they give you compliments they will be genuine and sincere.
+        </Text>
+        <Text style={[styles.tableCell, styles.text]}>
+          Might give you many compliments which are NOT genuine.
+        </Text>
+        <Text style={[styles.tableCell, styles.text]}>
+          May give you anything from sarcasm, put-downs and temper tantrums to
+          the silent treatment.
+        </Text>
+      </View>
+
+      <Text style={[styles.footer, styles.text]}>
+        You are likely to meet many people who don’t fit exactly into any one
+        category in this table, in which case you must use your discretion.
+        {"\n\n"}
+        Don’t be living under the illusion that everyone who knows you cares
+        about you because they don’t. People who care about you will probably
+        fall under the category of true friends or will otherwise be family.
+        {"\n\n"}
+        Never underestimate the value of a true friend.
+      </Text>
+
+      {/* Bottom Spacer */}
       <View style={{ paddingBottom: 40 }} />
-      </ScrollView>
+    </ScrollView>
+  );
+}
+
+export function KeepingACleanSlate() {
+  return (
+    <ScrollView style={styles.container}>
+      <Image
+        style={styles.imageStyle}
+        source={require("../assets/slate.jpg")}
+      />
+
+      {/* Photo credit */}
+      <Text style={styles.creditText}>Photo by John Seong</Text>
+      <Text style={styles.text}>
+        Whenever we go into a completely new environment and no-one knows us
+        yet, we start off with an undamaged reputation, that is a clean slate.
+      </Text>
+
+      <Text style={styles.text}>
+        It is largely by breaking the unwritten rules of society that people
+        dirty their slates.
+      </Text>
+
+      <Text style={styles.text}>
+        If you can keep using what you have read in this book, then it should be
+        enough to allow you to keep a fairly clean slate, but don’t expect to
+        keep it cleaner than everyone else’s slates.
+      </Text>
+
+      <Text style={styles.text}>
+        Everyone tries to keep a mental note of everyone else’s slate in their
+        little group. This includes things people have said, things they have
+        done, things they can and cannot do and the general way in which they
+        come across.
+      </Text>
+
+      <Text style={styles.text}>
+        It is mostly on the basis of your slate that people will be able to make
+        fun of you.
+      </Text>
+
+      <Text style={styles.text}>
+        If your slate is already dirty, don’t despair; it is often a reversible
+        process and if you are patient by ceasing to do anything wrong it should
+        slowly improve.
+      </Text>
+
+      <Text style={styles.text}>
+        Try not to tell someone too much about yourself or any of your
+        weaknesses unless you have got to know them quite well because knowledge
+        is power. This does not mean you have to bottle things up. (See chapter
+        on Worrying)
+      </Text>
+
+      <Text style={styles.text}>
+        If you wish, then by keeping your ears open you can learn about what’s
+        on other people's slates.
+      </Text>
+
+      <Text style={styles.text}>
+        Some people like to stand out. People who stand out but who cannot keep
+        to the unwritten rules whilst doing so, can very easily make themselves
+        into a target for other people’s teasing or neglect.
+      </Text>
+
+      <Text style={styles.text}>
+        Making a spectacle of one’s self is also an easy way to become a target;
+        but if you have Asperger Syndrome then it is often very difficult to
+        know exactly what this means.
+      </Text>
+
+      <Text style={styles.text}>
+        Making a spectacle of yourself is normally about doing things in public
+        which makes you look different to everyone else (being the odd one out).
+      </Text>
+
+      <Text style={styles.text}>
+        People who are able to stand out and be popular at the same time are
+        said to have charisma. This is a gift which some people have but not
+        others and it can often involve having a very accurate understanding of
+        what is going on around you. It is popular belief that you can only have
+        charisma if you were born that way but in the case of Asperger Syndrome
+        this statement is not applicable.
+      </Text>
+
+      <Text style={styles.text}>
+        It is usually better to stand out from the inside than on the outside.
+      </Text>
+
+      {/* Bottom Spacer */}
+      <View style={{ paddingBottom: 40 }} />
+    </ScrollView>
+  );
+}
+
+export function ComingClean() {
+  return (
+    <ScrollView style={styles.container}>
+      <Image
+        style={styles.imageStyle}
+        source={require("../assets/camera.jpg")}
+      />
+
+      {/* Photo credit */}
+      <Text style={styles.creditText}>Photo by John Seong</Text>
+      <Text style={styles.text}>
+        Amongst certain groups of people, you might decide you want to come
+        clean and tell them that you are autistic. This is entirely your own
+        choice.
+      </Text>
+
+      <Text style={styles.text}>
+        You might, however, wish to tell just one person in the group
+        (preferably the one who is friendliest towards you) in which case if you
+        want it kept a secret, it might be a good idea to say so, otherwise the
+        message might spread behind your back and it can be extremely difficult
+        to tell whether or not people know.
+      </Text>
+
+      <Text style={styles.text}>
+        If you are coming clean for the first time in your life, it might be a
+        very difficult move; but as people find out they might become a little
+        less hostile and a little more accepting.
+      </Text>
+
+      <Text style={styles.text}>
+        On the other hand, you might have come clean to so many different people
+        that you are sick and tired of saying it.
+      </Text>
+
+      <Text style={styles.text}>
+        You might find coming clean a more effective tactic as you get older.
+        People who are caring and mature might bring many things to your
+        attention in order to be constructive. However, it is better if they do
+        this while there are just the two of you in the room. You may need to
+        point this out at the time.
+      </Text>
+
+      <Text style={styles.text}>
+        Coming clean might make some people very interested in you and may give
+        you a lot to talk about.
+      </Text>
+
+      <Text style={styles.text}>
+        If the message that you are autistic gets to someone who has been giving
+        you a particularly hard time, it may make them feel guilty and do some
+        good, but not always.
+      </Text>
+
+      <Text style={styles.text}>
+        The worst reaction you can get is when people become more hostile
+        towards you because of having found out. This will nearly always be from
+        people who didn’t like you much to start with or who have little or no
+        knowledge of autism.
+      </Text>
+
+      <Text style={styles.text}>
+        To deal with people who don’t believe you when you say you are autistic
+        can be difficult but to have a detailed understanding of the problem can
+        be very helpful in shattering the myths (e.g. when people say you can’t
+        possibly be autistic because you make too much eye contact, or even
+        because you can talk!)
+      </Text>
+
+      <Text style={styles.text}>
+        Amongst children or young teenagers it might be a better idea if you do
+        not come clean, at least until you know them very well.
+      </Text>
+
+      <Text style={styles.text}>
+        Within the world of autism and Asperger Syndrome, there is quite a
+        demand for ‘out of the closet’ Asperger sufferers, who are able to
+        explain to parents, teachers and professionals exactly what it feels
+        like to be autistic. There can also be money in it.
+      </Text>
+
+      {/* Bottom Spacer */}
+      <View style={{ paddingBottom: 40 }} />
+    </ScrollView>
+  );
+}
+
+export function Education() {
+  return (
+    <ScrollView style={styles.container}>
+  <Image
+        style={styles.imageStyle}
+        source={require("../assets/laptop.jpg")}
+      />
+
+      {/* Photo credit */}
+      <Text style={styles.creditText}>Photo by John Seong</Text>
+      <Text style={styles.text}>
+        You might have teachers who are holding you back by thinking you are not intelligent enough to take your exams. If you know inside that you are, then this can be extremely frustrating. Try to get the help of a teacher who you seem to get on well with.
+      </Text>
+
+      <Text style={styles.text}>
+        If you are being held back because you are not doing all that well at your English exams then it might be because you write about situations which are strange and not realistic, in which case having read this book might help you. Remember, this subject is more about feeling than it is about words.
+      </Text>
+
+      <Text style={styles.text}>
+        Listen to any advice or instructions offered to you by your teachers even if at first it sounds unimportant to you. It helps them to be sympathetic if you make it clear that you are listening by nodding or saying ‘Right’.
+      </Text>
+
+      <Text style={styles.text}>
+        When people explain things to you which sound interesting or you are in a lesson, it is important to look interested otherwise people could easily assume that you are bored. Remember that speakers do watch the expressions on the faces of their audience.
+      </Text>
+
+      <Text style={styles.text}>
+        Pay close attention to your school reports because they are often chock-a-block with constructive criticisms.
+      </Text>
+
+      <Text style={styles.text}>
+        One of the problems you are likely to face in classes or lectures is concentration. No-one is able to concentrate 100% for a whole hour but to take short-hand notes which you will be able to look back on is normally to be expected.
+      </Text>
+
+      <Text style={styles.text}>
+        If a lecturer or teacher asks a question and no-one puts their hand up it is often because no-one wants to stand out NOT because no-one knows the answer.
+      </Text>
+
+      <Text style={styles.text}>
+        It is sometimes slightly difficult to distinguish between the information you do and don’t need to commit to memory.
+      </Text>
+
+      <Text style={styles.text}>
+        If you try to show lots of obscure academic knowledge to get public recognition, then you might be going the wrong way about it, however intelligent the people you are talking with are.
+      </Text>
+
+      <Text style={styles.text}>
+        Remember that most people exaggerate about how little work they do.
+      </Text>
+
+      <Text style={styles.text}>
+        Try not to compare yourself too much with other people.
+      </Text>
+
+      <Text style={styles.text}>
+        You might get especially worried about your exams but remember that you can still live a happy and fulfilling life even without any qualifications at all, and many people have to.
+      </Text>
+
+      <Text style={styles.text}>
+        You might find maths, science, foreign languages and computer studies easier than things like English and History, contrary to what most people find easier.
+      </Text>
+
+      <Text style={styles.text}>
+        Make sure you choose a subject which leads to a job where you don’t have to keep socialising and chatting people up. The ‘back-room’ jobs like computer, research or pharmacology are easier from this point of view than selling, management, teaching or social work.
+      </Text>
+
+      <Text style={styles.text}>
+        Remember that there are set rules and conventions about academic method and presentation. To conform to these guide-lines and closely follow a syllabus can be very significant to your final grades.
+      </Text>
+
+      <Text style={styles.text}>
+        One symptom of autism is that you may feel unsettled if your daily or weekly routine is disrupted. You might be able to structure your time so that you have time alloted for working in and time set aside for other things like watching TV, films, listening to music or going out. If someone invites you to go out try not to worry too much about your work, try to be flexible. You will have plenty more time for work.
+      </Text>
+
+      {/* Bottom Spacer */}
+      <View style={{ paddingBottom: 40 }} />
+    </ScrollView>
   );
 }
