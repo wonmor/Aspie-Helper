@@ -23,6 +23,32 @@ const styles = StyleSheet.create({
     resizeMode: "contain", // Adjusts the image to fit within the boundaries without stretching or clipping
     marginBottom: 20, // Space between image and the following text
   },
+  header: {
+    fontSize: 18,
+    marginBottom: 20,
+  },
+  tableRow: {
+    flexDirection: "row",
+    borderBottomWidth: 1,
+    borderColor: "#ccc",
+  },
+  tableHeader: {
+    flex: 1,
+    fontWeight: "bold",
+    paddingVertical: 10,
+    paddingHorizontal: 5,
+    textAlign: "center",
+  },
+  tableCell: {
+    flex: 1,
+    paddingVertical: 10,
+    paddingHorizontal: 5,
+    textAlign: "center",
+  },
+  footer: {
+    fontSize: 16,
+    marginTop: 20,
+  },
 });
 
 export function Foreword() {
@@ -769,7 +795,7 @@ export function ToneOfVoice() {
     <ScrollView style={styles.container}>
       <Image
         style={styles.imageStyle}
-        source={require("../assets/monkey2.jpg")}
+        source={require("../assets/horse1.jpg")}
       />
 
       {/* Photo credit */}
@@ -1001,9 +1027,9 @@ export const DistortionsOfTheTruth = () => {
 };
 
 export function MisunderstandingsOtherPeopleMightHaveAboutYou() {
-    return (
-      <ScrollView style={styles.container}>
-        <Image
+  return (
+    <ScrollView style={styles.container}>
+      <Image
         style={styles.imageStyle}
         source={require("../assets/alien.jpg")}
       />
@@ -1011,25 +1037,554 @@ export function MisunderstandingsOtherPeopleMightHaveAboutYou() {
       {/* Photo credit */}
       <Text style={styles.creditText}>Photo by John Seong</Text>
 
-        <Text style={styles.text}>
-          If you have difficulties with your eye-contact or body language, some people might mistake you for being shifty or dishonest. If they think this they are probably wrong.
-        </Text>
-  
-        <Text style={styles.text}>
-          If you don’t react to other people’s body language with your own, they might mistake you for being unsympathetic.
-        </Text>
-  
-        <Text style={styles.text}>
-          Many people might make the mistake of thinking you are unintelligent. If this is because you rarely get a chance to show them signs of intelligence, there may be little you can do except to let them accidentally see you doing something you’re good at, whether they like it or not, just as a one off. They might decide not to comment, even though they have seen your talent.
-        </Text>
-  
-        <Text style={styles.text}>
-          If you try to come across as being cooler, wittier, tougher and more confident that other people, then whenever you break an unwritten rule people might mistake it for nastiness. In this case, it might be in your best interest to drop your pretence.
-        </Text>
-  
-        {/* Bottom Spacer */}
-        <View style={{ paddingBottom: 40 }} />
+      <Text style={styles.text}>
+        If you have difficulties with your eye-contact or body language, some
+        people might mistake you for being shifty or dishonest. If they think
+        this they are probably wrong.
+      </Text>
+
+      <Text style={styles.text}>
+        If you don’t react to other people’s body language with your own, they
+        might mistake you for being unsympathetic.
+      </Text>
+
+      <Text style={styles.text}>
+        Many people might make the mistake of thinking you are unintelligent. If
+        this is because you rarely get a chance to show them signs of
+        intelligence, there may be little you can do except to let them
+        accidentally see you doing something you’re good at, whether they like
+        it or not, just as a one off. They might decide not to comment, even
+        though they have seen your talent.
+      </Text>
+
+      <Text style={styles.text}>
+        If you try to come across as being cooler, wittier, tougher and more
+        confident that other people, then whenever you break an unwritten rule
+        people might mistake it for nastiness. In this case, it might be in your
+        best interest to drop your pretence.
+      </Text>
+
+      {/* Bottom Spacer */}
+      <View style={{ paddingBottom: 40 }} />
+    </ScrollView>
+  );
+}
+
+export function Conversation() {
+  return (
+    <ScrollView style={styles.container}>
+      <Image
+        style={styles.imageStyle}
+        source={require("../assets/convo.jpg")}
+      />
+
+      {/* Photo credit */}
+      <Text style={styles.creditText}>Photo by John Seong</Text>
+
+      <Text style={styles.text}>
+        It may be known to you that the art of conversation is carried out
+        within a set of constraining rules.
+      </Text>
+
+      <Text style={styles.text}>
+        When people take part in a conversation, what they say normally has to
+        follow on from the last thing that was said. We stick to the relevant so
+        that the conversation flows smoothly.
+      </Text>
+
+      <Text style={styles.text}>
+        Be careful of stating the obvious. You may also wish to avoid asking
+        questions when you can work out the answer for yourself. This way the
+        conversation covers more useful ground.
+      </Text>
+
+      <Text style={styles.text}>
+        Try to avoid repeating yourself or rephrasing yourself when you have
+        already been understood. This may be rather difficult because repetition
+        of thought is quite fundamental to autism. The same thoughts can go
+        round and round ‘obsessively’ in your head. If you have to go on talking
+        about it, try to think up new angles or different ways of putting it;
+        better still, look for a way of leading into a different subject. I take
+        the approach of always looking for new things to think about. This seems
+        to have been quite a successful move.
+      </Text>
+
+      <Text style={styles.text}>
+        There may be subjects that fascinate you and you really want to talk
+        about them. If your listeners’ eyes look unfocused, or they keep looking
+        over your shoulder, they may be getting bored. You can say ‘Sorry I’ve
+        been going on, it’s a favourite subject of mine’.
+      </Text>
+
+      <Text style={styles.text}>
+        Also, some people reply to things you say before even giving you a
+        chance to finish your sentence. However, if they have anticipated you
+        correctly then there is usually no need for you to finish.
+      </Text>
+
+      <Text style={styles.text}>
+        If you say something that doesn’t make sense to the people around you
+        they might get annoyed but will probably forgive you. After all,
+        everyone does this sometimes. Just don’t do this too often.
+      </Text>
+
+      <Text style={styles.text}>
+        If there is something you need to say which is not relevant but is
+        important, for example ‘Bob phoned for you today’ or ‘there’s something
+        I’d like to talk to you about which is worrying me’ it is best to find
+        the suitable person when they’re not having a conversation. Try to find
+        the right moment, get your timing right. If you need to pass on a phone
+        call and think that you might forget if you are kept waiting too long,
+        just write it down and leave it by the phone.
+      </Text>
+
+      <Text style={styles.text}>
+        If what you need to tell them is vitally important for example ‘Bob has
+        just had a nasty knock on the head and is lying unconscious’, then you
+        MUST interrupt their conversation.
+      </Text>
+
+      <Text style={styles.text}>
+        To join in a conversation you need to listen to it. Listening can be
+        extremely difficult, especially if you have to keep your ears open 24
+        hours a day, but you can get better with practice. The most important
+        thing to listen to is the plot of the conversation.
+      </Text>
+
+      <Text style={styles.text}>
+        Be on the lookout for eye contact from other people as it can often mean
+        they would like to hear your point of view.
+      </Text>
+
+      <Text style={styles.text}>
+        It is easier to listen if you don’t make any assumptions or
+        pre-conceived ideas about what someone is going to say.
+      </Text>
+
+      <Text style={styles.text}>
+        Some topics of conversation are taboo subjects and if you are in doubt
+        they are sometimes better left alone.
+      </Text>
+
+      <Text style={styles.text}>
+        When a conversation becomes emotional people often say things like
+        ‘cheer up’, ‘it’ll be all right’, ‘oh that’s wonderful!’ or ‘well
+        done!’. When you try to say these things they might sound rather corny
+        and sentimental at first but they serve the same purpose as remembering
+        to buy someone a birthday card. They serve to open up the conversation
+        and invite the other person to express how they feel.
+      </Text>
+
+      {/* Bottom Spacer */}
+      <View style={{ paddingBottom: 40 }} />
+    </ScrollView>
+  );
+}
+
+export function GeneralKnowledge() {
+  return (
+    <ScrollView style={styles.container}>
+      <Image
+        style={styles.imageStyle}
+        source={require("../assets/spaceship.jpg")}
+      />
+
+      {/* Photo credit */}
+      <Text style={styles.creditText}>Photo by John Seong</Text>
+
+      <Text style={styles.text}>
+        Although it is often true that autistic people are better at picking up
+        details this is only when making a conscious effort to do so and there
+        may be great problems in picking up the right details.
+      </Text>
+
+      <Text style={styles.text}>
+        Also getting absorbed into one’s own head-space every other moment can
+        make it extremely difficult to ‘learn things on the trot’ which is the
+        way most non-autistic people are used to doing it.
+      </Text>
+
+      <Text style={styles.text}>
+        It might be difficult to join in a conversation if you don’t have the
+        general knowledge which is needed. The problem with this kind of
+        knowledge is that there is no one source from which you can find it out
+        but here are some tips:
+      </Text>
+
+      <Text style={styles.text}>
+        General knowledge in conversations is usually about sport (in the UK
+        usually football), pop music, films, politics, the media, TV, peoples
+        computers, clothes, hobbies and going out. It is however rare to find
+        someone who is an expert on all of these things.
+      </Text>
+
+      <Text style={styles.text}>
+        Many teenagers and young adults who are into music put more emphasis on
+        the pop stars than they do on the music they write. Sometimes they even
+        select their partners on the basis of who they look like in the world of
+        music or sport. Sometimes with this type of person you just have to
+        accept that you may not be compatible and look for friends elsewhere.
+      </Text>
+
+      <Text style={styles.text}>
+        With reference to this last statement, sport (e.g. football) can also be
+        quite selective. Sport is often a highly patriotic occupation in that
+        people are friendly to each other if they support the same team but
+        argue with and confront all those who support different teams.
+      </Text>
+
+      <Text style={styles.text}>
+        TV, radio, magazines, libraries, video libraries and newspapers can help
+        you learn about these topics. Also many leaflets which can be found in
+        magazines give you a list of all the most popular albums, CDs and films.
+        To force yourself to learn about things which don’t interest you,
+        however, may be a waste of time since you won’t really want to join in
+        with the conversations about them.
+      </Text>
+
+      <Text style={styles.text}>
+        If you decide to teach yourself the general knowledge you need in
+        certain conversations it is important that you also try to learn by
+        listening to the conversations themselves, paying special attention to
+        famous people when they are mentioned. This can make the learning
+        process much faster.
+      </Text>
+
+      {/* Bottom Spacer */}
+      <View style={{ paddingBottom: 40 }} />
+    </ScrollView>
+  );
+}
+
+export function Names() {
+  return (
+    <ScrollView style={styles.container}>
+      <Image
+        style={styles.imageStyle}
+        source={require("../assets/flags.jpg")}
+      />
+
+      {/* Photo credit */}
+      <Text style={styles.creditText}>Photo by John Seong</Text>
+
+      <Text style={styles.text}>
+        Picking up people’s names can be a problem but it is very important for
+        topics of conversation involving famous people or for following plots to
+        films, books and especially to detective stories.
+      </Text>
+
+      <Text style={styles.text}>
+        Picking up names of people you know personally may also be difficult but
+        it is not quite as essential as you might think. If you remember not to
+        ask someone’s name more than two times and after this if you still can’t
+        remember the name, to listen out for the next time someone calls it, you
+        can usually get away with having a bad memory for names.
+      </Text>
+
+      <Text style={styles.text}>
+        It helps to remember names if you make a mental note linking them with
+        faces; for example thinking things like ‘Sarah’s the one with the nose
+        ring’ or ‘Bob ‘s the one with the moustache’.
+      </Text>
+
+      {/* Bottom Spacer */}
+      <View style={{ paddingBottom: 40 }} />
+    </ScrollView>
+  );
+}
+
+export function HumourAndConflict() {
+  return (
+    <ScrollView style={styles.container}>
+      <Image
+        style={styles.imageStyle}
+        source={require("../assets/monkey2.jpg")}
+      />
+
+      {/* Photo credit */}
+      <Text style={styles.creditText}>Photo by John Seong</Text>
+      <Text style={styles.text}>
+        An autistic person’s sense of humour is often about things which suggest
+        silliness, ridiculousness or which appear slightly insane.
+      </Text>
+
+      <Text style={styles.text}>
+        It may be necessary to keep your laughter to yourself when there is
+        something which is funny to you but not as funny to other people.
+        Laughter is one of the best feelings in the world and to have to hold it
+        back is a nuisance but nonetheless to laugh at the wrong times may annoy
+        other people.
+      </Text>
+
+      <Text style={styles.text}>
+        A non-autistic person’s sense of humour is often to do with finding
+        clever ways of pointing out faults in other people and causing them
+        embarrassment. Everyone is a victim of someone else’s humour at some
+        time or another but some people are made to suffer more than others.
+        Sometimes non-autistic people can get quite ruthless with their humour.
+        This is especially true amongst teenagers and younger adults who are
+        perhaps less likely to care than older people.
+      </Text>
+
+      <Text style={styles.text}>
+        In the eyes of many zoologists, humour is a human replacement for the
+        violence which animals use on each other to establish an order of
+        dominance (the pecking order).
+      </Text>
+
+      <Text style={styles.text}>
+        No-one talks about the pecking order of which they are a part.
+      </Text>
+
+      <Text style={styles.text}>
+        Many gangs or groups of people are not particularly welcoming to
+        outsiders but some are more welcoming than others.
+      </Text>
+
+      <Text style={styles.text}>
+        Often, the reason two or more people gang up on one person is because it
+        gives them a feeling of being united together. For reasons such as this,
+        it is often easier to talk seriously to people if you can find them on
+        their own.
+      </Text>
+
+      <Text style={styles.text}>
+        If you say or do something that can be misinterpreted into a sexual
+        context then it probably will be a joke, often at your expense.
+      </Text>
+
+      <Text style={styles.text}>
+        If you are a victim of someone else’s humour, it is often possible to
+        translate it (in your own mind) into constructive criticism and then it
+        might be personality building.
+      </Text>
+
+      <Text style={styles.text}>
+        If a joke aimed at you is not too harsh it may be a good idea to laugh
+        at yourself.
+      </Text>
+
+      <Text style={styles.text}>
+        If a joke or some sarcasm aimed at you is too harsh, you can say ‘what
+        do you mean by that’, ‘why did you say that’, ‘what’s that supposed to
+        mean’, or ‘that’s not very nice’. You may have to use your discretion in
+        order to choose a suitable answer but putting someone else on the spot
+        can be quite a good defence.
+      </Text>
+
+      <Text style={styles.text}>
+        If a joke or some sarcasm aimed at you is downright hurtful, here is a
+        last resort you can use. Calmly say that you found the joke hurtful and
+        ask if it was meant to be hurtful. If the other person says ‘can’t you
+        take a joke’ or messes you around in some other way, stick to your guns
+        and just calmly ask them again if they meant it to be hurtful. If they
+        answer ‘no’ then you have got what you needed. If they answer ‘yes’ then
+        calmly walk away and in future make it very difficult for that person to
+        talk to you until they apologise of their own accord.
+      </Text>
+
+      <Text style={styles.text}>
+        Questions are often a much more powerful form of defence than
+        statements.
+      </Text>
+
+      <Text style={styles.text}>
+        Remember that people who put you down unfairly and without purpose are
+        often feeling weak in themselves and are mirroring their own feelings of
+        weakness onto you.
+      </Text>
+
+      <Text style={styles.text}>
+        If you wish to join in and make jokes at the expense of other people,
+        bear in mind that you should try not to make your jokes hurtful, even if
+        other people do. People who do this are usually in the wrong.
+      </Text>
+
+      <Text style={styles.text}>
+        Comedy is not just about playful confrontation, it is also a very clever
+        way in which people can accept the tragedies of life without getting
+        depressed. ‘If we didn’t laugh then we’d cry’.
+      </Text>
+
+      {/* Bottom Spacer */}
+      <View style={{ paddingBottom: 40 }} />
+    </ScrollView>
+  );
+}
+
+export function Invitation() {
+  return (
+    <ScrollView style={styles.container}>
+      <Image
+        style={styles.imageStyle}
+        source={require("../assets/baseball.jpg")}
+      />
+
+      {/* Photo credit */}
+      <Text style={styles.creditText}>Photo by John Seong</Text>
+      <Text style={styles.text}>
+        It is bad manners to turn up at someone else’s house uninvited unless
+        they have said ‘come round anytime’ in which case they could mean about
+        once a month or they could mean every other day depending on many
+        things.
+      </Text>
+
+      <Text style={styles.text}>
+        On the other hand it can sometimes be difficult to know what constitutes
+        an invitation.
+      </Text>
+
+      <Text style={styles.text}>
+        It is often best to phone first before turning up at someone’s house.
+      </Text>
+
+      <Text style={styles.text}>
+        In some setting e.g. student hall the rules are slightly different
+        because people are often running in and out of each other’s flats
+        anyway. None the less still be careful.
+      </Text>
+
+      <Text style={styles.text}>
+        An Invitation to a party does NOT mean that you have to go if you don’t
+        want to.
+      </Text>
+
+      <Text style={styles.text}>
+        If you gate-crash a party with more than 20 people but keep a low
+        profile, nobody should mind.
+      </Text>
+
+      <Text style={styles.text}>
+        It is sometimes difficult to know whether or not you are overstaying
+        your welcome at someone else’s house or whether they would like you to
+        stay longer. If they say they are feeling tired then this might be a
+        gentle hint that they want you to go. If they are smiling, giving you
+        plenty of eye contact and showing an interest in the conversation they
+        probably want you to stay.
+      </Text>
+
+      {/* Bottom Spacer */}
+      <View style={{ paddingBottom: 40 }} />
+    </ScrollView>
+  );
+}
+
+export function PersonalSecurity() {
+  return (
+    <ScrollView style={styles.container}>
+      <Image
+        style={styles.imageStyle}
+        source={require("../assets/graffiti.jpg")}
+      />
+
+      {/* Photo credit */}
+      <Text style={styles.creditText}>Photo by John Seong</Text>
+      <Text style={styles.text}>
+        It is best for anyone, male or female, to avoid walking alone late at
+        night down deserted or badly lit streets but here are some tips for
+        protecting yourself:
+      </Text>
+
+      <Text style={styles.text}>
+        Always make sure your wallet is out of sight.
+      </Text>
+
+      <Text style={styles.text}>
+        You may do well to look over your shoulder every now and then.
+      </Text>
+
+      <Text style={styles.text}>Don’t look down, look straight ahead.</Text>
+
+      <Text style={styles.text}>
+        Look like you know where you are going and show no fear.
+      </Text>
+
+      <Text style={styles.text}>
+        Following these guide-lines will make you look less vulnerable and more
+        able to defend yourself. Some people find taking classes in martial arts
+        helps them to be (and look) confident.
+      </Text>
+
+      <Text style={styles.text}>
+        If someone threatens you and you start running just keep on running.
+      </Text>
+
+      <Text style={styles.text}>
+        If it is too late or you are unable to run, let them have your wallet if
+        they ask for it. This is a small price to pay for your personal
+        security.
+      </Text>
+
+      <Text style={styles.text}>
+        If they take your wallet cancel all your credit cards as soon as
+        possible and get them replaced.
+      </Text>
+
+      <Text style={styles.text}>
+        Never try and bargain or reason with your mugger(s).
+      </Text>
+
+      <Text style={styles.text}>
+        Finally, ALWAYS phone your mum or dad and let them know if you have
+        decided to stay the night at someone else’s house or they will be so
+        worried they will call the police to search for you. (I’m assuming you
+        remembered to tell them you were going out for the evening in the first
+        place!)
+      </Text>
+
+      {/* Bottom Spacer */}
+      <View style={{ paddingBottom: 40 }} />
+    </ScrollView>
+  );
+}
+
+export function FindingTheRightFriends() {
+  return (
+      <ScrollView style={styles.container}>
+          <Text style={[styles.header, styles.text]}>
+              It is often difficult to tell the difference between a true friend and a fake friend but for autistic people, this can be many times harder. Here is a table to help you tell the difference.
+          </Text>
+          
+          <View style={styles.tableRow}>
+              <Text style={[styles.tableHeader, styles.text]}>True Friends</Text>
+              <Text style={[styles.tableHeader, styles.text]}>Fake Friends</Text>
+              <Text style={[styles.tableHeader, styles.text]}>Enemies</Text>
+          </View>
+          
+          <View style={styles.tableRow}>
+              <Text style={[styles.tableCell, styles.text]}>Treat you the same way they treat all their friends.</Text>
+              <Text style={[styles.tableCell, styles.text]}>May treat you differently to how they treat others.</Text>
+              <Text style={[styles.tableCell, styles.text]}>May ignore you most of the time.</Text>
+          </View>
+
+          <View style={styles.tableRow}>
+              <Text style={[styles.tableCell, styles.text]}>Will treat you as an equal.</Text>
+              <Text style={[styles.tableCell, styles.text]}>Might often make unfair requests of you.</Text>
+              <Text style={[styles.tableCell, styles.text]}>Will often treat you as a less important person than them.</Text>
+          </View>
+
+          <View style={styles.tableRow}>
+              <Text style={[styles.tableCell, styles.text]}>Make you feel welcome in the long term as well as the short term.</Text>
+              <Text style={[styles.tableCell, styles.text]}>Might make you feel welcome in the short term and then drop you in the dirt.</Text>
+              <Text style={[styles.tableCell, styles.text]}>Will make you feel unwelcome and will notice all your mistakes and may bring them to the attention of other people.</Text>
+          </View>
+
+          <View style={styles.tableRow}>
+              <Text style={[styles.tableCell, styles.text]}>If they give you compliments they will be genuine and sincere.</Text>
+              <Text style={[styles.tableCell, styles.text]}>Might give you many compliments which are NOT genuine.</Text>
+              <Text style={[styles.tableCell, styles.text]}>May give you anything from sarcasm, put-downs and temper tantrums to the silent treatment.</Text>
+          </View>
+
+          <Text style={[styles.footer, styles.text]}>
+              You are likely to meet many people who don’t fit exactly into any one category in this table, in which case you must use your discretion.
+              {"\n\n"}
+              Don’t be living under the illusion that everyone who knows you cares about you because they don’t. People who care about you will probably fall under the category of true friends or will otherwise be family.
+              {"\n\n"}
+              Never underestimate the value of a true friend.
+          </Text>
+
+          {/* Bottom Spacer */}
+      <View style={{ paddingBottom: 40 }} />
       </ScrollView>
-    );
-  }
-  
+  );
+}
