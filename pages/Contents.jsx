@@ -1879,3 +1879,79 @@ export function Education() {
     </ScrollView>
   );
 }
+
+export function LivingAwayFromHome() {
+  return (
+    <ScrollView style={styles.container}>
+  <Image
+        style={styles.imageStyle}
+        source={require("../assets/cat5.jpg")}
+      />
+
+      {/* Photo credit */}
+      <Text style={styles.creditText}>Photo by John Seong</Text>
+      <Text style={styles.text}>
+        You may start living away from home for a number of reasons, whether it is so that you can be independent or whether you are going away to university or even just staying in a youth hostel for a week or two to meet people.
+      </Text>
+
+      <Text style={styles.text}>
+        You will start off with a clean slate. To keep it this way see relevant chapter.
+      </Text>
+
+      <Text style={styles.text}>
+        You might have to become quite flexible in your routine if you want to take the opportunities of going out. Also, you might have to wait your turn to use the kitchen when there are too many people, or have to compromise your favourite TV program now and then when people want to watch something on the other side (if there is only one TV).
+      </Text>
+
+      <Text style={styles.text}>
+        Your routine might be quite complicated and hard to manage if you are doing a course or a stressful job, in which case it can be extremely useful to plan each week in advance (which may take about 20 minutes each Sunday night but will save you much more time in the long term). Use a diary.
+      </Text>
+
+      <Text style={styles.text}>
+        It is equally important to have everything you need gathered up the night before work, so that you are not in a frantic rush trying to get organised in the morning before you have to rush off.
+      </Text>
+
+      <Text style={styles.text}>
+        Always knock on the door and await a reply before walking into someone else’s room or office, otherwise you will probably be told off.
+      </Text>
+
+      <Text style={styles.text}>
+        Always let your flatmate know if you are going away for more than 24 hours or they WILL worry, even if they aren’t the nicest people to live with. If you were unable to do this for some reason, phone them.
+      </Text>
+
+      <Text style={styles.text}>
+        People might expect you to do the washing up or some house cleaning every now and then. This is called pulling your weight and is supposed to be equally fair on everyone and be a team effort to keep the place clean and tidy. Some people don’t mind mess as long as it’s hygienic mess but some people dislike mess and think that everyone should pull their weight and tidy up regularly. If you are lucky you will be living with other people who share the same attitude as yourself. Also, people who dislike mess are more likely to comment if they feel that you don’t take a bath or shower often enough.
+      </Text>
+
+      <Text style={styles.text}>
+        You might have a whole array of different kitchen tactics to that of everyone else. In the eyes of some people this is all right as long as your tactics don’t leave any unnecessary mess behind and your table manners are all right but some people might make comments about it and ask you to do things the same way as they do. It is your choice whether you decide to remain original or conform, but give some thought to both options.
+      </Text>
+
+      <Text style={styles.text}>
+        By making mental notes about the ways in which other people do their cooking, washing up, house cleaning or shopping you might be able to learn faster, more efficient ways of doing these things yourself. You may be taking short-cuts which do in fact make extra work for you afterwards.
+      </Text>
+
+      <Text style={styles.text}>
+        If you have a bit of free time on your hands, you might be able to nip out to the shops, buy the ingredients you need and cook yourself a really good meal. If you have access to a recipe or a set of instructions on the side of a jar, try to make use of it rather than rebelling against it. Also, it is somewhat cheaper to plan in advance what ingredients you need and get them along with the rest of your shopping at the supermarket rather than the corner shop.
+      </Text>
+
+      <Text style={styles.text}>
+        Non-autistic people are quite good at remembering which plates, cups, saucepans or cupboards belong to which people. Things like this allow them to do detective work and notice things.
+      </Text>
+
+      <Text style={styles.text}>
+        If you follow the rules given in the chapter Body language it might make you a slightly easier person to live with. Remember also that there might be a ‘pecking order’ in the flat which everyone is fairly aware of but no-one ever talks about.
+      </Text>
+
+      <Text style={styles.text}>
+        You might be living in a flat where everyone is being nasty towards you, in which case it might be a good idea to move out and live somewhere else, starting again with new people and a clean slate.
+      </Text>
+
+      <Text style={styles.text}>
+        If you are able to, get the ‘contract’ checked out professionally before signing it and moving into a new place.
+      </Text>
+
+      {/* Bottom Spacer */}
+      <View style={{ paddingBottom: 40 }} />
+    </ScrollView>
+  );
+}
