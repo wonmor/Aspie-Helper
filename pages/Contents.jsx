@@ -1961,7 +1961,7 @@ export function UsingThePhone() {
     <ScrollView style={styles.container}>
   <Image
         style={styles.imageStyle}
-        source={require("../assets/cat5.jpg")}
+        source={require("../assets/apple-park.jpg")}
       />
 
       {/* Photo credit */}
@@ -1991,3 +1991,44 @@ export function UsingThePhone() {
     </ScrollView>
   );
 }
+
+export function Guests() {
+  return (
+    <ScrollView style={styles.container}>
+  <Image
+        style={styles.imageStyle}
+        source={require("../assets/apple-store.jpg")}
+      />
+
+      {/* Photo credit */}
+      <Text style={styles.creditText}>Photo by John Seong</Text>
+      <Text style={styles.text}>
+        When you have a friend round or when you go to visit someone else through invitation, or even if you are living with a friend there are a number of points which are useful to know.
+      </Text>
+
+      <Text style={styles.text}>
+        It is usually the responsibility of the host to offer the guest a drink. The guest shouldn’t have to ask.
+      </Text>
+
+      <Text style={styles.text}>
+        Sometimes you have to put a little bit of effort into making a guest feel welcome.
+      </Text>
+
+      <Text style={styles.text}>
+        Try to avoid situations in which the other person might feel slightly ‘cornered’ either physically or verbally. Well at least until you know them quite well.
+      </Text>
+
+      <Text style={styles.text}>
+        Try to avoid situations in which you unexpectedly leave a friend or a guest on their own.
+      </Text>
+
+      <Text style={styles.text}>
+        Knowing when to say goodbye is a difficult process which can sometimes involve people dropping gentle hints or jokes about chucking the other person out. If you don’t pick up on the message early enough then it can sometimes create tension. However, a laugh and a smile can often make the goodbye process much more graceful.
+      </Text>
+
+      {/* Bottom Spacer */}
+      <View style={{ paddingBottom: 40 }} />
+    </ScrollView>
+  );
+}
+
