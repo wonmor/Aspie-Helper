@@ -1955,3 +1955,39 @@ export function LivingAwayFromHome() {
     </ScrollView>
   );
 }
+
+export function UsingThePhone() {
+  return (
+    <ScrollView style={styles.container}>
+  <Image
+        style={styles.imageStyle}
+        source={require("../assets/cat5.jpg")}
+      />
+
+      {/* Photo credit */}
+      <Text style={styles.creditText}>Photo by John Seong</Text>
+      <Text style={styles.text}>
+        Always answer the phone in a clear polite but relaxed voice.
+      </Text>
+
+      <Text style={styles.text}>
+        When speaking on the phone, it can be quite a relief to know that body language and eye contact are no longer important but tone of voice and clarity of speech become more important.
+      </Text>
+
+      <Text style={styles.text}>
+        If someone asks to talk to someone else, ask politely ‘who is it?’ to get their name and then say ‘ok I’ll just go and look for them. This will give the other person the opportunity to ask ‘who is it’ and perhaps to say ‘tell them I’m not in’ in the event that it’s someone they would rather not speak to.
+      </Text>
+
+      <Text style={styles.text}>
+        If that person is not in you may be asked to take a message in which case if you think you might not be able to remember to pass it on you MUST write it down and leave it somewhere near the phone.
+      </Text>
+
+      <Text style={styles.text}>
+        When phoning other people you don’t want to phone too early in the day or too late at night. This might mean having to be very patient. If you wish to phone someone you have met on a night out who you fancy, it is important not to phone them too soon after meeting them. It is best to leave it at least a day so they don’t think you’re coming on too strong.
+      </Text>
+
+      {/* Bottom Spacer */}
+      <View style={{ paddingBottom: 40 }} />
+    </ScrollView>
+  );
+}
