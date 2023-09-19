@@ -2,7 +2,7 @@
   "expo": {
     "name": "Aspie Guide",
     "slug": "aspie-helper",
-    "version": "1.1.0",
+    "version": "1.2.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
@@ -17,7 +17,7 @@
     "ios": {
       "supportsTablet": true,
       "bundleIdentifier": "com.johnseong.aspiehelper",
-      "buildNumber": "3"
+      "buildNumber": "1"
     },
     "android": {
       "adaptiveIcon": {
@@ -25,7 +25,7 @@
         "backgroundColor": "#ffffff"
       },
       "package": "com.johnseong.aspiehelper",
-      "versionCode": 3
+      "versionCode": 1
     },
     "web": {
       "favicon": "./assets/favicon.png"
