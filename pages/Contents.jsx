@@ -34,7 +34,7 @@ const styles = StyleSheet.create({
   },
   tableHeader: {
     flex: 1,
-    fontWeight: "bold",
+    fontFamily: "Quicksand_600SemiBold",
     paddingVertical: 10,
     paddingHorizontal: 5,
     textAlign: "center",
