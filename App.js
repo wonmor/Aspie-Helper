@@ -27,6 +27,7 @@ import {
   TouchableOpacity,
 } from "react-native";
 import React from "react";
+import Copilot from "./pages/Copilot";
 import * as Haptics from "expo-haptics";
 import {
   Foreword,
@@ -102,19 +103,31 @@ function HomeScreen({ navigation }) {
   return (
     <ScrollView style={styles.container}>
       <View style={styles.nestedContainer}>
-      <Text style={[styles.title, { fontFamily: "LoveYaLikeASister_400Regular" }]}>
-        Aspie Guide
-      </Text>
+        <Text
+          style={[styles.title, { fontFamily: "LoveYaLikeASister_400Regular" }]}
+        >
+          Aspie Guide
+        </Text>
 
-      <Text style={styles.subtitle}>
-      Designed for people who are neurodiverse; on the Autism Spectrum, ADHD, or other related conditions.
-      </Text>
+        <Text style={styles.subtitle}>
+          Designed for people who are neurodiverse; on the Autism Spectrum,
+          ADHD, or other related conditions.
+        </Text>
       </View>
 
-      <Image
-        style={styles.imageStyle}
-        source={require('./assets/icon.png')}
-    />
+      <TouchableOpacity style={styles.copilotButton} onPress={() => {
+        Haptics.notificationAsync(Haptics.NotificationFeedbackType.Success);
+        navigation.navigate("Copilot");
+      }}>
+        <Image
+          style={styles.copilotImage}
+          source={require("./assets/icon.png")}
+        />
+        <View style={styles.copilotTextContainer}>
+          <Text style={styles.copilotTitle}>Try Aspie Copilot</Text>
+          <Text style={styles.copilotSubtitle}>Powered by GPT-4</Text>
+        </View>
+      </TouchableOpacity>
 
       <Text style={[styles.header, { fontFamily: "Quicksand_600SemiBold" }]}>
         Contents
@@ -127,8 +140,8 @@ function HomeScreen({ navigation }) {
             onPress={() => {
               Haptics.notificationAsync(
                 Haptics.NotificationFeedbackType.Success
-              )
-              navigation.navigate(item)
+              );
+              navigation.navigate(item);
             }}
           >
             <View style={styles.gridItem}>
@@ -166,7 +179,7 @@ function HomeScreen({ navigation }) {
       </Text>
 
       {/* Bottom Spacer */}
-      <View style= {{ paddingBottom: 40 }} />
+      <View style={{ paddingBottom: 40 }} />
     </ScrollView>
   );
 }
@@ -180,7 +193,7 @@ export default function App() {
     Quicksand_500Medium,
     Quicksand_600SemiBold,
     Quicksand_700Bold,
-    LoveYaLikeASister_400Regular
+    LoveYaLikeASister_400Regular,
   });
   function ContentScreen({ route }) {
     const { title, chapterNumber } = route.params;
@@ -271,6 +284,20 @@ export default function App() {
               ),
             }}
           />
+           <Drawer.Screen
+            name="Copilot"
+            component={Copilot}
+            options={{
+              headerTitleStyle: {
+                fontFamily: "Quicksand_600SemiBold",
+              },
+              drawerLabel: ({ focused, color }) => (
+                <Text style={{ fontFamily: "Quicksand_600SemiBold", color }}>
+                  Copilot
+                </Text>
+              ),
+            }}
+          />
           {/* Loop through the data array and render screens */}
           {data.map((item, index) => (
             <Drawer.Screen
@@ -303,9 +330,9 @@ const styles = StyleSheet.create({
     backgroundColor: "#f5f5f5",
   },
   nestedContainer: {
-    flex: 1,                  // Allows the container to expand
-    alignItems: 'center',     // Centers children horizontally
-    justifyContent: 'center', // Centers children vertically
+    flex: 1, // Allows the container to expand
+    alignItems: "center", // Centers children horizontally
+    justifyContent: "center", // Centers children vertically
   },
   title: {
     fontSize: 48,
@@ -320,14 +347,14 @@ const styles = StyleSheet.create({
     color: "#555",
   },
   imageStyle: {
-    width: 200,             // Adjust the width as required
-    height: 200,            // Should be same as width to ensure a circle
-    resizeMode: 'cover',    // Adjusts the image to fit within the boundaries. Changed to 'cover' to fill the circular frame.
-    marginBottom: 20,       // Space between image and the following text
-    alignSelf: 'center',
-    borderRadius: 100,      // Half of the width & height to make it circle
-    overflow: 'hidden',     // Hide the parts of the image that exceed the borderRadius
-},
+    width: 150, // Adjust the width as required
+    height: 150, // Should be same as width to ensure a circle
+    resizeMode: "cover", // Adjusts the image to fit within the boundaries. Changed to 'cover' to fill the circular frame.
+    marginBottom: 20, // Space between image and the following text
+    alignSelf: "center",
+    borderRadius: 100, // Half of the width & height to make it circle
+    overflow: "hidden", // Hide the parts of the image that exceed the borderRadius
+  },
 
   gridContainer: {
     flexDirection: "row",
@@ -370,5 +397,42 @@ const styles = StyleSheet.create({
   },
   link: {
     color: "#2196F3",
+  },
+  copilotButton: {
+    flexDirection: "row", // Image on left, text on right
+    alignItems: "center", // Vertically align items in the center
+    backgroundColor: "#f5f5f5",
+    padding: 15,
+    borderRadius: 10,
+    marginBottom: 20, // Adding some margin to separate from other elements
+    shadowColor: "#000",
+    shadowOffset: {
+      width: 0,
+      height: 1,
+    },
+    shadowOpacity: 0.22,
+    shadowRadius: 2.22,
+    elevation: 3,
+  },
+  copilotImage: {
+    width: 50,
+    height: 50,
+    borderRadius: 25, // Half of the width & height to make it circle
+    overflow: "hidden", // Hide the parts of the image that exceed the borderRadius
+    marginRight: 15, // Space between image and text
+  },
+  copilotTextContainer: {
+    flexDirection: "column", // Stack title above subtitle
+  },
+  copilotTitle: {
+    fontFamily: "Quicksand_600SemiBold",
+    fontSize: 18,
+    color: "#333",
+  },
+  copilotSubtitle: {
+    fontFamily: "Quicksand_600SemiBold",
+    fontSize: 14,
+    color: "#666",
+    marginTop: 5, // Small space between title and subtitle
   },
 });

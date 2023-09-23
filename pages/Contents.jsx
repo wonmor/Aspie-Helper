@@ -1803,7 +1803,7 @@ export function ComingClean() {
 export function Education() {
   return (
     <ScrollView style={styles.container}>
-  <Image
+      <Image
         style={styles.imageStyle}
         source={require("../assets/laptop.jpg")}
       />
@@ -1811,39 +1811,61 @@ export function Education() {
       {/* Photo credit */}
       <Text style={styles.creditText}>Photo by John Seong</Text>
       <Text style={styles.text}>
-        You might have teachers who are holding you back by thinking you are not intelligent enough to take your exams. If you know inside that you are, then this can be extremely frustrating. Try to get the help of a teacher who you seem to get on well with.
+        You might have teachers who are holding you back by thinking you are not
+        intelligent enough to take your exams. If you know inside that you are,
+        then this can be extremely frustrating. Try to get the help of a teacher
+        who you seem to get on well with.
       </Text>
 
       <Text style={styles.text}>
-        If you are being held back because you are not doing all that well at your English exams then it might be because you write about situations which are strange and not realistic, in which case having read this book might help you. Remember, this subject is more about feeling than it is about words.
+        If you are being held back because you are not doing all that well at
+        your English exams then it might be because you write about situations
+        which are strange and not realistic, in which case having read this book
+        might help you. Remember, this subject is more about feeling than it is
+        about words.
       </Text>
 
       <Text style={styles.text}>
-        Listen to any advice or instructions offered to you by your teachers even if at first it sounds unimportant to you. It helps them to be sympathetic if you make it clear that you are listening by nodding or saying ‘Right’.
+        Listen to any advice or instructions offered to you by your teachers
+        even if at first it sounds unimportant to you. It helps them to be
+        sympathetic if you make it clear that you are listening by nodding or
+        saying ‘Right’.
       </Text>
 
       <Text style={styles.text}>
-        When people explain things to you which sound interesting or you are in a lesson, it is important to look interested otherwise people could easily assume that you are bored. Remember that speakers do watch the expressions on the faces of their audience.
+        When people explain things to you which sound interesting or you are in
+        a lesson, it is important to look interested otherwise people could
+        easily assume that you are bored. Remember that speakers do watch the
+        expressions on the faces of their audience.
       </Text>
 
       <Text style={styles.text}>
-        Pay close attention to your school reports because they are often chock-a-block with constructive criticisms.
+        Pay close attention to your school reports because they are often
+        chock-a-block with constructive criticisms.
       </Text>
 
       <Text style={styles.text}>
-        One of the problems you are likely to face in classes or lectures is concentration. No-one is able to concentrate 100% for a whole hour but to take short-hand notes which you will be able to look back on is normally to be expected.
+        One of the problems you are likely to face in classes or lectures is
+        concentration. No-one is able to concentrate 100% for a whole hour but
+        to take short-hand notes which you will be able to look back on is
+        normally to be expected.
       </Text>
 
       <Text style={styles.text}>
-        If a lecturer or teacher asks a question and no-one puts their hand up it is often because no-one wants to stand out NOT because no-one knows the answer.
+        If a lecturer or teacher asks a question and no-one puts their hand up
+        it is often because no-one wants to stand out NOT because no-one knows
+        the answer.
       </Text>
 
       <Text style={styles.text}>
-        It is sometimes slightly difficult to distinguish between the information you do and don’t need to commit to memory.
+        It is sometimes slightly difficult to distinguish between the
+        information you do and don’t need to commit to memory.
       </Text>
 
       <Text style={styles.text}>
-        If you try to show lots of obscure academic knowledge to get public recognition, then you might be going the wrong way about it, however intelligent the people you are talking with are.
+        If you try to show lots of obscure academic knowledge to get public
+        recognition, then you might be going the wrong way about it, however
+        intelligent the people you are talking with are.
       </Text>
 
       <Text style={styles.text}>
@@ -1855,23 +1877,37 @@ export function Education() {
       </Text>
 
       <Text style={styles.text}>
-        You might get especially worried about your exams but remember that you can still live a happy and fulfilling life even without any qualifications at all, and many people have to.
+        You might get especially worried about your exams but remember that you
+        can still live a happy and fulfilling life even without any
+        qualifications at all, and many people have to.
       </Text>
 
       <Text style={styles.text}>
-        You might find maths, science, foreign languages and computer studies easier than things like English and History, contrary to what most people find easier.
+        You might find maths, science, foreign languages and computer studies
+        easier than things like English and History, contrary to what most
+        people find easier.
       </Text>
 
       <Text style={styles.text}>
-        Make sure you choose a subject which leads to a job where you don’t have to keep socialising and chatting people up. The ‘back-room’ jobs like computer, research or pharmacology are easier from this point of view than selling, management, teaching or social work.
+        Make sure you choose a subject which leads to a job where you don’t have
+        to keep socialising and chatting people up. The ‘back-room’ jobs like
+        computer, research or pharmacology are easier from this point of view
+        than selling, management, teaching or social work.
       </Text>
 
       <Text style={styles.text}>
-        Remember that there are set rules and conventions about academic method and presentation. To conform to these guide-lines and closely follow a syllabus can be very significant to your final grades.
+        Remember that there are set rules and conventions about academic method
+        and presentation. To conform to these guide-lines and closely follow a
+        syllabus can be very significant to your final grades.
       </Text>
 
       <Text style={styles.text}>
-        One symptom of autism is that you may feel unsettled if your daily or weekly routine is disrupted. You might be able to structure your time so that you have time alloted for working in and time set aside for other things like watching TV, films, listening to music or going out. If someone invites you to go out try not to worry too much about your work, try to be flexible. You will have plenty more time for work.
+        One symptom of autism is that you may feel unsettled if your daily or
+        weekly routine is disrupted. You might be able to structure your time so
+        that you have time alloted for working in and time set aside for other
+        things like watching TV, films, listening to music or going out. If
+        someone invites you to go out try not to worry too much about your work,
+        try to be flexible. You will have plenty more time for work.
       </Text>
 
       {/* Bottom Spacer */}
@@ -1883,71 +1919,117 @@ export function Education() {
 export function LivingAwayFromHome() {
   return (
     <ScrollView style={styles.container}>
-  <Image
-        style={styles.imageStyle}
-        source={require("../assets/cat5.jpg")}
-      />
+      <Image style={styles.imageStyle} source={require("../assets/cat5.jpg")} />
 
       {/* Photo credit */}
       <Text style={styles.creditText}>Photo by John Seong</Text>
       <Text style={styles.text}>
-        You may start living away from home for a number of reasons, whether it is so that you can be independent or whether you are going away to university or even just staying in a youth hostel for a week or two to meet people.
+        You may start living away from home for a number of reasons, whether it
+        is so that you can be independent or whether you are going away to
+        university or even just staying in a youth hostel for a week or two to
+        meet people.
       </Text>
 
       <Text style={styles.text}>
-        You will start off with a clean slate. To keep it this way see relevant chapter.
+        You will start off with a clean slate. To keep it this way see relevant
+        chapter.
       </Text>
 
       <Text style={styles.text}>
-        You might have to become quite flexible in your routine if you want to take the opportunities of going out. Also, you might have to wait your turn to use the kitchen when there are too many people, or have to compromise your favourite TV program now and then when people want to watch something on the other side (if there is only one TV).
+        You might have to become quite flexible in your routine if you want to
+        take the opportunities of going out. Also, you might have to wait your
+        turn to use the kitchen when there are too many people, or have to
+        compromise your favourite TV program now and then when people want to
+        watch something on the other side (if there is only one TV).
       </Text>
 
       <Text style={styles.text}>
-        Your routine might be quite complicated and hard to manage if you are doing a course or a stressful job, in which case it can be extremely useful to plan each week in advance (which may take about 20 minutes each Sunday night but will save you much more time in the long term). Use a diary.
+        Your routine might be quite complicated and hard to manage if you are
+        doing a course or a stressful job, in which case it can be extremely
+        useful to plan each week in advance (which may take about 20 minutes
+        each Sunday night but will save you much more time in the long term).
+        Use a diary.
       </Text>
 
       <Text style={styles.text}>
-        It is equally important to have everything you need gathered up the night before work, so that you are not in a frantic rush trying to get organised in the morning before you have to rush off.
+        It is equally important to have everything you need gathered up the
+        night before work, so that you are not in a frantic rush trying to get
+        organised in the morning before you have to rush off.
       </Text>
 
       <Text style={styles.text}>
-        Always knock on the door and await a reply before walking into someone else’s room or office, otherwise you will probably be told off.
+        Always knock on the door and await a reply before walking into someone
+        else’s room or office, otherwise you will probably be told off.
       </Text>
 
       <Text style={styles.text}>
-        Always let your flatmate know if you are going away for more than 24 hours or they WILL worry, even if they aren’t the nicest people to live with. If you were unable to do this for some reason, phone them.
+        Always let your flatmate know if you are going away for more than 24
+        hours or they WILL worry, even if they aren’t the nicest people to live
+        with. If you were unable to do this for some reason, phone them.
       </Text>
 
       <Text style={styles.text}>
-        People might expect you to do the washing up or some house cleaning every now and then. This is called pulling your weight and is supposed to be equally fair on everyone and be a team effort to keep the place clean and tidy. Some people don’t mind mess as long as it’s hygienic mess but some people dislike mess and think that everyone should pull their weight and tidy up regularly. If you are lucky you will be living with other people who share the same attitude as yourself. Also, people who dislike mess are more likely to comment if they feel that you don’t take a bath or shower often enough.
+        People might expect you to do the washing up or some house cleaning
+        every now and then. This is called pulling your weight and is supposed
+        to be equally fair on everyone and be a team effort to keep the place
+        clean and tidy. Some people don’t mind mess as long as it’s hygienic
+        mess but some people dislike mess and think that everyone should pull
+        their weight and tidy up regularly. If you are lucky you will be living
+        with other people who share the same attitude as yourself. Also, people
+        who dislike mess are more likely to comment if they feel that you don’t
+        take a bath or shower often enough.
       </Text>
 
       <Text style={styles.text}>
-        You might have a whole array of different kitchen tactics to that of everyone else. In the eyes of some people this is all right as long as your tactics don’t leave any unnecessary mess behind and your table manners are all right but some people might make comments about it and ask you to do things the same way as they do. It is your choice whether you decide to remain original or conform, but give some thought to both options.
+        You might have a whole array of different kitchen tactics to that of
+        everyone else. In the eyes of some people this is all right as long as
+        your tactics don’t leave any unnecessary mess behind and your table
+        manners are all right but some people might make comments about it and
+        ask you to do things the same way as they do. It is your choice whether
+        you decide to remain original or conform, but give some thought to both
+        options.
       </Text>
 
       <Text style={styles.text}>
-        By making mental notes about the ways in which other people do their cooking, washing up, house cleaning or shopping you might be able to learn faster, more efficient ways of doing these things yourself. You may be taking short-cuts which do in fact make extra work for you afterwards.
+        By making mental notes about the ways in which other people do their
+        cooking, washing up, house cleaning or shopping you might be able to
+        learn faster, more efficient ways of doing these things yourself. You
+        may be taking short-cuts which do in fact make extra work for you
+        afterwards.
       </Text>
 
       <Text style={styles.text}>
-        If you have a bit of free time on your hands, you might be able to nip out to the shops, buy the ingredients you need and cook yourself a really good meal. If you have access to a recipe or a set of instructions on the side of a jar, try to make use of it rather than rebelling against it. Also, it is somewhat cheaper to plan in advance what ingredients you need and get them along with the rest of your shopping at the supermarket rather than the corner shop.
+        If you have a bit of free time on your hands, you might be able to nip
+        out to the shops, buy the ingredients you need and cook yourself a
+        really good meal. If you have access to a recipe or a set of
+        instructions on the side of a jar, try to make use of it rather than
+        rebelling against it. Also, it is somewhat cheaper to plan in advance
+        what ingredients you need and get them along with the rest of your
+        shopping at the supermarket rather than the corner shop.
       </Text>
 
       <Text style={styles.text}>
-        Non-autistic people are quite good at remembering which plates, cups, saucepans or cupboards belong to which people. Things like this allow them to do detective work and notice things.
+        Non-autistic people are quite good at remembering which plates, cups,
+        saucepans or cupboards belong to which people. Things like this allow
+        them to do detective work and notice things.
       </Text>
 
       <Text style={styles.text}>
-        If you follow the rules given in the chapter Body language it might make you a slightly easier person to live with. Remember also that there might be a ‘pecking order’ in the flat which everyone is fairly aware of but no-one ever talks about.
+        If you follow the rules given in the chapter Body language it might make
+        you a slightly easier person to live with. Remember also that there
+        might be a ‘pecking order’ in the flat which everyone is fairly aware of
+        but no-one ever talks about.
       </Text>
 
       <Text style={styles.text}>
-        You might be living in a flat where everyone is being nasty towards you, in which case it might be a good idea to move out and live somewhere else, starting again with new people and a clean slate.
+        You might be living in a flat where everyone is being nasty towards you,
+        in which case it might be a good idea to move out and live somewhere
+        else, starting again with new people and a clean slate.
       </Text>
 
       <Text style={styles.text}>
-        If you are able to, get the ‘contract’ checked out professionally before signing it and moving into a new place.
+        If you are able to, get the ‘contract’ checked out professionally before
+        signing it and moving into a new place.
       </Text>
 
       {/* Bottom Spacer */}
@@ -1959,7 +2041,7 @@ export function LivingAwayFromHome() {
 export function UsingThePhone() {
   return (
     <ScrollView style={styles.container}>
-  <Image
+      <Image
         style={styles.imageStyle}
         source={require("../assets/apple-park.jpg")}
       />
@@ -1971,19 +2053,31 @@ export function UsingThePhone() {
       </Text>
 
       <Text style={styles.text}>
-        When speaking on the phone, it can be quite a relief to know that body language and eye contact are no longer important but tone of voice and clarity of speech become more important.
+        When speaking on the phone, it can be quite a relief to know that body
+        language and eye contact are no longer important but tone of voice and
+        clarity of speech become more important.
       </Text>
 
       <Text style={styles.text}>
-        If someone asks to talk to someone else, ask politely ‘who is it?’ to get their name and then say ‘ok I’ll just go and look for them. This will give the other person the opportunity to ask ‘who is it’ and perhaps to say ‘tell them I’m not in’ in the event that it’s someone they would rather not speak to.
+        If someone asks to talk to someone else, ask politely ‘who is it?’ to
+        get their name and then say ‘ok I’ll just go and look for them. This
+        will give the other person the opportunity to ask ‘who is it’ and
+        perhaps to say ‘tell them I’m not in’ in the event that it’s someone
+        they would rather not speak to.
       </Text>
 
       <Text style={styles.text}>
-        If that person is not in you may be asked to take a message in which case if you think you might not be able to remember to pass it on you MUST write it down and leave it somewhere near the phone.
+        If that person is not in you may be asked to take a message in which
+        case if you think you might not be able to remember to pass it on you
+        MUST write it down and leave it somewhere near the phone.
       </Text>
 
       <Text style={styles.text}>
-        When phoning other people you don’t want to phone too early in the day or too late at night. This might mean having to be very patient. If you wish to phone someone you have met on a night out who you fancy, it is important not to phone them too soon after meeting them. It is best to leave it at least a day so they don’t think you’re coming on too strong.
+        When phoning other people you don’t want to phone too early in the day
+        or too late at night. This might mean having to be very patient. If you
+        wish to phone someone you have met on a night out who you fancy, it is
+        important not to phone them too soon after meeting them. It is best to
+        leave it at least a day so they don’t think you’re coming on too strong.
       </Text>
 
       {/* Bottom Spacer */}
@@ -1995,7 +2089,7 @@ export function UsingThePhone() {
 export function Guests() {
   return (
     <ScrollView style={styles.container}>
-  <Image
+      <Image
         style={styles.imageStyle}
         source={require("../assets/apple-store.jpg")}
       />
@@ -2003,27 +2097,38 @@ export function Guests() {
       {/* Photo credit */}
       <Text style={styles.creditText}>Photo by John Seong</Text>
       <Text style={styles.text}>
-        When you have a friend round or when you go to visit someone else through invitation, or even if you are living with a friend there are a number of points which are useful to know.
+        When you have a friend round or when you go to visit someone else
+        through invitation, or even if you are living with a friend there are a
+        number of points which are useful to know.
       </Text>
 
       <Text style={styles.text}>
-        It is usually the responsibility of the host to offer the guest a drink. The guest shouldn’t have to ask.
+        It is usually the responsibility of the host to offer the guest a drink.
+        The guest shouldn’t have to ask.
       </Text>
 
       <Text style={styles.text}>
-        Sometimes you have to put a little bit of effort into making a guest feel welcome.
+        Sometimes you have to put a little bit of effort into making a guest
+        feel welcome.
       </Text>
 
       <Text style={styles.text}>
-        Try to avoid situations in which the other person might feel slightly ‘cornered’ either physically or verbally. Well at least until you know them quite well.
+        Try to avoid situations in which the other person might feel slightly
+        ‘cornered’ either physically or verbally. Well at least until you know
+        them quite well.
       </Text>
 
       <Text style={styles.text}>
-        Try to avoid situations in which you unexpectedly leave a friend or a guest on their own.
+        Try to avoid situations in which you unexpectedly leave a friend or a
+        guest on their own.
       </Text>
 
       <Text style={styles.text}>
-        Knowing when to say goodbye is a difficult process which can sometimes involve people dropping gentle hints or jokes about chucking the other person out. If you don’t pick up on the message early enough then it can sometimes create tension. However, a laugh and a smile can often make the goodbye process much more graceful.
+        Knowing when to say goodbye is a difficult process which can sometimes
+        involve people dropping gentle hints or jokes about chucking the other
+        person out. If you don’t pick up on the message early enough then it can
+        sometimes create tension. However, a laugh and a smile can often make
+        the goodbye process much more graceful.
       </Text>
 
       {/* Bottom Spacer */}
@@ -2031,4 +2136,3 @@ export function Guests() {
     </ScrollView>
   );
 }
-
