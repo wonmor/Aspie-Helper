@@ -117,20 +117,34 @@ function HomeScreen({ navigation }) {
 
       <TouchableOpacity style={styles.copilotButton} onPress={() => {
         Haptics.notificationAsync(Haptics.NotificationFeedbackType.Success);
-        navigation.navigate("Copilot");
+        navigation.navigate("GPT Copilot");
       }}>
         <Image
           style={styles.copilotImage}
           source={require("./assets/icon.png")}
         />
         <View style={styles.copilotTextContainer}>
-          <Text style={styles.copilotTitle}>Try Aspie Copilot</Text>
-          <Text style={styles.copilotSubtitle}>Powered by GPT-4</Text>
+          <Text style={styles.copilotTitle}>GPT Copilot</Text>
+          <Text style={styles.copilotSubtitle}>Tap to Start Chatting</Text>
+        </View>
+      </TouchableOpacity>
+
+      <TouchableOpacity style={styles.copilotButton} onPress={() => {
+        Haptics.notificationAsync(Haptics.NotificationFeedbackType.Success);
+        navigation.navigate("GPT Copilot");
+      }}>
+        <Image
+          style={styles.copilotImage}
+          source={require("./assets/brain-relax.png")}
+        />
+        <View style={styles.copilotTextContainer}>
+          <Text style={styles.copilotTitle}>Sensory Relaxation</Text>
+          <Text style={styles.copilotSubtitle}>Tap to Begin Session</Text>
         </View>
       </TouchableOpacity>
 
       <Text style={[styles.header, { fontFamily: "Quicksand_600SemiBold" }]}>
-        Contents
+        Articles
       </Text>
       {/* Table of Contents Grid */}
       <View style={styles.gridContainer}>
@@ -160,8 +174,8 @@ function HomeScreen({ navigation }) {
 
       {/* Acknowledgments */}
       <Text style={styles.acknowledgment}>
-        The book, ‘Coping: A Survival Guide for People with Asperger Syndrome’
-        was written by Marc Segar. Special thanks are due to Pauline Greenhough
+        The content, ‘Coping: A Survival Guide for People with Asperger Syndrome’
+        was originally written by Marc Segar. Special thanks are due to Pauline Greenhough
         for her typing.
       </Text>
 
@@ -285,7 +299,7 @@ export default function App() {
             }}
           />
            <Drawer.Screen
-            name="Copilot"
+            name="GPT Copilot"
             component={Copilot}
             options={{
               headerTitleStyle: {
@@ -293,7 +307,7 @@ export default function App() {
               },
               drawerLabel: ({ focused, color }) => (
                 <Text style={{ fontFamily: "Quicksand_600SemiBold", color }}>
-                  Copilot
+                  GPT Copilot
                 </Text>
               ),
             }}
