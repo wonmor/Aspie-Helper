@@ -64,8 +64,8 @@ export const HomeScreen: FC<NativeStackScreenProps<RootStackParamList, "Home">> 
       {colorScheme === "light" && <PlanetsBackground />}
 
       <View className="mx-12 flex-1 items-center justify-end">
-        <Animated.Text className="font-breathly-serif-semibold text-5xl text-slate-800 dark:text-white">
-          Breathly
+        <Animated.Text className="text-center font-breathly-serif-semibold text-5xl text-slate-800 dark:text-white">
+          Sensory{"\n"}Relaxation
         </Animated.Text>
         <Animated.Text className="mb-8 text-center font-breathly-regular text-lg font-light text-slate-500">
           Relax, focus on your breath, and find your inner peace.

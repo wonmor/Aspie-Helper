@@ -132,7 +132,7 @@ function HomeScreen({ navigation }) {
 
       <TouchableOpacity style={styles.copilotButton} onPress={() => {
         Haptics.notificationAsync(Haptics.NotificationFeedbackType.Success);
-        navigation.navigate("Relaxation");
+        navigation.navigate("Sensory Relaxation");
       }}>
         <Image
           style={styles.copilotImage}
@@ -314,7 +314,7 @@ export default function App() {
             }}
           />
           <Drawer.Screen
-            name="Relaxation"
+            name="Sensory Relaxation"
             component={EntryPoint}
             options={{
               headerTitleStyle: {
@@ -322,7 +322,7 @@ export default function App() {
               },
               drawerLabel: ({ focused, color }) => (
                 <Text style={{ fontFamily: "Quicksand_600SemiBold", color }}>
-                  Relaxation
+                  Sensory Relaxation
                 </Text>
               ),
             }}
