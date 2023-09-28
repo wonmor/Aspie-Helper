@@ -34,6 +34,25 @@
       "eas": {
         "projectId": "e0a7d914-362e-4c8c-afa5-137864cb2e93"
       }
-    }
+    },
+    "plugins": [
+      [
+        "expo-build-properties",
+        {
+          "android": {
+            "enableProguardInReleaseBuilds": true
+          }
+        }
+      ],
+      [
+        "expo-navigation-bar",
+        {
+          "position": "absolute",
+          "visibility": "hidden",
+          "behavior": "overlay-swipe",
+          "backgroundColor": "#00000080"
+        }
+      ]
+    ]
   }
 }
