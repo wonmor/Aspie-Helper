@@ -17,6 +17,7 @@ import {
 import { LoveYaLikeASister_400Regular } from "@expo-google-fonts/love-ya-like-a-sister";
 import { createDrawerNavigator } from "@react-navigation/drawer";
 import { NavigationContainer } from "@react-navigation/native";
+import { EntryPoint } from "./core/entry-point";
 import {
   View,
   ScrollView,
@@ -131,7 +132,7 @@ function HomeScreen({ navigation }) {
 
       <TouchableOpacity style={styles.copilotButton} onPress={() => {
         Haptics.notificationAsync(Haptics.NotificationFeedbackType.Success);
-        navigation.navigate("GPT Copilot");
+        navigation.navigate("Relaxation");
       }}>
         <Image
           style={styles.copilotImage}
@@ -282,7 +283,7 @@ export default function App() {
     return <AppLoading />;
   } else {
     return (
-      <NavigationContainer>
+      <NavigationContainer independent={true}>
         <Drawer.Navigator initialRouteName="Home">
           <Drawer.Screen
             name="Home"
@@ -308,6 +309,20 @@ export default function App() {
               drawerLabel: ({ focused, color }) => (
                 <Text style={{ fontFamily: "Quicksand_600SemiBold", color }}>
                   GPT Copilot
+                </Text>
+              ),
+            }}
+          />
+          <Drawer.Screen
+            name="Relaxation"
+            component={EntryPoint}
+            options={{
+              headerTitleStyle: {
+                fontFamily: "Quicksand_600SemiBold",
+              },
+              drawerLabel: ({ focused, color }) => (
+                <Text style={{ fontFamily: "Quicksand_600SemiBold", color }}>
+                  Relaxation
                 </Text>
               ),
             }}
