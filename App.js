@@ -284,20 +284,6 @@ export default function App() {
               ),
             }}
           />
-           <Drawer.Screen
-            name="GPT Copilot"
-            component={Copilot}
-            options={{
-              headerTitleStyle: {
-                fontFamily: "Quicksand_600SemiBold",
-              },
-              drawerLabel: ({ focused, color }) => (
-                <Text style={{ fontFamily: "Quicksand_600SemiBold", color }}>
-                  GPT Copilot
-                </Text>
-              ),
-            }}
-          />
           <Drawer.Screen
             name="Sensory Relaxation"
             component={EntryPoint}
