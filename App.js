@@ -111,8 +111,7 @@ function HomeScreen({ navigation }) {
         </Text>
 
         <Text style={styles.subtitle}>
-          Designed for people who are neurodiverse; on the Autism Spectrum,
-          ADHD, or other related conditions.
+          Designed for people who are neurodiverse; on the Autism Spectrum (DSM-5) or Asperger's Syndrome (DSM-4).
         </Text>
       </View>
 
