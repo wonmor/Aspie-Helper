@@ -117,25 +117,11 @@ function HomeScreen({ navigation }) {
 
       <TouchableOpacity style={styles.copilotButton} onPress={() => {
         Haptics.notificationAsync(Haptics.NotificationFeedbackType.Success);
-        navigation.navigate("GPT Copilot");
-      }}>
-        <Image
-          style={styles.copilotImage}
-          source={require("./assets/icon.png")}
-        />
-        <View style={styles.copilotTextContainer}>
-          <Text style={styles.copilotTitle}>GPT Copilot</Text>
-          <Text style={styles.copilotSubtitle}>Tap to Start Chatting</Text>
-        </View>
-      </TouchableOpacity>
-
-      <TouchableOpacity style={styles.copilotButton} onPress={() => {
-        Haptics.notificationAsync(Haptics.NotificationFeedbackType.Success);
         navigation.navigate("Sensory Relaxation");
       }}>
         <Image
           style={styles.copilotImage}
-          source={require("./assets/brain-relax.png")}
+          source={require("./assets/icon.png")}
         />
         <View style={styles.copilotTextContainer}>
           <Text style={styles.copilotTitle}>Sensory Relaxation</Text>
