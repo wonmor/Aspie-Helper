@@ -1,6 +1,7 @@
 {
   "expo": {
     "name": "Aspie Guide",
+    
     "slug": "aspie-helper",
     "version": "1.5.0",
     "orientation": "portrait",
@@ -15,6 +16,7 @@
       "**/*"
     ],
     "ios": {
+      "jsEngine": "jsc",
       "supportsTablet": true,
       "bundleIdentifier": "com.johnseong.aspiehelper",
       "buildNumber": "1",
