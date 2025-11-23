@@ -173,9 +173,9 @@ function HomeScreen({ navigation }) {
           style={styles.link}
           onPress={() => Linking.openURL("mailto:wonmos@uci.edu")}
         >
-          wonmos@uci.edu
+          john@orchestrsim.com
         </Text>{" "}
-        at University of California, Irvine.
+        at Orchestr, Inc.
       </Text>
 
       {/* Bottom Spacer */}
