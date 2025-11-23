@@ -2126,9 +2126,516 @@ export function Guests() {
       <Text style={styles.text}>
         Knowing when to say goodbye is a difficult process which can sometimes
         involve people dropping gentle hints or jokes about chucking the other
-        person out. If you don’t pick up on the message early enough then it can
+        person out. If you don't pick up on the message early enough then it can
         sometimes create tension. However, a laugh and a smile can often make
         the goodbye process much more graceful.
+      </Text>
+
+      {/* Bottom Spacer */}
+      <View style={{ paddingBottom: 40 }} />
+    </ScrollView>
+  );
+}
+
+export function JobsAndInterviews() {
+  return (
+    <ScrollView style={styles.container}>
+      <Image
+        style={styles.imageStyle}
+        source={require("../assets/marc1.jpg")}
+      />
+
+      {/* Photo credit */}
+      <Text style={styles.creditText}>Photo by John Seong</Text>
+      <Text style={styles.text}>
+        In an interview body language is extra important and you want to look
+        confident and relaxed. You are also expected to sit still with your arms
+        by your side or on your lap and a good posture and this might be an
+        effort for you. You are expected to speak clearly and professionally.
+      </Text>
+
+      <Text style={styles.text}>
+        First impressions are extremely important.
+      </Text>
+
+      <Text style={styles.text}>
+        Prepare as many possible answers for as many possible questions as you
+        can but don't over rehearse or rigidify your answers. It is good to get
+        help at this stage.
+      </Text>
+
+      <Text style={styles.text}>
+        Know what your skills and talents are.
+      </Text>
+
+      <Text style={styles.text}>
+        The interviewer will often drop you a few hints towards the end of the
+        interview (using mainly body language) to let you know whether you are
+        likely or unlikely to get the job.
+      </Text>
+
+      <Text style={styles.text}>
+        There are courses and classes around which teach interview technique.
+      </Text>
+
+      <Text style={styles.text}>
+        All the same rules apply in the workplace as they do anywhere else; but
+        the one difference is that there is something at stake, your job. This
+        means it is extra important to keep a clean slate or you might be a
+        target for scape-goating which is a very nasty threat to your job (see
+        Distortions of the truth).
+      </Text>
+
+      <Text style={styles.text}>
+        If in doubt keep quiet. This is often seen as a good quality in the
+        office.
+      </Text>
+
+      <Text style={styles.text}>
+        Like it or not, as an autistic person or someone with Asperger syndrome
+        some jobs will be more suitable than others. Examples are as follows:
+      </Text>
+
+      <Text style={styles.text}>
+        Suitable jobs: Graphic designer, Computer programmer, Computer
+        technician or operator, Research scientist, Medical research scientist,
+        Architect, Pharmacist (Which are respected professions which generally
+        take place in environments with people who tend to be perhaps just a
+        little bit more accepting of the needs of those who worry. Please note
+        that I have specifically chosen to show quite difficult careers here and
+        there are plenty of easier careers available.)
+      </Text>
+
+      <Text style={styles.text}>
+        Unsuitable jobs: Salesman, Manager, Solicitor or lawyer, Police
+        officer, Doctor, dentist or health inspector, Secondary school teacher,
+        Airline pilot (All of which can be highly stressful and competitive
+        occupations that involve making difficult decisions and compromises
+        under intense pressure from other people; some also involve using and
+        interpreting body language in a subtle way.)
+      </Text>
+
+      <Text style={styles.text}>
+        In the workplace, everyone is usually under a constant struggle to keep
+        their jobs. This means being organised and methodical all the time to
+        avoid confusing situations. Good communication is very important.
+      </Text>
+
+      <Text style={styles.text}>
+        Sad as it may seem, devious games can occur in the work place and
+        sometimes you might feel great compassion for someone else who is on the
+        verge of losing their job unfairly. However, to defend them can often be
+        putting your own job at risk as well. If you do wish to defend someone
+        against a higher authority first ask yourself whether it is worth the
+        risk.
+      </Text>
+
+      <Text style={styles.text}>
+        Be on the lookout for the 'authoritarian personality'. These are people
+        who tend to be very much bound by the rule-book, very respectful of
+        higher authority, bossy to junior staff and quite hard to reason with.
+        What really needs to be remembered is the fact that these people can
+        often be much more cunning than they look.
+      </Text>
+
+      <Text style={styles.text}>
+        If you are doing your own research you may find yourself in a situation
+        where you wish to patent copyright or create proof of ownership of a
+        piece of work you have produced. The easiest thing to do is to make a
+        copy, seal it in an envelope and post it to your home address. It gets
+        the date stamped on it in the post. Don't open the envelope when it
+        arrives but keep it sealed and stored away in a safe place. Recorded
+        delivery may be more reliable and legally airtight. Also, keep any notes
+        you have written whilst producing your work. You now have legal proof
+        that it is your work and should not have to worry too much about it
+        falling into the wrong hands.
+      </Text>
+
+      <Text style={styles.text}>
+        You tend to meet three different kinds of people in life, Meek,
+        Assertive and Aggressive. Aim to be the assertive type.
+      </Text>
+
+      <Text style={styles.text}>
+        Meek: Looks down. Keeps his fists clenched (a closed signal). Often
+        speaks too quietly. Steps backwards when spoken to. Has a weak
+        handshake. Is easily put down by others. Is often angry with himself for
+        allowing others to take advantage of him. Is shy and withdrawn in
+        company. Cannot accept compliments. Says 'oh dear!' and 'sorry' too
+        much.
+      </Text>
+
+      <Text style={styles.text}>
+        Assertive: Has an upright but relaxed stance. Maintains eye contact when
+        listening or speaking (for over two thirds of the time) looking at faces
+        as a whole. Has a firm handshake but not too firm. Is able to say 'no'
+        when needs must. Can express his true feelings. Is interested in other
+        people's opinions as well as his own. Tries to treat everyone as equals.
+      </Text>
+
+      <Text style={styles.text}>
+        Aggressive: Stands still with stiff, rigid posture. Keeps his arms
+        folded. Shouts and points finger. Bangs desk or table. May give eye
+        contact almost the whole time he is speaking (looking straight into the
+        eyes). Is better at talking than at listening. Likes telling others what
+        to do. Thinks his own opinion is always right. Likes to tell other
+        people they're useless. Tends to make himself quite lonely because
+        people feel they have to be careful around him.
+      </Text>
+
+      {/* Bottom Spacer */}
+      <View style={{ paddingBottom: 40 }} />
+    </ScrollView>
+  );
+}
+
+export function Driving() {
+  return (
+    <ScrollView style={styles.container}>
+      <Image
+        style={styles.imageStyle}
+        source={require("../assets/marc2.jpg")}
+      />
+
+      {/* Photo credit */}
+      <Text style={styles.creditText}>Photo by John Seong</Text>
+      <Text style={styles.text}>
+        Driving is quite a bizarre skill to learn. How fast you pick up driving
+        often has nothing at all to do with your intelligence in other things.
+        Some real dimwits are still able to drive in as few as five lessons
+        whereas some really intelligent people can need as many as fifty lessons.
+      </Text>
+
+      <Text style={styles.text}>
+        I myself went through sheer hell learning to drive. The most difficult
+        thing for me was planning in advance and thinking ahead. I also had a
+        very heavy telling-off from one of my driving instructors.
+      </Text>
+
+      <Text style={styles.text}>
+        Try to find a sensitive instructor if you can. Some driving instructors
+        can be opinionated, randy, impulsive or impatient.
+      </Text>
+
+      <Text style={styles.text}>
+        As already pointed out, try not to compare yourself with other people.
+        Other people might be exaggerating about how few lessons they needed and
+        might be lying when they say they passed first time.
+      </Text>
+
+      <Text style={styles.text}>Slow progress is still progress.</Text>
+
+      {/* Bottom Spacer */}
+      <View style={{ paddingBottom: 40 }} />
+    </ScrollView>
+  );
+}
+
+export function TravellingAbroad() {
+  return (
+    <ScrollView style={styles.container}>
+      <Image
+        style={styles.imageStyle}
+        source={require("../assets/marc3.jpg")}
+      />
+
+      {/* Photo credit */}
+      <Text style={styles.creditText}>Photo by John Seong</Text>
+      <Text style={styles.text}>
+        If you travel abroad somewhere for whatever reason you might find you
+        have to adapt yourself to a rather different way of life. This might be
+        quite pleasant, or it might be quite difficult and inconvenient for you
+        (culture shock).
+      </Text>
+
+      <Text style={styles.text}>
+        Whenever you are in a different country take extra care crossing the
+        road because in some countries there is a lot of reckless driving,
+        drunken driving, speeding, cutting corners, shouting at other drivers
+        and showing off.
+      </Text>
+
+      <Text style={styles.text}>
+        If you are travelling of your own accord be careful about your choice
+        of destinations. Find out about the reasons for which most people go
+        there and DO NOT rush your decision.
+      </Text>
+
+      <Text style={styles.text}>
+        If you decide to go on an expedition, remember that you might have to be
+        travelling and living with the same group of people almost 24 hours a
+        day and that the rules given under the chapter living away from home
+        might apply twice as strong. Also, you might be living in a way which is
+        particularly uncomfortable and inconvenient.
+      </Text>
+
+      <Text style={styles.text}>
+        If you end up not getting along with the group as well as you would
+        like, you might decide to venture away from the group on your own and
+        talk to the local people, who might welcome you with open arms and treat
+        you as an honoured guest in their home where the pace of life might be
+        much slower and calmer than you are used to.
+      </Text>
+
+      <Text style={styles.text}>
+        If you end up as a guest staying at someone else's house along with all
+        your luggage and possessions, be sure to write down their address
+        and/or telephone number as soon as possible, preferably in secret, so
+        that if you get lost (e.g. in town) you won't get permanently separated
+        from them. With people who are over-friendly, it is especially easy as
+        an AS sufferer to become over-trusting, even if you don't think this will
+        be a problem at first.
+      </Text>
+
+      <Text style={styles.text}>
+        On the other hand in some countries the people tend to be colder and less
+        interested in you than they are in the west and it can be quite awkward
+        to talk to them. There may also be a lot of tension and possibly heavy
+        prejudices and racism about in these places, so if you are of a
+        different religious faith it will be best to keep it to yourself.
+      </Text>
+
+      <Text style={styles.text}>
+        In third world countries things don't tend to run as smoothly as they do
+        in the west and you will be living a more risky existence. Even if the
+        people are excessively friendly, they can sometimes turn quite nasty if
+        provoked or offended in some way. The value of human life might be a lot
+        cheaper than it is in the west.
+      </Text>
+
+      <Text style={styles.text}>
+        In the third world the people might be as much as a hundred times poorer
+        than people in the west, but this does not mean that you will be helping
+        out by giving away your money. In poor corrupt countries money always has
+        a habit of finding its way to the richest and most unscrupulous people
+        who exploit people poorer than them selves. Charities like Oxfam and
+        Comic Relief are highly trained and experienced in getting the money and
+        the resources to the right people in the right places.
+      </Text>
+
+      <Text style={styles.text}>
+        In many third world countries, the police, court system and law might be
+        extremely harsh and corrupt so keep out of trouble and try to keep a
+        low profile. The police might be able to get a lot of bribe money by
+        setting you up as a scapegoat and then taking you hostage in one of their
+        disease ridden, often crowded and highly uncomfortable police cells.
+      </Text>
+
+      <Text style={styles.text}>
+        If you are travelling abroad independently for the first time, it is
+        most certainly best to stay in the Western World and travel to countries
+        like France, Holland, Canada, Spain, Scotland or Switzerland, parts of
+        which can be very beautiful and pleasant.
+      </Text>
+
+      {/* Bottom Spacer */}
+      <View style={{ paddingBottom: 40 }} />
+    </ScrollView>
+  );
+}
+
+export function Bartering() {
+  return (
+    <ScrollView style={styles.container}>
+      <Image
+        style={styles.imageStyle}
+        source={require("../assets/marc4.jpg")}
+      />
+
+      {/* Photo credit */}
+      <Text style={styles.creditText}>Photo by John Seong</Text>
+      <Text style={styles.text}>
+        In many countries (all over the third world and also over much of
+        Mediterranean Europe), you will be constantly expected to barter and
+        bargain in the market place. The generally agreed prices can vary
+        anywhere from one eighth to one half of what you would normally expect to
+        pay for them in the shops in the west. Bargain with a smile and in good
+        spirit but remember that it is always your own responsibility to be
+        assertive and not let yourself get ripped off. It is also entirely the
+        sale merchant's responsibility not to sell at a loss. If you have made a
+        good bargain for yourself they may play heavily on your guilt as you
+        walk away by saying something like 'you're taking the shoes off my
+        children's feet!'.
+      </Text>
+
+      <Text style={styles.text}>
+        Remember that getting ripped off can make you feel angry with yourself.
+      </Text>
+
+      <Text style={styles.text}>
+        These people don't sell at a loss, some of them may have decades of
+        selling experience behind them.
+      </Text>
+
+      <Text style={styles.text}>
+        If someone tries to make a bargain with you which is unfair or seems
+        untrustworthy, simply say 'no thank you' and calmly walk away.
+      </Text>
+
+      <Text style={styles.text}>
+        It is easy to get ripped off if you are unfamiliar with the currency.
+      </Text>
+
+      <Text style={styles.text}>
+        If you are making an informal deal with someone back at home, you want to
+        be neither too generous nor too stingy. To find the balance can be hard.
+      </Text>
+
+      {/* Bottom Spacer */}
+      <View style={{ paddingBottom: 40 }} />
+    </ScrollView>
+  );
+}
+
+export function Opportunities() {
+  return (
+    <ScrollView style={styles.container}>
+      <Image
+        style={styles.imageStyle}
+        source={require("../assets/marc5.jpg")}
+      />
+
+      {/* Photo credit */}
+      <Text style={styles.creditText}>Photo by John Seong</Text>
+      <Text style={styles.text}>
+        The first move in finding yourself a social life is often seeing an
+        advert in your local paper and picking up the phone. The most difficult
+        step can often be just picking up the phone.
+      </Text>
+
+      <Text style={styles.text}>
+        Clubs and societies can be a good way of meeting people but often
+        require you to be good at a specific hobby or interest if you are to be
+        valued by the group. However, there are also singles clubs and places that
+        exist simply for the purpose of meeting people.
+      </Text>
+
+      <Text style={styles.text}>
+        Voluntary work is advertised in the papers and probably also in your
+        local library.
+      </Text>
+
+      <Text style={styles.text}>
+        Also, it could be a very good move to enrol in an evening class.
+        Counselling courses and psychology classes may give you a lot of extra
+        insight into social interaction. Even if you don't actually pass the
+        exam, you could easily find yourself drawing more benefit and reward
+        from the course than any other student.
+      </Text>
+
+      {/* Bottom Spacer */}
+      <View style={{ paddingBottom: 40 }} />
+    </ScrollView>
+  );
+}
+
+export function APersonalInDepthAnalysisOfTheProblem() {
+  return (
+    <ScrollView style={styles.container}>
+      <Image
+        style={styles.imageStyle}
+        source={require("../assets/marc6.jpg")}
+      />
+
+      {/* Photo credit */}
+      <Text style={styles.creditText}>Photo by John Seong</Text>
+      <Text style={styles.text}>
+        I personally believe that the best key to overcoming autism is
+        understanding it. Autism is caused by various biochemical processes that
+        affect the way the brain develops.
+      </Text>
+
+      <Text style={styles.text}>
+        For some time I believed that the brains of autistic people were
+        structured slightly differently so that there is a greater tendency for
+        neuronal impulses to travel up and down (literal thinking) and a lesser
+        tendency for them to move sideways (lateral thinking). This phenomenon
+        would be spread throughout the whole brain rather than being local to
+        certain regions. Experiments with neural nets on computer systems have
+        shown that nets which emphasise up and down movement of information (like
+        in autistic brains) give excellent storage of detail but show less
+        ability to distinguish things. Nets which emphasise sideways movement of
+        information show excellent distinguishing power but are not as good at
+        storage.
+      </Text>
+
+      <Text style={styles.text}>
+        On the much larger and more complex scale of the brain, this means that
+        non-autistic people are more aware of plot but autistic people are more
+        aware of detail. Autistic people are better at logical problems but less
+        intuitive. This doesn't necessarily mean that autistic people should
+        have brilliant memories, on the contrary they can often be quite absent
+        minded about certain things. The heightened sensory awareness and
+        constant recall of extra details, many of which are unimportant can be a
+        never ending source of distraction to concentration and learning skills.
+        It can be especially difficult to pick up information regarding the
+        culture one lives in especially in today's Western society which I feel
+        is suffering from cultural overload (see general knowledge).
+      </Text>
+
+      <Text style={styles.text}>
+        What I now believe is similar to the above but slightly modified. I now
+        feel that perhaps the root cause of autism is an increased bias towards
+        the re-assessment of previous thoughts (hence the repetitions and
+        rituals). Consequently the capacity for intuition and context awareness
+        is reduced.
+      </Text>
+
+      <Text style={styles.text}>
+        To assess a social situation, one needs to pick up on as many clues as
+        possible and swiftly piece them together. The final deduction is often
+        greater than the sum of its parts.
+      </Text>
+
+      <Text style={styles.text}>
+        Also, a difficult thing for an autistic person is 'finding a balance'
+        and this may show its self at all levels of behaviour and reasoning. The
+        ability to adapt to the 'situation continuum' and conform to the
+        surrounding world is however an extremely ancient survival strategy
+        which is most relevant in the social sector of life.
+      </Text>
+
+      <Text style={styles.text}>
+        If I could explain Asperger Syndrome in just one sentence it would be as
+        follows:
+      </Text>
+
+      <Text
+        style={[
+          styles.text,
+          { fontFamily: "Quicksand_700Bold", textAlign: "center" },
+        ]}
+      >
+        Autistic people have to understand scientifically what non-autistic
+        people already understand instinctively.
+      </Text>
+
+      {/* Bottom Spacer */}
+      <View style={{ paddingBottom: 40 }} />
+    </ScrollView>
+  );
+}
+
+export function FurtherReading() {
+  return (
+    <ScrollView style={styles.container}>
+      <Image
+        style={styles.imageStyle}
+        source={require("../assets/marc7.jpg")}
+      />
+
+      {/* Photo credit */}
+      <Text style={styles.creditText}>Photo by John Seong</Text>
+      <Text style={styles.text}>
+        Allan Pease (1984) Body Language, Sheldon Press.
+      </Text>
+
+      <Text style={styles.text}>
+        David Cohen (1992) Body Language in Relationships, Sheldon Press.
+      </Text>
+
+      <Text style={styles.text}>
+        Ursula Markham (1993) How to deal with difficult people, Thorsons.
       </Text>
 
       {/* Bottom Spacer */}
