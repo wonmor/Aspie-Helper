@@ -162,7 +162,7 @@ function HomeScreen({ navigation }) {
       <Text style={styles.acknowledgment}>
         The content, ‘Coping: A Survival Guide for People with Asperger Syndrome’
         was originally written by Marc Segar. Special thanks are due to Pauline Greenhough
-        for her typing. Translated into Korean and edited to be more accessible through a digital platform by John Wonmo Seong.
+        for her typing. Edited to be more accessible through a digital platform by John Wonmo Seong.
       </Text>
 
       {/* App Development */}
