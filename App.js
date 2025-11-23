@@ -121,7 +121,7 @@ function HomeScreen({ navigation }) {
       }}>
         <Image
           style={styles.copilotImage}
-          source={require("./assets/icon.png")}
+          source={require("./assets/brain-relax.png")}
         />
         <View style={styles.copilotTextContainer}>
           <Text style={styles.copilotTitle}>Sensory Relaxation</Text>
