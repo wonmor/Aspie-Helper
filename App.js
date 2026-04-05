@@ -28,8 +28,11 @@ import {
   TouchableOpacity,
 } from "react-native";
 import React from "react";
-import Copilot from "./pages/Copilot";
 import * as Haptics from "expo-haptics";
+import ChatbotScreen from "./pages/ChatbotScreen";
+import MiniGamesScreen from "./pages/MiniGamesScreen";
+import QuizzesScreen from "./pages/QuizzesScreen";
+import TherapyScreen from "./pages/TherapyScreen";
 import {
   Foreword,
   Introduction,
@@ -65,7 +68,7 @@ import {
   FurtherReading,
 } from "./pages/Contents";
 
-const data = [
+const chapterData = [
   "Foreword",
   "Introduction",
   "Getting the best from this book",
@@ -100,57 +103,128 @@ const data = [
   "Further Reading",
 ];
 
+// ─── Feature cards shown on the home screen ───────────────────────────────────
+const features = [
+  {
+    id: "AI Chat Assistant",
+    title: "AI Chat Assistant",
+    subtitle: "Ask anything about ASD",
+    icon: "🤖",
+    color: "#ede9fe",
+    border: "#8b5cf6",
+    desc: "Powered by ChatGPT. Get direct, clear answers to social, emotional, and ASD-related questions.",
+  },
+  {
+    id: "Mini-Games",
+    title: "Mini-Games",
+    subtitle: "Build social skills playfully",
+    icon: "🎮",
+    color: "#fef3c7",
+    border: "#f59e0b",
+    desc: "4 interactive games: Emotion Decoder, Social Scenarios, Conversation Flow, and Literal vs. Figurative.",
+  },
+  {
+    id: "Quizzes",
+    title: "Quizzes",
+    subtitle: "Test and expand your knowledge",
+    icon: "📝",
+    color: "#dcfce7",
+    border: "#22c55e",
+    desc: "ASD Knowledge, Sensory Profile Self-Assessment, and Social Situations quizzes.",
+  },
+  {
+    id: "Psychology & Therapy",
+    title: "Psychology & Therapy",
+    subtitle: "Evidence-based techniques",
+    icon: "🧠",
+    color: "#e0f2fe",
+    border: "#0ea5e9",
+    desc: "CBT, DBT, Social Stories, Mindfulness, Sensory Integration, Emotion Regulation, and more.",
+  },
+];
+
 function HomeScreen({ navigation }) {
   return (
-    <ScrollView style={styles.container}>
-      <View style={styles.nestedContainer}>
-        <Text
-          style={[styles.title, { fontFamily: "LoveYaLikeASister_400Regular" }]}
-        >
+    <ScrollView style={styles.container} showsVerticalScrollIndicator={false}>
+      {/* ── Hero ──────────────────────────────────────────── */}
+      <View style={styles.hero}>
+        <Text style={[styles.title, { fontFamily: "LoveYaLikeASister_400Regular" }]}>
           Aspie Guide
         </Text>
-
-        <Text style={styles.subtitle}>
-          Designed for people who are neurodiverse; on the Autism Spectrum (DSM-5) or Asperger's Syndrome (DSM-4).
+        <Text style={styles.heroSubtitle}>
+          A comprehensive resource for people on the Autism Spectrum (DSM-5) and with Asperger's Syndrome (DSM-4).
         </Text>
       </View>
 
-      <TouchableOpacity style={styles.copilotButton} onPress={() => {
-        Haptics.notificationAsync(Haptics.NotificationFeedbackType.Success);
-        navigation.navigate("Sensory Relaxation");
-      }}>
+      {/* ── Sensory Relaxation ────────────────────────────── */}
+      <Text style={[styles.sectionHeader, { fontFamily: "Quicksand_700Bold" }]}>
+        Sensory Relaxation
+      </Text>
+      <TouchableOpacity
+        style={styles.relaxButton}
+        onPress={() => {
+          Haptics.notificationAsync(Haptics.NotificationFeedbackType.Success);
+          navigation.navigate("Sensory Relaxation");
+        }}
+      >
         <Image
-          style={styles.copilotImage}
+          style={styles.relaxImage}
           source={require("./assets/marc.jpg")}
         />
-        <View style={styles.copilotTextContainer}>
-          <Text style={styles.copilotTitle}>Sensory Relaxation</Text>
-          <Text style={styles.copilotSubtitle}>Tap to Begin Session</Text>
+        <View style={styles.relaxTextContainer}>
+          <Text style={styles.relaxTitle}>Breathing Exercises</Text>
+          <Text style={styles.relaxSubtitle}>
+            Guided breathing with custom patterns, audio cues, and haptic feedback
+          </Text>
+          <View style={styles.relaxBadge}>
+            <Text style={styles.relaxBadgeText}>Tap to Begin</Text>
+          </View>
         </View>
       </TouchableOpacity>
 
-      <Text style={[styles.header, { fontFamily: "Quicksand_600SemiBold" }]}>
-        Articles
+      {/* ── New Features ──────────────────────────────────── */}
+      <Text style={[styles.sectionHeader, { fontFamily: "Quicksand_700Bold" }]}>
+        Tools & Learning
       </Text>
-      {/* Table of Contents Grid */}
+
+      {features.map((f) => (
+        <TouchableOpacity
+          key={f.id}
+          style={[styles.featureCard, { backgroundColor: f.color, borderLeftColor: f.border }]}
+          onPress={() => {
+            Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Medium);
+            navigation.navigate(f.id);
+          }}
+        >
+          <Text style={styles.featureIcon}>{f.icon}</Text>
+          <View style={styles.featureContent}>
+            <Text style={[styles.featureTitle, { fontFamily: "Quicksand_700Bold" }]}>{f.title}</Text>
+            <Text style={[styles.featureSubtitle, { fontFamily: "Quicksand_600SemiBold" }]}>{f.subtitle}</Text>
+            <Text style={[styles.featureDesc, { fontFamily: "Quicksand_400Regular" }]}>{f.desc}</Text>
+          </View>
+          <Text style={styles.featureChevron}>›</Text>
+        </TouchableOpacity>
+      ))}
+
+      {/* ── Articles ──────────────────────────────────────── */}
+      <Text style={[styles.sectionHeader, { fontFamily: "Quicksand_700Bold" }]}>
+        Articles: Coping Guide
+      </Text>
+      <Text style={[styles.articlesSubtitle, { fontFamily: "Quicksand_400Regular" }]}>
+        32 chapters from "Coping: A Survival Guide for People with Asperger Syndrome" by Marc Segar.
+      </Text>
+
       <View style={styles.gridContainer}>
-        {data.map((item, index) => (
+        {chapterData.map((item, index) => (
           <TouchableOpacity
             key={index}
             onPress={() => {
-              Haptics.notificationAsync(
-                Haptics.NotificationFeedbackType.Success
-              );
+              Haptics.notificationAsync(Haptics.NotificationFeedbackType.Success);
               navigation.navigate(item);
             }}
           >
             <View style={styles.gridItem}>
-              <Text
-                style={{
-                  ...styles.contents,
-                  fontFamily: "Quicksand_600SemiBold",
-                }}
-              >
+              <Text style={{ ...styles.gridItemText, fontFamily: "Quicksand_600SemiBold" }}>
                 {item}
               </Text>
             </View>
@@ -158,36 +232,103 @@ function HomeScreen({ navigation }) {
         ))}
       </View>
 
-      {/* Acknowledgments */}
-      <Text style={styles.acknowledgment}>
-        The content, ‘Coping: A Survival Guide for People with Asperger Syndrome’
-        was originally written by Marc Segar. Special thanks are due to Pauline Greenhough
-        for her typing. Edited to be more accessible through a digital platform by John Wonmo Seong.
-      </Text>
+      {/* ── Footer ────────────────────────────────────────── */}
+      <View style={styles.footer}>
+        <Text style={styles.acknowledgment}>
+          The article content, "Coping: A Survival Guide for People with Asperger Syndrome", was originally written by Marc Segar.
+          Special thanks to Pauline Greenhough for her typing.
+          Edited for digital accessibility by John Wonmo Seong.
+        </Text>
+        <Text style={styles.development}>
+          App developed by John Wonmo Seong.{" "}
+          <Text
+            style={styles.link}
+            onPress={() => Linking.openURL("mailto:john@orchestrsim.com")}
+          >
+            john@orchestrsim.com
+          </Text>{" "}
+          · Orchestr, Inc.
+        </Text>
+      </View>
 
-      {/* App Development */}
-      <Text style={styles.development}>
-        The app has been developed by John Wonmo Seong for better accessibility
-        to the public. Contact:{" "}
-        <Text
-          style={styles.link}
-          onPress={() => Linking.openURL("mailto:wonmos@uci.edu")}
-        >
-          john@orchestrsim.com
-        </Text>{" "}
-        at Orchestr, Inc.
-      </Text>
-
-      {/* Bottom Spacer */}
       <View style={{ paddingBottom: 40 }} />
     </ScrollView>
   );
 }
 
+// ─── Chapter content screen ───────────────────────────────────────────────────
+
+const chapterComponents = {
+  Foreword,
+  Introduction,
+  "Getting the best from this book": GettingTheBestFromThisBook,
+  Worrying,
+  "Looking on the bright side": LookingOnTheBrightSide,
+  "Body language": BodyLanguage,
+  Boundaries,
+  "Eye contact": EyeContact,
+  "Tone of voice": ToneOfVoice,
+  "Dress sense": DressSense,
+  "Distortions of the truth": DistortionsOfTheTruth,
+  "Misunderstandings other people might have about you": MisunderstandingsOtherPeopleMightHaveAboutYou,
+  Conversation,
+  "General knowledge": GeneralKnowledge,
+  Names,
+  "Humour and conflict": HumourAndConflict,
+  Invitation,
+  "Personal Security": PersonalSecurity,
+  "Finding the right friends": FindingTheRightFriends,
+  "Keeping a clean slate": KeepingACleanSlate,
+  "Coming Clean": ComingClean,
+  Education,
+  "Living Away from Home": LivingAwayFromHome,
+  "Using the Phone": UsingThePhone,
+  Guests,
+  "Jobs and Interviews": JobsAndInterviews,
+  Driving,
+  "Travelling abroad": TravellingAbroad,
+  Bartering,
+  Opportunities,
+  "A Personal in depth analysis of the problem": APersonalInDepthAnalysisOfTheProblem,
+  "Further Reading": FurtherReading,
+};
+
+function ContentScreen({ route }) {
+  const { title, chapterNumber } = route.params;
+  const ChapterComponent = chapterComponents[title] || null;
+
+  return (
+    <ScrollView style={styles.chapterContainer}>
+      <Text style={{ fontFamily: "Quicksand_400Regular", fontSize: 20, marginBottom: 4 }}>
+        <Text style={{ fontFamily: "Quicksand_700Bold" }}>Chapter {chapterNumber}: </Text>
+        {title}
+      </Text>
+
+      {ChapterComponent ? (
+        <ChapterComponent />
+      ) : (
+        <Text style={{ fontFamily: "Quicksand_400Regular", fontSize: 16, marginTop: 20, color: "#666" }}>
+          This chapter is not available yet. Please check back later.
+        </Text>
+      )}
+    </ScrollView>
+  );
+}
+
+// ─── Drawer navigator ─────────────────────────────────────────────────────────
+
 const Drawer = createDrawerNavigator();
 
+const drawerLabelStyle = { fontFamily: "Quicksand_600SemiBold" };
+
+function makeLabel(name) {
+  return ({ color }) => (
+    <Text style={[drawerLabelStyle, { color }]}>{name}</Text>
+  );
+}
+
 export default function App() {
-  let [fontsLoaded] = useFonts({
+  const [fontsLoaded] = useFonts({
     Quicksand_300Light,
     Quicksand_400Regular,
     Quicksand_500Medium,
@@ -195,244 +336,234 @@ export default function App() {
     Quicksand_700Bold,
     LoveYaLikeASister_400Regular,
   });
-  function ContentScreen({ route }) {
-    const { title, chapterNumber } = route.params;
-
-    const chapterComponents = {
-      Foreword: Foreword,
-      Introduction: Introduction,
-      "Getting the best from this book": GettingTheBestFromThisBook,
-      Worrying: Worrying,
-      "Looking on the bright side": LookingOnTheBrightSide,
-      "Body language": BodyLanguage,
-      Boundaries: Boundaries,
-      "Eye contact": EyeContact,
-      "Tone of voice": ToneOfVoice,
-      "Dress sense": DressSense,
-      "Distortions of the truth": DistortionsOfTheTruth,
-      "Misunderstandings other people might have about you":
-        MisunderstandingsOtherPeopleMightHaveAboutYou,
-      Conversation: Conversation,
-      "General knowledge": GeneralKnowledge,
-      Names: Names,
-      "Humour and conflict": HumourAndConflict,
-      Invitation: Invitation,
-      "Personal Security": PersonalSecurity,
-      "Finding the right friends": FindingTheRightFriends,
-      "Keeping a clean slate": KeepingACleanSlate,
-      "Coming Clean": ComingClean,
-      Education: Education,
-      "Living Away from Home": LivingAwayFromHome,
-      "Using the Phone": UsingThePhone,
-      Guests: Guests,
-      "Jobs and Interviews": JobsAndInterviews,
-      Driving: Driving,
-      "Travelling abroad": TravellingAbroad,
-      Bartering: Bartering,
-      Opportunities: Opportunities,
-      "A Personal in depth analysis of the problem":
-        APersonalInDepthAnalysisOfTheProblem,
-      "Further Reading": FurtherReading,
-    };
-
-    const ChapterComponent = chapterComponents[title] || null;
-
-    return (
-      <ScrollView style={{ padding: 20 }}>
-        <Text style={{ fontFamily: "Quicksand_400Regular", fontSize: 20 }}>
-          <Text style={{ fontFamily: "Quicksand_600SemiBold" }}>
-            Chapter {chapterNumber}:{" "}
-          </Text>
-          {title}
-        </Text>
-
-        {/* Dynamically render the component if it exists, otherwise default content */}
-        {ChapterComponent ? (
-          <ChapterComponent />
-        ) : (
-          <Text
-            style={{
-              fontFamily: "Quicksand_400Regular",
-              fontSize: 16,
-              marginTop: 20,
-            }}
-          >
-            This chapter is not available yet. Please check back later!
-          </Text>
-        )}
-      </ScrollView>
-    );
-  }
 
   if (!fontsLoaded) {
     return <AppLoading />;
-  } else {
-    return (
-      <NavigationContainer independent={true}>
-        <Drawer.Navigator initialRouteName="Home">
-          <Drawer.Screen
-            name="Home"
-            component={HomeScreen}
-            options={{
-              headerTitleStyle: {
-                fontFamily: "Quicksand_600SemiBold",
-              },
-              drawerLabel: ({ focused, color }) => (
-                <Text style={{ fontFamily: "Quicksand_600SemiBold", color }}>
-                  Home
-                </Text>
-              ),
-            }}
-          />
-          <Drawer.Screen
-            name="Sensory Relaxation"
-            component={EntryPoint}
-            options={{
-              headerTitleStyle: {
-                fontFamily: "Quicksand_600SemiBold",
-              },
-              drawerLabel: ({ focused, color }) => (
-                <Text style={{ fontFamily: "Quicksand_600SemiBold", color }}>
-                  Sensory Relaxation
-                </Text>
-              ),
-            }}
-          />
-          {/* Loop through the data array and render screens */}
-          {data.map((item, index) => (
-            <Drawer.Screen
-              key={index}
-              name={item}
-              component={ContentScreen}
-              initialParams={{ title: item, chapterNumber: index + 1 }}
-              options={{
-                headerTitleStyle: {
-                  fontFamily: "Quicksand_600SemiBold",
-                },
-                drawerLabel: ({ focused, color }) => (
-                  <Text style={{ fontFamily: "Quicksand_600SemiBold", color }}>
-                    {item}
-                  </Text>
-                ),
-              }}
-            />
-          ))}
-        </Drawer.Navigator>
-      </NavigationContainer>
-    );
   }
+
+  return (
+    <NavigationContainer independent={true}>
+      <Drawer.Navigator
+        initialRouteName="Home"
+        screenOptions={{ headerTitleStyle: { fontFamily: "Quicksand_600SemiBold" } }}
+      >
+        {/* ── Main screens ─────────────────────────────── */}
+        <Drawer.Screen
+          name="Home"
+          component={HomeScreen}
+          options={{ drawerLabel: makeLabel("Home") }}
+        />
+        <Drawer.Screen
+          name="Sensory Relaxation"
+          component={EntryPoint}
+          options={{ drawerLabel: makeLabel("Sensory Relaxation") }}
+        />
+
+        {/* ── New feature screens ───────────────────────── */}
+        <Drawer.Screen
+          name="AI Chat Assistant"
+          component={ChatbotScreen}
+          options={{ drawerLabel: makeLabel("AI Chat Assistant") }}
+        />
+        <Drawer.Screen
+          name="Mini-Games"
+          component={MiniGamesScreen}
+          options={{ drawerLabel: makeLabel("Mini-Games") }}
+        />
+        <Drawer.Screen
+          name="Quizzes"
+          component={QuizzesScreen}
+          options={{ drawerLabel: makeLabel("Quizzes") }}
+        />
+        <Drawer.Screen
+          name="Psychology & Therapy"
+          component={TherapyScreen}
+          options={{ drawerLabel: makeLabel("Psychology & Therapy") }}
+        />
+
+        {/* ── Chapter screens ───────────────────────────── */}
+        {chapterData.map((item, index) => (
+          <Drawer.Screen
+            key={index}
+            name={item}
+            component={ContentScreen}
+            initialParams={{ title: item, chapterNumber: index + 1 }}
+            options={{ drawerLabel: makeLabel(item) }}
+          />
+        ))}
+      </Drawer.Navigator>
+    </NavigationContainer>
+  );
 }
+
+// ─── Styles ───────────────────────────────────────────────────────────────────
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    padding: 20,
     backgroundColor: "#f5f5f5",
   },
-  nestedContainer: {
-    flex: 1, // Allows the container to expand
-    alignItems: "center", // Centers children horizontally
-    justifyContent: "center", // Centers children vertically
-  },
-  title: {
-    fontSize: 48,
-    textAlign: "center",
-    marginBottom: 20,
-    color: "#333",
-  },
-  header: {
-    fontSize: 22,
-    marginTop: 15,
-    marginBottom: 15,
-    color: "#555",
-  },
-  imageStyle: {
-    width: 150, // Adjust the width as required
-    height: 150, // Should be same as width to ensure a circle
-    resizeMode: "cover", // Adjusts the image to fit within the boundaries. Changed to 'cover' to fill the circular frame.
-    marginBottom: 20, // Space between image and the following text
-    alignSelf: "center",
-    borderRadius: 100, // Half of the width & height to make it circle
-    overflow: "hidden", // Hide the parts of the image that exceed the borderRadius
+  chapterContainer: {
+    flex: 1,
+    padding: 20,
+    backgroundColor: "#fff",
   },
 
+  // Hero
+  hero: {
+    alignItems: "center",
+    paddingHorizontal: 20,
+    paddingTop: 28,
+    paddingBottom: 24,
+    backgroundColor: "#fff",
+    marginBottom: 4,
+  },
+  title: {
+    fontSize: 46,
+    textAlign: "center",
+    marginBottom: 12,
+    color: "#1e1b4b",
+  },
+  heroSubtitle: {
+    fontFamily: "Quicksand_500Medium",
+    fontSize: 15,
+    color: "#666",
+    textAlign: "center",
+    lineHeight: 22,
+    paddingHorizontal: 8,
+  },
+
+  // Section headers
+  sectionHeader: {
+    fontSize: 20,
+    color: "#1e1b4b",
+    paddingHorizontal: 20,
+    marginTop: 24,
+    marginBottom: 12,
+  },
+
+  // Relaxation button
+  relaxButton: {
+    flexDirection: "row",
+    alignItems: "center",
+    backgroundColor: "#fff",
+    padding: 16,
+    marginHorizontal: 20,
+    borderRadius: 14,
+    marginBottom: 4,
+    shadowColor: "#000",
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.1,
+    shadowRadius: 6,
+    elevation: 3,
+  },
+  relaxImage: {
+    width: 56,
+    height: 56,
+    borderRadius: 28,
+    marginRight: 14,
+  },
+  relaxTextContainer: {
+    flex: 1,
+  },
+  relaxTitle: {
+    fontFamily: "Quicksand_700Bold",
+    fontSize: 17,
+    color: "#1e1b4b",
+    marginBottom: 3,
+  },
+  relaxSubtitle: {
+    fontFamily: "Quicksand_400Regular",
+    fontSize: 13,
+    color: "#666",
+    lineHeight: 18,
+    marginBottom: 8,
+  },
+  relaxBadge: {
+    backgroundColor: "#6366f1",
+    borderRadius: 10,
+    paddingHorizontal: 10,
+    paddingVertical: 4,
+    alignSelf: "flex-start",
+  },
+  relaxBadgeText: {
+    fontFamily: "Quicksand_700Bold",
+    fontSize: 12,
+    color: "#fff",
+  },
+
+  // Feature cards
+  featureCard: {
+    flexDirection: "row",
+    alignItems: "center",
+    borderRadius: 14,
+    padding: 16,
+    marginHorizontal: 20,
+    marginBottom: 12,
+    borderLeftWidth: 4,
+    shadowColor: "#000",
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.08,
+    shadowRadius: 6,
+    elevation: 2,
+  },
+  featureIcon: { fontSize: 34, marginRight: 14, flexShrink: 0 },
+  featureContent: { flex: 1 },
+  featureTitle: { fontSize: 16, color: "#1e1b4b", marginBottom: 1 },
+  featureSubtitle: { fontSize: 12, color: "#64748b", marginBottom: 4 },
+  featureDesc: { fontSize: 13, color: "#444", lineHeight: 18 },
+  featureChevron: { fontSize: 22, color: "#9ca3af", marginLeft: 8 },
+
+  // Articles
+  articlesSubtitle: {
+    fontSize: 13,
+    color: "#888",
+    paddingHorizontal: 20,
+    marginBottom: 12,
+    lineHeight: 19,
+  },
   gridContainer: {
     flexDirection: "row",
     flexWrap: "wrap",
-    justifyContent: "space-between",
+    paddingHorizontal: 15,
+    justifyContent: "flex-start",
   },
   gridItem: {
     backgroundColor: "#fff",
     padding: 10,
-    borderRadius: 5,
+    borderRadius: 8,
     margin: 5,
     shadowColor: "#000",
-    shadowOffset: {
-      width: 0,
-      height: 1,
-    },
-    shadowOpacity: 0.22,
-    shadowRadius: 2.22,
-    elevation: 3,
+    shadowOffset: { width: 0, height: 1 },
+    shadowOpacity: 0.1,
+    shadowRadius: 3,
+    elevation: 2,
   },
-  contents: {
-    fontFamily: "Quicksand_600SemiBold",
+  gridItemText: {
     color: "#444",
-    fontSize: 16,
+    fontSize: 14,
+  },
+
+  // Footer
+  footer: {
+    paddingHorizontal: 20,
+    paddingTop: 24,
+    paddingBottom: 8,
   },
   acknowledgment: {
-    fontFamily: "Quicksand_600SemiBold",
-    marginVertical: 20,
-    color: "#666",
-  },
-  subtitle: {
-    fontFamily: "Quicksand_600SemiBold",
-    marginBottom: 40,
-    color: "#666",
+    fontFamily: "Quicksand_500Medium",
+    fontSize: 13,
+    color: "#888",
+    lineHeight: 20,
+    marginBottom: 12,
   },
   development: {
-    fontFamily: "Quicksand_600SemiBold",
-    marginBottom: 30,
-    color: "#666",
+    fontFamily: "Quicksand_500Medium",
+    fontSize: 13,
+    color: "#888",
+    lineHeight: 20,
   },
   link: {
-    color: "#2196F3",
-  },
-  copilotButton: {
-    flexDirection: "row", // Image on left, text on right
-    alignItems: "center", // Vertically align items in the center
-    backgroundColor: "#f5f5f5",
-    padding: 15,
-    borderRadius: 10,
-    marginBottom: 20, // Adding some margin to separate from other elements
-    shadowColor: "#000",
-    shadowOffset: {
-      width: 0,
-      height: 1,
-    },
-    shadowOpacity: 0.22,
-    shadowRadius: 2.22,
-    elevation: 3,
-  },
-  copilotImage: {
-    width: 50,
-    height: 50,
-    borderRadius: 25, // Half of the width & height to make it circle
-    overflow: "hidden", // Hide the parts of the image that exceed the borderRadius
-    marginRight: 15, // Space between image and text
-  },
-  copilotTextContainer: {
-    flexDirection: "column", // Stack title above subtitle
-  },
-  copilotTitle: {
-    fontFamily: "Quicksand_600SemiBold",
-    fontSize: 18,
-    color: "#333",
-  },
-  copilotSubtitle: {
-    fontFamily: "Quicksand_600SemiBold",
-    fontSize: 14,
-    color: "#666",
-    marginTop: 5, // Small space between title and subtitle
+    color: "#6366f1",
   },
 });
