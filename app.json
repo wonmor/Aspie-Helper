@@ -19,7 +19,7 @@
       "jsEngine": "jsc",
       "supportsTablet": true,
       "bundleIdentifier": "com.johnseong.aspiehelper",
-      "buildNumber": "1",
+      "buildNumber": "2",
       "infoPlist": {
         "ITSAppUsesNonExemptEncryption": false
       }
@@ -30,7 +30,7 @@
         "backgroundColor": "#ffffff"
       },
       "package": "com.johnseong.aspiehelper",
-      "versionCode": 6
+      "versionCode": 7
     },
     "web": {
       "favicon": "./assets/favicon.png"
