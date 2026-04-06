@@ -37,4 +37,4 @@ yarn-error.*
 .DS_Store
 **/.DS_Store
 
-package-lock.json
+package-lock.jsongoogle-service-account.json
