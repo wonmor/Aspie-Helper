@@ -29,6 +29,7 @@ import {
 } from "react-native";
 import React from "react";
 import * as Haptics from "expo-haptics";
+import SearchScreen from "./pages/SearchScreen";
 import ChatbotScreen from "./pages/ChatbotScreen";
 import MiniGamesScreen from "./pages/MiniGamesScreen";
 import QuizzesScreen from "./pages/QuizzesScreen";
@@ -155,6 +156,20 @@ function HomeScreen({ navigation }) {
           A comprehensive resource for people on the Autism Spectrum (DSM-5) and with Asperger's Syndrome (DSM-4).
         </Text>
       </View>
+
+      {/* ── Search ─────────────────────────────────────────── */}
+      <TouchableOpacity
+        style={styles.searchButton}
+        onPress={() => {
+          Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
+          navigation.navigate("Search");
+        }}
+      >
+        <Text style={styles.searchButtonIcon}>🔍</Text>
+        <Text style={[styles.searchButtonText, { fontFamily: "Quicksand_500Medium" }]}>
+          Search articles, games, quizzes, therapy...
+        </Text>
+      </TouchableOpacity>
 
       {/* ── Sensory Relaxation ────────────────────────────── */}
       <Text style={[styles.sectionHeader, { fontFamily: "Quicksand_700Bold" }]}>
@@ -354,6 +369,11 @@ export default function App() {
           options={{ drawerLabel: makeLabel("Home") }}
         />
         <Drawer.Screen
+          name="Search"
+          component={SearchScreen}
+          options={{ drawerLabel: makeLabel("Search") }}
+        />
+        <Drawer.Screen
           name="Sensory Relaxation"
           component={EntryPoint}
           options={{ drawerLabel: makeLabel("Sensory Relaxation") }}
@@ -432,6 +452,26 @@ const styles = StyleSheet.create({
     lineHeight: 22,
     paddingHorizontal: 8,
   },
+
+  // Search button
+  searchButton: {
+    flexDirection: "row",
+    alignItems: "center",
+    backgroundColor: "#fff",
+    marginHorizontal: 20,
+    marginTop: 16,
+    borderRadius: 14,
+    padding: 14,
+    borderWidth: 1.5,
+    borderColor: "#e5e7eb",
+    shadowColor: "#000",
+    shadowOffset: { width: 0, height: 1 },
+    shadowOpacity: 0.06,
+    shadowRadius: 4,
+    elevation: 2,
+  },
+  searchButtonIcon: { fontSize: 18, marginRight: 10 },
+  searchButtonText: { fontSize: 15, color: "#9ca3af" },
 
   // Section headers
   sectionHeader: {
