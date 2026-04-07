@@ -5,7 +5,7 @@
   }
 */
 
-import AppLoading from "expo-app-loading";
+import * as SplashScreen from "expo-splash-screen";
 import {
   useFonts,
   Quicksand_300Light,
@@ -353,8 +353,10 @@ export default function App() {
   });
 
   if (!fontsLoaded) {
-    return <AppLoading />;
+    return null;
   }
+
+  SplashScreen.hideAsync();
 
   return (
     <NavigationContainer independent={true}>
