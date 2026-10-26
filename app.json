@@ -1,9 +1,8 @@
 {
   "expo": {
     "name": "Aspie Guide",
-    
     "slug": "aspie-helper",
-    "version": "2.1.0",
+    "version": "2.2.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
@@ -18,7 +17,7 @@
     "ios": {
       "supportsTablet": true,
       "bundleIdentifier": "com.johnseong.aspiehelper",
-      "buildNumber": "2",
+      "buildNumber": "3",
       "infoPlist": {
         "ITSAppUsesNonExemptEncryption": false
       }
@@ -29,7 +28,10 @@
         "backgroundColor": "#ffffff"
       },
       "package": "com.johnseong.aspiehelper",
-      "versionCode": 8
+      "versionCode": 9,
+      "permissions": [
+        "com.android.vending.BILLING"
+      ]
     },
     "web": {
       "favicon": "./assets/favicon.png"
@@ -51,9 +53,12 @@
         {
           "android": {
             "enableProguardInReleaseBuilds": true,
-            "compileSdkVersion": 35,
-            "targetSdkVersion": 35,
+            "compileSdkVersion": 36,
+            "targetSdkVersion": 36,
             "android16KBPageSize": true
+          },
+          "ios": {
+            "deploymentTarget": "15.1"
           }
         }
       ],
@@ -65,7 +70,9 @@
           "behavior": "overlay-swipe",
           "backgroundColor": "#00000080"
         }
-      ]
+      ],
+      "expo-iap",
+      "./plugins/withPodDeploymentTarget"
     ]
   }
 }

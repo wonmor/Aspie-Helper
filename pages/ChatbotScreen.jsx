@@ -5,7 +5,9 @@ import {
   Linking, ActivityIndicator, SafeAreaView,
 } from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import { Ionicons } from '@expo/vector-icons';
 import * as Haptics from 'expo-haptics';
+import { onDeviceAvailability, chatOnDevice, errorText, looksLikeCrisis } from '../lib/coach';
 
 const SYSTEM_PROMPT = `You are a compassionate, knowledgeable AI assistant specialised in supporting individuals with Asperger's Syndrome and Autism Spectrum Disorder (ASD).
 
@@ -38,8 +40,10 @@ const QUICK_PROMPTS = [
   "How do I politely end a conversation?",
 ];
 
-export default function ChatbotScreen() {
+export default function ChatbotScreen({ navigation }) {
   const [savedApiKey, setSavedApiKey] = useState('');
+  const [onDevice] = useState(() => onDeviceAvailability() === 'available');
+  const [crisis, setCrisis] = useState(false);
   const [apiKeyInput, setApiKeyInput] = useState('');
   const [messages, setMessages] = useState([
     {
@@ -108,10 +112,11 @@ export default function ChatbotScreen() {
   const sendMessage = async (overrideText) => {
     const content = (overrideText ?? inputText).trim();
     if (!content) return;
-    if (!savedApiKey) {
+    if (!savedApiKey && !onDevice) {
       setScreen('setup');
       return;
     }
+    if (looksLikeCrisis(content)) setCrisis(true);
 
     const newMessages = [...messages, { role: 'user', content }];
     setMessages(newMessages);
@@ -120,6 +125,16 @@ export default function ChatbotScreen() {
     Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
 
     setTimeout(() => scrollRef.current?.scrollToEnd({ animated: true }), 100);
+
+    // No OpenAI key, but Apple Intelligence is available: answer on device.
+    if (!savedApiKey && onDevice) {
+      const r = await chatOnDevice(SYSTEM_PROMPT, newMessages.slice(-12));
+      setMessages((prev) => [...prev, { role: 'assistant', content: r.text || errorText(r.error) }]);
+      if (r.text) Haptics.notificationAsync(Haptics.NotificationFeedbackType.Success);
+      setIsLoading(false);
+      setTimeout(() => scrollRef.current?.scrollToEnd({ animated: true }), 200);
+      return;
+    }
 
     try {
       const response = await fetch('https://api.openai.com/v1/chat/completions', {
@@ -328,7 +343,11 @@ export default function ChatbotScreen() {
           <View>
             <Text style={styles.chatHeaderTitle}>Aspie AI Assistant</Text>
             <Text style={styles.chatHeaderSub}>
-              {savedApiKey ? 'Connected' : 'No API key — tap to set up'}
+              {savedApiKey
+                ? 'Connected to OpenAI'
+                : onDevice
+                ? 'Private on-device AI (Apple Intelligence)'
+                : 'No API key: tap the gear to set up'}
             </Text>
           </View>
           <View style={styles.chatHeaderActions}>
@@ -336,13 +355,21 @@ export default function ChatbotScreen() {
               style={styles.headerBtn}
               onPress={() => setScreen('setup')}
             >
-              <Text style={styles.headerBtnText}>⚙️</Text>
+              <Ionicons name="settings-outline" size={20} color="#6366f1" />
             </TouchableOpacity>
             <TouchableOpacity style={styles.headerBtn} onPress={clearConversation}>
-              <Text style={styles.headerBtnText}>🗑</Text>
+              <Ionicons name="trash-outline" size={20} color="#6366f1" />
             </TouchableOpacity>
           </View>
         </View>
+
+        {crisis && (
+          <TouchableOpacity style={styles.crisisBanner} onPress={() => navigation?.navigate('Get Help Now')}>
+            <Text style={styles.crisisText}>
+              If you are not safe right now, tap here for Get Help Now: crisis lines and help cards, always free.
+            </Text>
+          </TouchableOpacity>
+        )}
 
         {/* Messages */}
         <ScrollView
@@ -410,11 +437,11 @@ export default function ChatbotScreen() {
             style={styles.chatInput}
             value={inputText}
             onChangeText={setInputText}
-            placeholder={savedApiKey ? 'Type a message...' : 'Set up API key to chat...'}
+            placeholder={savedApiKey || onDevice ? 'Type a message...' : 'Set up API key to chat...'}
             placeholderTextColor="#aaa"
             multiline
             maxLength={1000}
-            editable={!!savedApiKey}
+            editable={!!savedApiKey || onDevice}
           />
           <TouchableOpacity
             style={[styles.sendButton, (!inputText.trim() || isLoading) && styles.sendButtonDisabled]}
@@ -425,7 +452,7 @@ export default function ChatbotScreen() {
           </TouchableOpacity>
         </View>
 
-        {!savedApiKey && (
+        {!savedApiKey && !onDevice && (
           <TouchableOpacity style={styles.setupBanner} onPress={() => setScreen('setup')}>
             <Text style={styles.setupBannerText}>
               Tap here to set up your OpenAI API key and enable the AI assistant
@@ -610,6 +637,8 @@ const styles = StyleSheet.create({
   },
   sendButtonDisabled: { backgroundColor: '#c4b5fd' },
   sendButtonText: { color: '#fff', fontSize: 20, fontWeight: 'bold', lineHeight: 24 },
+  crisisBanner: { backgroundColor: '#fef2f2', padding: 12 },
+  crisisText: { fontFamily: 'Quicksand_600SemiBold', fontSize: 13, color: '#b91c1c', textAlign: 'center' },
   setupBanner: {
     backgroundColor: PURPLE_LIGHT,
     padding: 12,

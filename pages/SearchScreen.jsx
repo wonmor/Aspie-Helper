@@ -4,11 +4,16 @@ import {
   StyleSheet, SafeAreaView, Keyboard,
 } from 'react-native';
 import * as Haptics from 'expo-haptics';
+import { SCENARIOS } from '../data/scenarios';
 
 // ─── Searchable content index ─────────────────────────────────────────────────
 
 const SEARCH_ITEMS = [
   // Features
+  { title: 'Get Help Now', subtitle: 'Crisis lines, help cards, meltdown plan', screen: 'Get Help Now', category: 'Feature', icon: '🆘', keywords: 'help crisis emergency suicide 988 911 999 112 samaritans lifeline meltdown shutdown card safe danger' },
+  { title: 'Situation Scripts', subtitle: 'What to say and do', screen: 'Situation Scripts', category: 'Feature', icon: '💬', keywords: 'script what to say situation scenario work phone call shop police doctor interview date friend family' },
+  { title: 'Practice & Coach', subtitle: 'Rehearse with feedback or AI', screen: 'Practice & Coach', category: 'Feature', icon: '🎭', keywords: 'practice role play rehearse coach ai message check tone apple intelligence' },
+  { title: 'My Scripts', subtitle: 'Your saved lines', screen: 'My Scripts', category: 'Feature', icon: '🔖', keywords: 'saved scripts bookmark my lines phrases' },
   { title: 'Sensory Relaxation', subtitle: 'Guided breathing exercises', screen: 'Sensory Relaxation', category: 'Feature', icon: '🫁', keywords: 'breathing calm relax meditation inhale exhale hold pattern audio haptic' },
   { title: 'AI Chat Assistant', subtitle: 'Ask anything about ASD', screen: 'AI Chat Assistant', category: 'Feature', icon: '🤖', keywords: 'chatbot openai gpt conversation help question answer advice support' },
   { title: 'Mini-Games', subtitle: 'Build social skills playfully', screen: 'Mini-Games', category: 'Feature', icon: '🎮', keywords: 'game play emotion social scenario conversation literal figurative practice interactive' },
@@ -71,6 +76,20 @@ const SEARCH_ITEMS = [
   { title: 'Further Reading', subtitle: 'Chapter 32', screen: 'Further Reading', category: 'Article', icon: '📄', keywords: 'further reading books resources references' },
 ];
 
+// Every situation script is searchable (locked ones open a Pro preview).
+SEARCH_ITEMS.push(
+  ...SCENARIOS.map((x) => ({
+    title: x.title,
+    subtitle: x.free ? 'Situation script' : 'Situation script (Pro)',
+    screen: 'Situation Scripts',
+    params: { scenarioId: x.id },
+    category: 'Script',
+    icon: '💬',
+    keywords: `${x.situation} ${x.say.join(' ')}`.toLowerCase(),
+  }))
+);
+
+
 // ─── Category colours ─────────────────────────────────────────────────────────
 
 const CATEGORY_STYLES = {
@@ -79,6 +98,7 @@ const CATEGORY_STYLES = {
   Quiz: { bg: '#dcfce7', text: '#16a34a' },
   Therapy: { bg: '#e0f2fe', text: '#0284c7' },
   Article: { bg: '#f1f5f9', text: '#64748b' },
+  Script: { bg: '#e0e7ff', text: '#4338ca' },
 };
 
 // ─── Search Screen ────────────────────────────────────────────────────────────
@@ -111,7 +131,7 @@ export default function SearchScreen({ navigation }) {
     grouped[item.category].push(item);
   });
 
-  const categoryOrder = ['Feature', 'Game', 'Quiz', 'Therapy', 'Article'];
+  const categoryOrder = ['Feature', 'Script', 'Game', 'Quiz', 'Therapy', 'Article'];
   const sortedCategories = categoryOrder.filter((c) => grouped[c]);
 
   return (
@@ -202,7 +222,7 @@ export default function SearchScreen({ navigation }) {
                 onPress={() => {
                   Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
                   Keyboard.dismiss();
-                  navigation.navigate(item.screen);
+                  navigation.navigate(item.screen, item.params);
                 }}
               >
                 <Text style={styles.resultIcon}>{item.icon}</Text>

@@ -27,8 +27,17 @@ import {
   Linking,
   TouchableOpacity,
 } from "react-native";
-import React from "react";
+import React, { useEffect } from "react";
 import * as Haptics from "expo-haptics";
+import { Ionicons } from "@expo/vector-icons";
+import ScriptsScreen from "./pages/ScriptsScreen";
+import CoachScreen from "./pages/CoachScreen";
+import MyScriptsScreen from "./pages/MyScriptsScreen";
+import HelpNowScreen from "./pages/HelpNowScreen";
+import ProScreen from "./pages/ProScreen";
+import PaywallModal from "./components/Paywall";
+import { usePro } from "./lib/pro";
+import { SCENARIOS } from "./data/scenarios";
 import SearchScreen from "./pages/SearchScreen";
 import ChatbotScreen from "./pages/ChatbotScreen";
 import MiniGamesScreen from "./pages/MiniGamesScreen";
@@ -107,19 +116,46 @@ const chapterData = [
 // ─── Feature cards shown on the home screen ───────────────────────────────────
 const features = [
   {
+    id: "Situation Scripts",
+    title: "Situation Scripts",
+    subtitle: "What to say and do",
+    icon: "library-outline",
+    color: "#e0e7ff",
+    border: "#6366f1",
+    desc: `${SCENARIOS.length} everyday situations: work, phone calls, shops, friends, dating, safety and health.`,
+  },
+  {
+    id: "Practice & Coach",
+    title: "Practice & Coach",
+    subtitle: "Rehearse before the real thing",
+    icon: "chatbubbles-outline",
+    color: "#fae8ff",
+    border: "#c026d3",
+    desc: "Practice rounds with feedback, a private AI role-play partner, and Message Check.",
+  },
+  {
+    id: "My Scripts",
+    title: "My Scripts",
+    subtitle: "Your saved lines",
+    icon: "bookmark-outline",
+    color: "#f1f5f9",
+    border: "#64748b",
+    desc: "Keep the lines that work for you and show them full screen when you need them.",
+  },
+  {
     id: "AI Chat Assistant",
     title: "AI Chat Assistant",
     subtitle: "Ask anything about ASD",
-    icon: "🤖",
+    icon: "chatbubble-ellipses-outline",
     color: "#ede9fe",
     border: "#8b5cf6",
-    desc: "Powered by ChatGPT. Get direct, clear answers to social, emotional, and ASD-related questions.",
+    desc: "Direct, clear answers to social, emotional and ASD-related questions. Private on-device AI on iPhones with Apple Intelligence, or your own OpenAI key.",
   },
   {
     id: "Mini-Games",
     title: "Mini-Games",
     subtitle: "Build social skills playfully",
-    icon: "🎮",
+    icon: "game-controller-outline",
     color: "#fef3c7",
     border: "#f59e0b",
     desc: "4 interactive games: Emotion Decoder, Social Scenarios, Conversation Flow, and Literal vs. Figurative.",
@@ -128,7 +164,7 @@ const features = [
     id: "Quizzes",
     title: "Quizzes",
     subtitle: "Test and expand your knowledge",
-    icon: "📝",
+    icon: "clipboard-outline",
     color: "#dcfce7",
     border: "#22c55e",
     desc: "ASD Knowledge, Sensory Profile Self-Assessment, and Social Situations quizzes.",
@@ -137,7 +173,7 @@ const features = [
     id: "Psychology & Therapy",
     title: "Psychology & Therapy",
     subtitle: "Evidence-based techniques",
-    icon: "🧠",
+    icon: "bulb-outline",
     color: "#e0f2fe",
     border: "#0ea5e9",
     desc: "CBT, DBT, Social Stories, Mindfulness, Sensory Integration, Emotion Regulation, and more.",
@@ -145,6 +181,7 @@ const features = [
 ];
 
 function HomeScreen({ navigation }) {
+  const isPro = usePro((x) => x.isPro);
   return (
     <ScrollView style={styles.container} showsVerticalScrollIndicator={false}>
       {/* ── Hero ──────────────────────────────────────────── */}
@@ -165,10 +202,29 @@ function HomeScreen({ navigation }) {
           navigation.navigate("Search");
         }}
       >
-        <Text style={styles.searchButtonIcon}>🔍</Text>
+        <Ionicons name="search-outline" size={18} color="#9ca3af" style={{ marginRight: 10 }} />
         <Text style={[styles.searchButtonText, { fontFamily: "Quicksand_500Medium" }]}>
           Search articles, games, quizzes, therapy...
         </Text>
+      </TouchableOpacity>
+
+      {/* ── Get Help Now (always free) ─────────────────────── */}
+      <TouchableOpacity
+        style={styles.helpCard}
+        onPress={() => {
+          Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Medium);
+          navigation.navigate("Get Help Now");
+        }}
+        accessibilityRole="button"
+      >
+        <Ionicons name="hand-left-outline" size={26} color="#b91c1c" style={{ marginRight: 12 }} />
+        <View style={{ flex: 1 }}>
+          <Text style={[styles.helpTitle, { fontFamily: "Quicksand_700Bold" }]}>Get Help Now</Text>
+          <Text style={[styles.helpSub, { fontFamily: "Quicksand_500Medium" }]}>
+            Crisis lines, help cards and a meltdown plan. Always free.
+          </Text>
+        </View>
+        <Ionicons name="chevron-forward-outline" size={20} color="#b91c1c" />
       </TouchableOpacity>
 
       {/* ── Sensory Relaxation ────────────────────────────── */}
@@ -211,15 +267,33 @@ function HomeScreen({ navigation }) {
             navigation.navigate(f.id);
           }}
         >
-          <Text style={styles.featureIcon}>{f.icon}</Text>
+          <Ionicons name={f.icon} size={30} color={f.border} style={styles.featureIcon} />
           <View style={styles.featureContent}>
             <Text style={[styles.featureTitle, { fontFamily: "Quicksand_700Bold" }]}>{f.title}</Text>
             <Text style={[styles.featureSubtitle, { fontFamily: "Quicksand_600SemiBold" }]}>{f.subtitle}</Text>
             <Text style={[styles.featureDesc, { fontFamily: "Quicksand_400Regular" }]}>{f.desc}</Text>
           </View>
-          <Text style={styles.featureChevron}>›</Text>
+          <Ionicons name="chevron-forward-outline" size={20} color="#9ca3af" style={{ marginLeft: 8 }} />
         </TouchableOpacity>
       ))}
+
+      <TouchableOpacity
+        style={styles.proCard}
+        onPress={() => navigation.navigate("Aspie Guide Pro")}
+        accessibilityRole="button"
+      >
+        <Ionicons name={isPro ? "checkmark-done-outline" : "sparkles-outline"} size={24} color="#fff" style={{ marginRight: 12 }} />
+        <View style={{ flex: 1 }}>
+          <Text style={[styles.proTitle, { fontFamily: "Quicksand_700Bold" }]}>
+            {isPro ? "Aspie Guide Pro is active" : "Aspie Guide Pro"}
+          </Text>
+          <Text style={[styles.proSub, { fontFamily: "Quicksand_500Medium" }]}>
+            {isPro
+              ? "Thank you for supporting the app."
+              : "All situations, practice, a private AI coach and unlimited saved scripts."}
+          </Text>
+        </View>
+      </TouchableOpacity>
 
       {/* ── Articles ──────────────────────────────────────── */}
       <Text style={[styles.sectionHeader, { fontFamily: "Quicksand_700Bold" }]}>
@@ -261,8 +335,8 @@ function HomeScreen({ navigation }) {
             onPress={() => Linking.openURL("mailto:john@orchestrsim.com")}
           >
             john@orchestrsim.com
-          </Text>{" "}
-          · Orchestr, Inc.
+          </Text>
+          {" | Orchestr, Inc."}
         </Text>
       </View>
 
@@ -352,6 +426,10 @@ export default function App() {
     LoveYaLikeASister_400Regular,
   });
 
+  useEffect(() => {
+    usePro.getState().init();
+  }, []);
+
   if (!fontsLoaded) {
     return null;
   }
@@ -371,6 +449,11 @@ export default function App() {
           options={{ drawerLabel: makeLabel("Home") }}
         />
         <Drawer.Screen
+          name="Get Help Now"
+          component={HelpNowScreen}
+          options={{ drawerLabel: makeLabel("Get Help Now") }}
+        />
+        <Drawer.Screen
           name="Search"
           component={SearchScreen}
           options={{ drawerLabel: makeLabel("Search") }}
@@ -382,6 +465,21 @@ export default function App() {
         />
 
         {/* ── New feature screens ───────────────────────── */}
+        <Drawer.Screen
+          name="Situation Scripts"
+          component={ScriptsScreen}
+          options={{ drawerLabel: makeLabel("Situation Scripts") }}
+        />
+        <Drawer.Screen
+          name="Practice & Coach"
+          component={CoachScreen}
+          options={{ drawerLabel: makeLabel("Practice & Coach") }}
+        />
+        <Drawer.Screen
+          name="My Scripts"
+          component={MyScriptsScreen}
+          options={{ drawerLabel: makeLabel("My Scripts") }}
+        />
         <Drawer.Screen
           name="AI Chat Assistant"
           component={ChatbotScreen}
@@ -403,6 +501,12 @@ export default function App() {
           options={{ drawerLabel: makeLabel("Psychology & Therapy") }}
         />
 
+        <Drawer.Screen
+          name="Aspie Guide Pro"
+          component={ProScreen}
+          options={{ drawerLabel: makeLabel("Aspie Guide Pro") }}
+        />
+
         {/* ── Chapter screens ───────────────────────────── */}
         {chapterData.map((item, index) => (
           <Drawer.Screen
@@ -414,6 +518,7 @@ export default function App() {
           />
         ))}
       </Drawer.Navigator>
+      <PaywallModal />
     </NavigationContainer>
   );
 }
@@ -484,6 +589,35 @@ const styles = StyleSheet.create({
     marginBottom: 12,
   },
 
+  // Get Help Now
+  helpCard: {
+    flexDirection: "row",
+    alignItems: "center",
+    backgroundColor: "#fef2f2",
+    borderWidth: 1.5,
+    borderColor: "#fecaca",
+    marginHorizontal: 20,
+    marginTop: 12,
+    borderRadius: 14,
+    padding: 14,
+  },
+  helpTitle: { fontSize: 17, color: "#b91c1c" },
+  helpSub: { fontSize: 13, color: "#7f1d1d", marginTop: 2, lineHeight: 18 },
+
+  // Pro
+  proCard: {
+    flexDirection: "row",
+    alignItems: "center",
+    backgroundColor: "#6366f1",
+    marginHorizontal: 20,
+    marginTop: 4,
+    marginBottom: 4,
+    borderRadius: 14,
+    padding: 16,
+  },
+  proTitle: { fontSize: 16, color: "#fff" },
+  proSub: { fontSize: 13, color: "#e0e7ff", marginTop: 2, lineHeight: 18 },
+
   // Relaxation button
   relaxButton: {
     flexDirection: "row",
@@ -549,7 +683,7 @@ const styles = StyleSheet.create({
     shadowRadius: 6,
     elevation: 2,
   },
-  featureIcon: { fontSize: 34, marginRight: 14, flexShrink: 0 },
+  featureIcon: { marginRight: 14, flexShrink: 0 },
   featureContent: { flex: 1 },
   featureTitle: { fontSize: 16, color: "#1e1b4b", marginBottom: 1 },
   featureSubtitle: { fontSize: 12, color: "#64748b", marginBottom: 4 },

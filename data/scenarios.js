@@ -1,0 +1,930 @@
+// Situation Scripts: what to say and do in everyday situations.
+//
+// `free: true` scenarios are open to everyone. Every Safety and Health
+// scenario is free: help that keeps people safe is never behind Pro.
+
+export const CATEGORIES = [
+  { id: 'safety', title: 'Safety', icon: 'shield-checkmark-outline' },
+  { id: 'health', title: 'Health', icon: 'medkit-outline' },
+  { id: 'work', title: 'Work', icon: 'briefcase-outline' },
+  { id: 'school', title: 'School & Study', icon: 'school-outline' },
+  { id: 'social', title: 'Friends & Social', icon: 'people-outline' },
+  { id: 'phone', title: 'Phone & Messages', icon: 'call-outline' },
+  { id: 'services', title: 'Shops & Services', icon: 'bag-handle-outline' },
+  { id: 'dating', title: 'Dating & Relationships', icon: 'heart-outline' },
+  { id: 'home', title: 'Family & Home', icon: 'home-outline' },
+];
+
+export const SCENARIOS = [
+  // ── Safety (all free) ────────────────────────────────────────────────────
+  {
+    id: 'police-stop',
+    cat: 'safety',
+    free: true,
+    title: 'A police officer stops or questions you',
+    otherRole: 'a police officer',
+    situation: 'A police officer stops you in the street or in your car and starts asking questions.',
+    say: [
+      '"I am autistic. I want to cooperate. I may need a little more time to answer."',
+      '"I don\'t understand the question. Can you ask it in a different way?"',
+      '"Am I free to go?"',
+      '"I would like to speak to a lawyer before I answer more questions."',
+    ],
+    do: [
+      'Keep your hands visible and still. Tell the officer before you reach for anything (for example, "My ID is in my right pocket. Can I get it?").',
+      'Follow simple instructions such as "stand there" or "sit down".',
+      'If you carry an autism card or help card, say that you have it and where it is before taking it out.',
+      'If you start to feel overwhelmed, say so in words: "I am getting overwhelmed. I am not trying to be difficult."',
+    ],
+    avoid: [
+      'Running away, even if you feel panicked.',
+      'Sudden movements or reaching into pockets without saying so first.',
+      'Touching the officer.',
+      'Guessing or agreeing to things you do not understand.',
+    ],
+    why: 'Officers are trained to watch for signs of danger. Some autistic behaviour (avoiding eye contact, flat voice, stimming, slow answers) can be misread as being suspicious or uncooperative. Saying that you are autistic, early and calmly, gives them the correct explanation.',
+    practice: {
+      line: '"Can I see some ID, please? What are you doing here?"',
+      choices: [
+        { text: 'Say nothing and walk away quickly.', best: false, note: 'Walking away can look like running. Stay where you are unless you are told you are free to go.' },
+        { text: '"I am autistic, so I may answer slowly. My ID is in my back pocket. Can I take it out?"', best: true, note: 'Clear and calm. You explained yourself and asked before reaching.' },
+        { text: 'Reach into your pocket straight away to find your ID.', best: false, note: 'Sudden reaching can alarm an officer. Say where it is first and ask.' },
+      ],
+    },
+  },
+  {
+    id: 'lost',
+    cat: 'safety',
+    free: true,
+    title: 'You are lost and need directions',
+    otherRole: 'a staff member at a train station',
+    situation: 'You are in an unfamiliar place, you do not know where you are, and you are starting to feel anxious.',
+    say: [
+      '"Excuse me, I\'m lost. Can you help me get to [place]?"',
+      '"Could you show me on my phone map?"',
+      '"Can you write that down for me? I remember things better when they are written."',
+    ],
+    do: [
+      'Stop walking and find a safe spot to stand (out of traffic and crowds).',
+      'Ask someone in uniform first: station staff, shop workers, security or police.',
+      'Use your phone map and share your location with someone you trust.',
+      'If the anxiety is strong, do one round of slow breathing before you ask.',
+    ],
+    avoid: [
+      'Getting into a stranger\'s car or going somewhere private with them.',
+      'Following a stranger who offers to "show you a shortcut".',
+    ],
+    why: 'Most people are happy to give directions. Staff in uniform are the safest people to ask, because helping is part of their job.',
+    practice: {
+      line: '"Hi there. Can I help you with something?"',
+      choices: [
+        { text: '"I\'m lost. I need to get to Platform 4. Can you show me the way?"', best: true, note: 'Direct and specific. They know exactly how to help.' },
+        { text: '"No, I\'m fine." (even though you are lost)', best: false, note: 'It is okay to accept help. Saying what you need gets you there faster.' },
+        { text: 'Explain the whole journey from the start of the day.', best: false, note: 'Too much detail can make it harder to help. Start with where you need to go.' },
+      ],
+    },
+  },
+  {
+    id: 'pressure',
+    cat: 'safety',
+    free: true,
+    title: 'Someone pressures you to do something you don\'t want to do',
+    otherRole: 'an acquaintance who is pushing you',
+    situation: 'Someone is pushing you to lend money, give personal details, go somewhere, drink, or do something physical that you do not want to do.',
+    say: [
+      '"No." (A full sentence. You do not owe a reason.)',
+      '"No, I don\'t want to. Please stop asking."',
+      '"I need to think about it. I\'ll answer tomorrow."',
+      '"I\'m leaving now."',
+    ],
+    do: [
+      'Say no once, clearly. If they ask again, repeat the same words (the "broken record" method).',
+      'Move towards other people or a public place.',
+      'Tell someone you trust what happened.',
+      'If you feel unsafe, call your local emergency number.',
+    ],
+    avoid: [
+      'Giving in just to make the conversation end.',
+      'Sharing passwords, bank details or your home address.',
+      'Believing "everyone does this" or "you owe me" as reasons.',
+    ],
+    why: 'People who pressure others often rely on the other person wanting to be polite. Being clear and repeating "no" is not rude. A good friend accepts "no" the first time.',
+    practice: {
+      line: '"Come on, just lend me £50. You\'re my friend, aren\'t you?"',
+      choices: [
+        { text: '"No, I\'m not going to lend money."', best: true, note: 'Clear and calm. You do not need to give a reason.' },
+        { text: '"Okay... I guess." (even though you do not want to)', best: false, note: 'You are allowed to say no. Friends accept it.' },
+        { text: 'Explain all your money problems in detail.', best: false, note: 'A long explanation invites arguing. A short "no" is enough.' },
+      ],
+    },
+  },
+  {
+    id: 'overload-public',
+    cat: 'safety',
+    free: true,
+    title: 'Sensory overload in a public place',
+    otherRole: 'a shop assistant',
+    situation: 'You are in a loud, bright or crowded place and you feel a meltdown or shutdown coming.',
+    say: [
+      '"I\'m autistic and I\'m overwhelmed. I need somewhere quiet for a few minutes."',
+      '"I\'m okay. I just need space. Please don\'t touch me."',
+      'If speaking is hard: show a help card from Get Help Now.',
+    ],
+    do: [
+      'Leave the area or move to the quietest corner you can find (toilets, fitting rooms, outside).',
+      'Use what helps you: headphones, sunglasses, a hood, a stim toy.',
+      'Breathe out slowly, longer than you breathe in.',
+      'When you feel safe, text someone you trust.',
+    ],
+    avoid: [
+      'Forcing yourself to finish the task. You can come back another time.',
+      'Driving while you are overwhelmed.',
+    ],
+    why: 'Overload is a nervous system response, not bad behaviour. Lowering the input (sound, light, people) is the fastest way to recover.',
+    practice: {
+      line: '"Are you alright? You look a bit pale."',
+      choices: [
+        { text: '"I\'m autistic and overwhelmed. Is there a quiet place I can sit for a few minutes?"', best: true, note: 'You named what is happening and asked for exactly what you need.' },
+        { text: '"I\'m fine!" and stay in the noise.', best: false, note: 'It is okay to ask for help. Staying in the noise usually makes it worse.' },
+        { text: 'Walk away without saying anything.', best: false, note: 'Leaving is fine if you need to. If you can, a few words helps people understand.' },
+      ],
+    },
+  },
+  {
+    id: 'scam',
+    cat: 'safety',
+    free: true,
+    title: 'A call or message asks for money or passwords',
+    otherRole: 'a caller saying they are from your bank',
+    situation: 'Someone calls or messages saying they are from your bank, the tax office, a delivery company or the police, and asks for a code, password, payment or gift cards.',
+    say: [
+      '"I don\'t give details on calls I didn\'t make. I will call the official number myself."',
+      'Then hang up. You do not need to say anything else.',
+    ],
+    do: [
+      'Hang up and call the number printed on your bank card or the official website.',
+      'Never share one-time codes. Real banks never ask for them.',
+      'Tell someone you trust, and report it to your bank.',
+    ],
+    avoid: [
+      'Acting fast because they say it is urgent. Urgency is a trick.',
+      'Paying with gift cards, crypto or wire transfers.',
+      'Clicking links in unexpected texts.',
+    ],
+    why: 'Scammers copy real organisations and create panic so that you do not stop to check. Hanging up and calling back on an official number is always allowed and always safe.',
+    practice: {
+      line: '"This is your bank\'s fraud team. To protect your account, read me the code we just texted you."',
+      choices: [
+        { text: 'Read them the code.', best: false, note: 'Banks never ask for codes. This is a scam.' },
+        { text: '"I will call my bank on the number on my card." Then hang up.', best: true, note: 'Exactly right. Calling back on the official number is always safe.' },
+        { text: 'Argue with them to prove they are lying.', best: false, note: 'You do not need to win the argument. Just hang up.' },
+      ],
+    },
+  },
+
+  // ── Health (all free) ────────────────────────────────────────────────────
+  {
+    id: 'doctor',
+    cat: 'health',
+    free: true,
+    title: 'Explaining a health problem to a doctor',
+    otherRole: 'a GP / family doctor',
+    situation: 'You have an appointment and only a few minutes to explain what is wrong.',
+    say: [
+      '"I\'m autistic. I might describe pain differently, and I may need you to ask specific questions."',
+      '"The main problem is [symptom]. It started [when]. It is [getting better / worse / the same]."',
+      '"I wrote a list. Can I read it to you?"',
+      '"Can you write down what I need to do next?"',
+    ],
+    do: [
+      'Write a short list before you go: main symptom, when it started, what makes it better or worse, medicines you take.',
+      'Rate pain with numbers (0 to 10) or compare it ("worse than a headache, less than a broken bone").',
+      'Ask for a longer appointment or a quiet waiting area if you need it.',
+      'Bring someone you trust if that helps.',
+    ],
+    avoid: [
+      'Saying "I\'m fine" out of habit when the doctor greets you. They may take it literally.',
+      'Leaving without understanding the plan. It is okay to ask again.',
+    ],
+    why: 'Doctors make decisions quickly from what you tell them. A short, ordered list makes sure the most important information is heard.',
+    practice: {
+      line: '"So, what brings you in today?"',
+      choices: [
+        { text: '"I\'ve had stomach pain for five days. It\'s about a 6 out of 10 and worse after eating. I wrote a list."', best: true, note: 'Clear, specific and measurable. Great.' },
+        { text: '"Oh, I\'m fine, thanks."', best: false, note: 'This is a polite habit, but here the doctor needs the real answer.' },
+        { text: '"Just a few things, nothing serious."', best: false, note: 'Do not downplay it. Say exactly what is going on.' },
+      ],
+    },
+  },
+  {
+    id: 'urgent-care',
+    cat: 'health',
+    free: true,
+    title: 'At urgent care or the emergency department',
+    otherRole: 'a triage nurse',
+    situation: 'You or someone with you is hurt or very unwell and you are at an emergency department or urgent care clinic.',
+    say: [
+      '"I am autistic. Bright lights and noise are very hard for me. Is there a quieter place to wait?"',
+      '"The problem is [what happened]. It happened [when]."',
+      '"My pain is [number] out of 10. I may not look like I\'m in pain, but I am."',
+    ],
+    do: [
+      'Bring your medicine list, allergies and any health passport or hospital passport.',
+      'Tell staff if your face or voice does not show pain the way other people\'s do.',
+      'Use headphones or sunglasses while you wait.',
+    ],
+    avoid: [
+      'Leaving because the wait is long, if the problem is serious. Tell staff if things get worse.',
+    ],
+    why: 'Staff judge urgency partly by how people look. If your expressions do not match how you feel, saying it in words helps them treat you correctly.',
+    practice: {
+      line: '"How bad is the pain, from 0 to 10?"',
+      choices: [
+        { text: '"8 out of 10. I know I look calm, but that\'s how autism affects my face. It\'s really bad."', best: true, note: 'You gave a number and explained the mismatch. That helps them treat you correctly.' },
+        { text: '"I don\'t know, it hurts."', best: false, note: 'Try a number, even a rough one. It helps them decide quickly.' },
+      ],
+    },
+  },
+  {
+    id: 'pharmacy',
+    cat: 'health',
+    free: true,
+    title: 'Asking a pharmacist a question',
+    otherRole: 'a pharmacist',
+    situation: 'You need to ask about a medicine, side effect, or how to take something.',
+    say: [
+      '"Can I ask the pharmacist a private question about a medicine?"',
+      '"Is it safe to take [medicine] with [other medicine]?"',
+      '"Can you write the dose and times on the label or on a piece of paper?"',
+    ],
+    do: ['Bring the boxes or a photo of the medicines you take.', 'Ask to speak somewhere more private if the counter is busy.'],
+    avoid: ['Guessing the dose if the instructions are unclear.'],
+    why: 'Pharmacists answer medicine questions all day, for free. Asking is normal and expected.',
+    practice: {
+      line: '"Hi, what can I do for you?"',
+      choices: [
+        { text: '"I\'d like to ask the pharmacist if I can take ibuprofen with my other medicine. I have the box here."', best: true, note: 'Specific question, and you brought the information. Perfect.' },
+        { text: '"Never mind." (because the shop is busy)', best: false, note: 'Your question matters. It is okay to ask even when it is busy.' },
+      ],
+    },
+  },
+
+  // ── Work ─────────────────────────────────────────────────────────────────
+  {
+    id: 'clarify-task',
+    cat: 'work',
+    free: true,
+    title: 'Your manager gives a vague instruction',
+    otherRole: 'your manager',
+    situation: 'Your manager says something like "Can you tidy up the report?" or "Get that done soon" and you are not sure what they mean.',
+    say: [
+      '"Just to check I understand: you want me to [your understanding]. Is that right?"',
+      '"When do you need it by: today, or this week?"',
+      '"What does \'done\' look like for this?"',
+      '"Could you send that to me in an email so I have it written down?"',
+    ],
+    do: ['Repeat back what you heard in your own words.', 'Ask for a deadline as a date or time.', 'Write down the answer.'],
+    avoid: ['Guessing and doing hours of work in the wrong direction.', 'Saying "that\'s vague" (true, but can sound like criticism).'],
+    why: 'Many managers give short instructions and assume people will ask if unsure. Asking a clarifying question is seen as careful, not slow.',
+    practice: {
+      line: '"Can you sort out the client spreadsheet sometime soon?"',
+      choices: [
+        { text: '"Sure. Do you mean fix the errors or reformat it? And is end of day Friday okay?"', best: true, note: 'You checked the meaning and set a clear deadline.' },
+        { text: '"What does \'sort out\' even mean?"', best: false, note: 'Good question, but the wording can sound annoyed. Offer options instead.' },
+        { text: 'Say "okay" and guess.', best: false, note: 'Guessing can waste time. A quick question saves work.' },
+      ],
+    },
+  },
+  {
+    id: 'accommodations',
+    cat: 'work',
+    free: true,
+    title: 'Asking for a reasonable adjustment / accommodation',
+    otherRole: 'your manager',
+    situation: 'Something at work (noise, lighting, unclear instructions, phone calls) makes your job harder, and a small change would help.',
+    say: [
+      '"I\'d like to talk about a small change that would help me do my best work."',
+      '"Noise makes it hard for me to focus. Could I use noise-cancelling headphones or sit somewhere quieter?"',
+      '"I work best with written instructions. Could tasks be sent by email or chat?"',
+      'You can mention autism or not; that is your choice. "I\'m autistic, and these changes help me" is enough.',
+    ],
+    do: [
+      'Ask for a short meeting rather than raising it in passing.',
+      'Bring one to three specific, practical requests.',
+      'Explain the benefit for the work, not only for you.',
+      'Follow up by email so there is a record.',
+    ],
+    avoid: ['Waiting until you are burnt out.', 'Asking for everything at once.'],
+    why: 'In many countries employers must consider reasonable adjustments for disabled employees, including autistic people. Specific, practical requests are the easiest to say yes to.',
+    practice: {
+      line: '"You wanted to talk to me about something?"',
+      choices: [
+        { text: '"Yes. Open-plan noise makes it hard to concentrate. Could I wear headphones, or use the quiet room for focus work?"', best: true, note: 'Specific, practical, and linked to the work.' },
+        { text: '"This office is impossible to work in."', best: false, note: 'Your feelings are valid, but a specific request is more likely to get a yes.' },
+      ],
+    },
+  },
+  {
+    id: 'interview',
+    cat: 'work',
+    title: 'A job interview: "Tell me about yourself"',
+    otherRole: 'an interviewer',
+    situation: 'The interviewer starts with "So, tell me about yourself."',
+    say: [
+      '"I\'m a [job] with [number] years of experience in [area]. Recently I [one achievement]. I\'m interested in this role because [reason]."',
+      'Keep it to about one minute: present, past, future.',
+    ],
+    do: ['Prepare and practise this answer out loud.', 'Talk about work, skills and why this job.', 'End by connecting to the job.'],
+    avoid: ['Your whole life story or private details.', 'Talking for more than two minutes.'],
+    why: 'This question is not really about your life. It is a warm-up to hear a short summary of why you fit the job.',
+    practice: {
+      line: '"So, tell me about yourself."',
+      choices: [
+        { text: '"I\'m a data analyst with three years in retail. Last year I built a report that cut stock waste by 10%. I\'d like to do similar work here."', best: true, note: 'Short, relevant, and ends with the job. Great.' },
+        { text: '"Well, I was born in 1995 and grew up in..."', best: false, note: 'This question wants your work story, not your life story.' },
+      ],
+    },
+  },
+  {
+    id: 'small-talk-work',
+    cat: 'work',
+    title: 'Small talk in the kitchen at work',
+    otherRole: 'a coworker',
+    situation: 'A coworker says "How was your weekend?" while you are making a drink.',
+    say: ['"Good, thanks. I went to [one thing]. How was yours?"', '"Quiet, which is how I like it. Did you do anything fun?"'],
+    do: ['Give a short answer (one or two sentences).', 'Ask the same question back.', 'It is fine to end with "Anyway, back to it!"'],
+    avoid: ['A one-word answer with no question back (can seem cold).', 'A very long, detailed answer.'],
+    why: 'Small talk is a friendly signal ("I see you, we are on good terms"), not a request for information. The exchange matters more than the details.',
+    practice: {
+      line: '"Hey! How was your weekend?"',
+      choices: [
+        { text: '"Good, thanks! I finished a puzzle I\'d been working on. How about yours?"', best: true, note: 'Short, friendly, and you asked back.' },
+        { text: '"Fine."', best: false, note: 'Not wrong, but adding one detail and a question back feels friendlier.' },
+        { text: 'A ten-minute description of the puzzle.', best: false, note: 'Save the details for if they ask more.' },
+      ],
+    },
+  },
+  {
+    id: 'mistake-work',
+    cat: 'work',
+    title: 'You made a mistake at work',
+    otherRole: 'your manager',
+    situation: 'You realise you made an error: sent the wrong file, missed a deadline, or broke something.',
+    say: ['"I made a mistake: [what happened]. I\'ve [what you did to fix it]. Next time I\'ll [prevention]."', '"I\'m sorry about that. What would you like me to do now?"'],
+    do: ['Tell the right person soon, ideally before they find out another way.', 'Bring a fix or a plan.', 'Apologise once, then focus on the solution.'],
+    avoid: ['Hiding it.', 'Apologising over and over.', 'Blaming others.'],
+    why: 'Everyone makes mistakes at work. What people remember is whether you were honest and helped fix it.',
+    practice: {
+      line: '"Did that file go out to the client?"',
+      choices: [
+        { text: '"I sent the old version by mistake. I\'ve already sent the right one with a note. I\'ll double-check attachments from now on."', best: true, note: 'Honest, fixed, and has a plan. Excellent.' },
+        { text: '"I\'m so sorry, I\'m terrible at this, I\'m so sorry..."', best: false, note: 'One apology is enough. Focus on the fix.' },
+      ],
+    },
+  },
+  {
+    id: 'say-no-work',
+    cat: 'work',
+    title: 'You are asked to take on too much',
+    otherRole: 'your manager',
+    situation: 'You are already busy and someone asks you to take on another task.',
+    say: ['"I can do that, but it would mean [other task] is late. Which is more important?"', '"I don\'t have time this week. I could start on Monday."'],
+    do: ['Say what you are already working on.', 'Ask which task comes first.'],
+    avoid: ['Saying yes to everything and then missing deadlines.'],
+    why: 'Managers often do not know how busy you are. Asking them to choose a priority is professional, not lazy.',
+    practice: {
+      line: '"Could you also put together the slides for Thursday?"',
+      choices: [
+        { text: '"I\'m finishing the budget report for Wednesday. If I do the slides, the report will be late. Which should come first?"', best: true, note: 'Clear and lets them decide. Very professional.' },
+        { text: '"Fine." (and work until midnight)', best: false, note: 'It is okay to say what is on your plate.' },
+      ],
+    },
+  },
+  {
+    id: 'meeting-speak',
+    cat: 'work',
+    title: 'Speaking up in a meeting',
+    otherRole: 'a colleague leading the meeting',
+    situation: 'You have an idea or concern in a meeting, but it is hard to find a gap to speak.',
+    say: ['"Can I add something?"', '"I have a concern about the timeline. Can I explain?"', '"Building on what Sam said, ..."'],
+    do: ['Raise your hand slightly or lean forward when someone finishes.', 'Keep your point short; offer to send details in writing.', 'Send questions in the chat if it is a video call.'],
+    avoid: ['Talking over someone mid-sentence.', 'Staying silent on something important.'],
+    why: 'Most meetings have a natural pause when someone finishes a point. A short phrase like "Can I add something?" claims the gap politely.',
+    practice: {
+      line: '"Okay, any other thoughts before we move on?"',
+      choices: [
+        { text: '"Yes, one thing: I think the deadline is tight for testing. Could we add two days?"', best: true, note: 'Short, specific, with a suggestion.' },
+        { text: 'Stay quiet and email everyone a long message afterwards.', best: false, note: 'Writing is fine, but a short comment in the meeting means the group can discuss it now.' },
+      ],
+    },
+  },
+  {
+    id: 'raise',
+    cat: 'work',
+    title: 'Asking for a pay rise',
+    otherRole: 'your manager',
+    situation: 'You have done well for a while and want to ask for more pay.',
+    say: ['"I\'d like to talk about my pay. Over the last year I [results]. Similar roles pay around [amount]. I\'d like to discuss moving to [amount]."'],
+    do: ['Book a meeting for it specifically.', 'Bring three concrete results.', 'Name a number.'],
+    avoid: ['Asking during a stressful day or in passing.', 'Comparing yourself to a named coworker.'],
+    why: 'Pay discussions are normal business conversations. Facts and a clear number make it easier to say yes.',
+    practice: {
+      line: '"What did you want to discuss?"',
+      choices: [
+        { text: '"My pay. This year I took on the supplier accounts and cut processing time by a third. I\'d like to discuss a raise to $58,000."', best: true, note: 'Facts plus a number. Strong.' },
+        { text: '"I feel like I deserve more money."', best: false, note: 'Add specific results and a number.' },
+      ],
+    },
+  },
+
+  // ── School & Study ───────────────────────────────────────────────────────
+  {
+    id: 'ask-teacher',
+    cat: 'school',
+    title: 'Asking a teacher or lecturer for help',
+    otherRole: 'your lecturer',
+    situation: 'You do not understand an assignment or part of a lesson.',
+    say: ['"I didn\'t understand [specific part]. Could you explain it another way?"', '"Can you give me an example of a good answer?"', '"Could I come to your office hours?"'],
+    do: ['Ask after class or by email if asking in front of everyone is hard.', 'Point to the exact part that is confusing.'],
+    avoid: ['Waiting until the night before it is due.'],
+    why: 'Teachers want students to ask. A specific question shows you are engaged.',
+    practice: {
+      line: '"Yes? What can I help with?"',
+      choices: [
+        { text: '"In the essay brief, what does \'critically evaluate\' mean? Could you give an example?"', best: true, note: 'Specific and easy to answer.' },
+        { text: '"I don\'t get any of it."', best: false, note: 'Pick one part to start. It helps them help you.' },
+      ],
+    },
+  },
+  {
+    id: 'group-project',
+    cat: 'school',
+    title: 'Working in a group project',
+    otherRole: 'a classmate in your group',
+    situation: 'You are put in a group and nobody has decided who does what.',
+    say: ['"Shall we split it into parts? I can do the research section."', '"Can we agree a deadline for our parts, like Wednesday?"', '"I\'ll make a shared document with the list of tasks."'],
+    do: ['Offer to take a clear, defined part.', 'Suggest written plans (shared doc or group chat).'],
+    avoid: ['Doing all the work yourself without saying anything.', 'Correcting others in front of the group.'],
+    why: 'Groups often stall because nobody wants to seem bossy. A friendly suggestion with a clear structure is usually welcome.',
+    practice: {
+      line: '"So... how do we want to do this?"',
+      choices: [
+        { text: '"Let\'s split it into four parts. I can do the data. Shall we each finish by Wednesday?"', best: true, note: 'Clear structure, and you volunteered.' },
+        { text: '"I\'ll just do it all."', best: false, note: 'This can lead to burnout, and others may feel left out.' },
+      ],
+    },
+  },
+  {
+    id: 'exam-adjust',
+    cat: 'school',
+    title: 'Requesting exam arrangements',
+    otherRole: 'a disability services advisor',
+    situation: 'Exam rooms are loud or stressful and you would do better with adjustments (extra time, a separate room).',
+    say: ['"I\'m autistic and I\'d like to ask about exam arrangements, like a separate room or extra time."', '"What evidence do you need from me?"'],
+    do: ['Contact the disability or accessibility office early in the term.', 'Ask what deadline applies.'],
+    avoid: ['Waiting until exam week.'],
+    why: 'Most schools and universities have a formal process for adjustments. Starting early makes it much more likely to be in place on time.',
+    practice: {
+      line: '"Hello, accessibility services. How can I help?"',
+      choices: [
+        { text: '"Hi, I\'m autistic and I\'d like to apply for a separate exam room. What do I need to send?"', best: true, note: 'Clear request plus a question about next steps.' },
+        { text: '"Exams are unfair to people like me."', best: false, note: 'Possibly true, but a specific request gets results.' },
+      ],
+    },
+  },
+
+  // ── Friends & Social ─────────────────────────────────────────────────────
+  {
+    id: 'start-chat',
+    cat: 'social',
+    free: true,
+    title: 'Starting a conversation with someone new',
+    otherRole: 'another guest at a party',
+    situation: 'You are at an event and want to talk to someone, but you do not know how to start.',
+    say: ['"Hi, I\'m [name]. How do you know [host]?"', '"Is this your first time at this event?"', '"I like your [shirt/bag/book]. Where is it from?"'],
+    do: ['Comment on something you share right now (the event, the food, the place).', 'Ask an open question (one that needs more than yes/no).', 'Listen to the answer and ask one follow-up question.'],
+    avoid: ['Very personal questions (money, health, religion) in the first conversation.', 'Talking only about your special interest for a long time without checking.'],
+    why: 'Most people feel awkward starting conversations. A simple question about the shared situation is the easiest way in.',
+    practice: {
+      line: '(Someone is standing alone near the snacks.)',
+      choices: [
+        { text: '"Hi, I\'m Alex. How do you know Priya?"', best: true, note: 'Simple, friendly, and easy to answer.' },
+        { text: '"How much do you earn?"', best: false, note: 'Money is too personal for a first chat.' },
+        { text: 'Stand next to them silently.', best: false, note: 'A short greeting works better. They may be hoping someone will talk to them too.' },
+      ],
+    },
+  },
+  {
+    id: 'end-chat',
+    cat: 'social',
+    free: true,
+    title: 'Ending a conversation politely',
+    otherRole: 'a neighbour who loves to chat',
+    situation: 'You want to leave a conversation but do not know how to stop without being rude.',
+    say: ['"It was nice talking to you. I need to head off now."', '"I\'ll let you get on. See you soon!"', '"I need to get going, but let\'s chat again."'],
+    do: ['Wait for a small pause, then use an exit line.', 'Smile or nod and then actually leave.'],
+    avoid: ['Walking away mid-sentence.', 'Making up a long excuse.'],
+    why: 'Conversations have a natural ending ritual. A short exit line tells the other person it is ending on good terms.',
+    practice: {
+      line: '"...and then the plumber said it would be another week!"',
+      choices: [
+        { text: '"That sounds frustrating! Anyway, I need to head off. Good luck with it."', best: true, note: 'You acknowledged them, then exited kindly.' },
+        { text: 'Turn around and walk away.', best: false, note: 'A short goodbye line keeps things friendly.' },
+      ],
+    },
+  },
+  {
+    id: 'join-group',
+    cat: 'social',
+    title: 'Joining a group conversation',
+    otherRole: 'a group of coworkers',
+    situation: 'People are already chatting in a group and you want to join.',
+    say: ['"Mind if I join you?"', '"Are you talking about the match? I watched it too."'],
+    do: ['Stand at the edge and listen first.', 'Join on the current topic.', 'Wait for a gap.'],
+    avoid: ['Changing the topic straight away.', 'Interrupting someone mid-story.'],
+    why: 'Groups accept newcomers more easily when they join the existing topic before adding new ones.',
+    practice: {
+      line: '"...I can\'t believe they lost in the last minute!"',
+      choices: [
+        { text: '"I saw that too! That last goal was unreal."', best: true, note: 'You joined on their topic. Smooth.' },
+        { text: '"Has anyone read about black holes?"', best: false, note: 'Join their topic first; switch later.' },
+      ],
+    },
+  },
+  {
+    id: 'decline-invite',
+    cat: 'social',
+    title: 'Saying no to an invitation without hurting feelings',
+    otherRole: 'a friend',
+    situation: 'A friend invites you somewhere you do not want to go (too loud, too tired, not interested).',
+    say: ['"Thanks for asking! I can\'t make it this time, but I\'d love to do something quieter soon, like a coffee?"', '"I\'m low on energy this week. Can we do something next week?"'],
+    do: ['Thank them for inviting you.', 'Suggest an alternative if you do want to see them.'],
+    avoid: ['Ignoring the message.', 'Saying yes and cancelling at the last minute.'],
+    why: 'People mostly want to know you value the friendship. Thanking them and offering another plan shows that.',
+    practice: {
+      line: '"Want to come to a club on Saturday?"',
+      choices: [
+        { text: '"Thanks for inviting me! Clubs are too loud for me, but are you free for lunch on Sunday?"', best: true, note: 'Kind, honest, and keeps the friendship going.' },
+        { text: 'No reply.', best: false, note: 'Silence can feel like rejection. A short answer is kinder.' },
+      ],
+    },
+  },
+  {
+    id: 'misunderstood-joke',
+    cat: 'social',
+    title: 'You did not understand a joke',
+    otherRole: 'a friend',
+    situation: 'Everyone laughs at something and you are not sure if it was a joke, or what it meant.',
+    say: ['"I think I missed that one. What did you mean?"', '"Was that a joke? I take things literally sometimes."'],
+    do: ['Ask lightly with a smile.', 'If it was sarcasm, it is okay to say "Ah, got it."'],
+    avoid: ['Pretending to understand and then responding as if it were serious.'],
+    why: 'Asking about a joke is common and usually not awkward. Most people are happy to explain.',
+    practice: {
+      line: '"Oh great, more rain. Lovely weather we\'re having!"',
+      choices: [
+        { text: '"Ha, I see what you mean. Sarcasm, right?"', best: true, note: 'Correct: it was sarcasm. Checking is fine.' },
+        { text: '"Actually it\'s not lovely, it\'s raining."', best: false, note: 'They meant the opposite of what they said (sarcasm).' },
+      ],
+    },
+  },
+  {
+    id: 'apologise-friend',
+    cat: 'social',
+    title: 'Apologising after upsetting a friend',
+    otherRole: 'a friend who is upset',
+    situation: 'A friend seems hurt by something you said or did.',
+    say: ['"I\'m sorry I [what you did]. I didn\'t mean to upset you."', '"Can you tell me what hurt, so I don\'t do it again?"'],
+    do: ['Name what you did.', 'Listen without defending yourself.', 'Say what you will do differently.'],
+    avoid: ['"I\'m sorry you feel that way." (sounds like blaming them)', 'Explaining why you were right.'],
+    why: 'A real apology names the action and focuses on the other person. Intent matters to you, impact matters to them.',
+    practice: {
+      line: '"It really hurt when you said my cooking was bland in front of everyone."',
+      choices: [
+        { text: '"I\'m sorry I said that in front of everyone. I was being honest, but I didn\'t think about how it would feel. I won\'t do that again."', best: true, note: 'You named it and committed to change.' },
+        { text: '"But it was bland."', best: false, note: 'Honesty can wait. Right now they need to feel heard.' },
+      ],
+    },
+  },
+  {
+    id: 'birthday-gift',
+    cat: 'social',
+    title: 'Receiving a gift you don\'t like',
+    otherRole: 'a relative giving a gift',
+    situation: 'Someone gives you a present and you do not like it or will not use it.',
+    say: ['"Thank you, that\'s really kind of you to think of me."', '"Thank you! What made you choose this?"'],
+    do: ['Thank them for the thought.', 'Smile if you can.'],
+    avoid: ['Saying "I don\'t like it."', 'Pointing out that you already have one.'],
+    why: 'Gift-giving is about the relationship. Thanking them for the thought is honest: you are grateful they thought of you.',
+    practice: {
+      line: '"I got you this sweater! Do you like it?"',
+      choices: [
+        { text: '"Thank you for thinking of me. That\'s really kind."', best: true, note: 'Honest and kind.' },
+        { text: '"No. The wool will itch."', best: false, note: 'True, maybe, but it can hurt. Thank them for the thought.' },
+      ],
+    },
+  },
+
+  // ── Phone & Messages ─────────────────────────────────────────────────────
+  {
+    id: 'book-appointment',
+    cat: 'phone',
+    free: true,
+    title: 'Phoning to book an appointment',
+    otherRole: 'a receptionist',
+    situation: 'You need to phone a clinic, hairdresser or office to book a time.',
+    say: ['"Hi, I\'d like to book an appointment for [service], please."', '"My name is [name]. My date of birth is [date]."', '"Do you have anything on [day] in the [morning/afternoon]?"', '"Can you repeat that time, please? I want to write it down."'],
+    do: ['Write a short script before calling.', 'Have a pen and calendar ready.', 'Check if you can book online or by text instead.'],
+    avoid: ['Hanging up if they put you on hold. Holding is normal.'],
+    why: 'Receptionists handle the same kind of call many times a day. A short script keeps the call short and easy.',
+    practice: {
+      line: '"Good morning, Riverside Clinic, how can I help?"',
+      choices: [
+        { text: '"Hi, I\'d like to book a check-up. My name is Sam Lee. Do you have anything Thursday afternoon?"', best: true, note: 'Clear, complete and quick.' },
+        { text: '"Um... hi... I need... sorry, I\'ll call back."', best: false, note: 'Try reading from a written script. It is okay to read!' },
+      ],
+    },
+  },
+  {
+    id: 'reply-late',
+    cat: 'phone',
+    title: 'Replying to a message you left too long',
+    otherRole: 'a friend you have not replied to',
+    situation: 'You forgot to reply to a message for days or weeks and now it feels awkward.',
+    say: ['"Sorry for the slow reply! I\'ve been [busy / low on energy]. [Answer to their message]."', '"I just saw I never replied, sorry! How are you?"'],
+    do: ['Reply now, short is fine.', 'Apologise once and move on.'],
+    avoid: ['Waiting longer because it feels awkward (it gets more awkward).', 'A huge explanation.'],
+    why: 'Most people are relieved to hear from you and do not mind a late reply. A short apology resets things.',
+    practice: {
+      line: '(Message from 2 weeks ago) "Hey, want to get lunch sometime?"',
+      choices: [
+        { text: '"Sorry for the slow reply! Yes, I\'d like that. Are you free next Tuesday?"', best: true, note: 'Short, warm, and you made a plan.' },
+        { text: 'Leave it, it\'s been too long now.', best: false, note: 'It is almost never too late for a short reply.' },
+      ],
+    },
+  },
+  {
+    id: 'group-chat',
+    cat: 'phone',
+    title: 'Understanding tone in group chats',
+    otherRole: 'a friend in the group chat',
+    situation: 'A message seems short or cold, and you are worried someone is angry with you.',
+    say: ['"Just checking, are we okay? I couldn\'t tell the tone from your message."'],
+    do: ['Remember that short messages are often just quick, not angry.', 'Check other signs: do they usually write like this?', 'Ask directly if it is bothering you.'],
+    avoid: ['Assuming the worst.', 'Sending many messages in a row asking.'],
+    why: 'Text has no tone of voice or facial expression, so everyone misreads it sometimes. "k" usually means "okay", typed fast.',
+    practice: {
+      line: '"k."',
+      choices: [
+        { text: 'Take it as "okay" unless something else suggests a problem.', best: true, note: 'Most of the time, short replies are just quick replies.' },
+        { text: 'Send five messages asking what you did wrong.', best: false, note: 'One gentle check-in is plenty, if you need it.' },
+      ],
+    },
+  },
+  {
+    id: 'complain-email',
+    cat: 'phone',
+    title: 'Writing a complaint email',
+    otherRole: 'a customer service agent',
+    situation: 'A company got something wrong (wrong item, overcharged, poor service) and you want it fixed.',
+    say: ['"Order [number]: I received [problem] on [date]. I\'d like [refund / replacement] please. Photos attached."'],
+    do: ['Put the order number in the subject line.', 'Say the problem, the date, and what you want.', 'Keep it calm and short.'],
+    avoid: ['Insults or ALL CAPS.', 'Not saying what you want them to do.'],
+    why: 'Agents fix problems fastest when the request is clear. Calm, factual emails are taken more seriously.',
+    practice: {
+      line: '"Hello, how can we help today?"',
+      choices: [
+        { text: '"Order 48213: the blender arrived cracked on 3 May. I\'d like a replacement. Photos attached."', best: true, note: 'Everything they need in one go.' },
+        { text: '"YOUR COMPANY IS USELESS."', best: false, note: 'Understandable frustration, but facts get it fixed faster.' },
+      ],
+    },
+  },
+
+  // ── Shops & Services ─────────────────────────────────────────────────────
+  {
+    id: 'return-item',
+    cat: 'services',
+    free: true,
+    title: 'Returning something to a shop',
+    otherRole: 'a shop assistant',
+    situation: 'You bought something that is broken, does not fit, or that you do not want.',
+    say: ['"Hi, I\'d like to return this, please. Here\'s the receipt."', '"It doesn\'t fit. Can I get a refund or exchange?"'],
+    do: ['Bring the receipt or the card you paid with.', 'Say what you want: refund, exchange or store credit.'],
+    avoid: ['Long explanations of why. A short reason is enough.'],
+    why: 'Returns are a normal part of shopping. Shops have a process for it and staff do it many times a day.',
+    practice: {
+      line: '"Hi, how can I help?"',
+      choices: [
+        { text: '"I\'d like to return these shoes, they\'re too small. Here\'s the receipt. Could I get a refund?"', best: true, note: 'Clear and complete.' },
+        { text: '"Sorry, sorry, I know this is annoying..."', best: false, note: 'No need to apologise. Returns are part of their job.' },
+      ],
+    },
+  },
+  {
+    id: 'restaurant-order',
+    cat: 'services',
+    title: 'Ordering food with special requests',
+    otherRole: 'a waiter',
+    situation: 'You want to order but need a change (no sauce, a texture you can manage, an allergy).',
+    say: ['"Could I have the chicken burger without the sauce, please?"', '"I have a [food] allergy. Is this safe for me?"', '"Could I order the kids\' pasta? Plain food works best for me."'],
+    do: ['Look at the menu online before you go.', 'Say requests clearly when you order.'],
+    avoid: ['Eating something unsafe to avoid "being difficult".'],
+    why: 'Restaurants get changes and allergy questions all the time. Being clear helps them get it right.',
+    practice: {
+      line: '"Are you ready to order?"',
+      choices: [
+        { text: '"Yes, the burger with no sauce and no onions, please. And fries."', best: true, note: 'Clear and specific.' },
+        { text: 'Order it as it is and pick everything off.', best: false, note: 'You are allowed to ask for changes.' },
+      ],
+    },
+  },
+  {
+    id: 'haircut',
+    cat: 'services',
+    title: 'Getting a haircut',
+    otherRole: 'a hairdresser',
+    situation: 'Haircuts can be hard: touch, noise, chatting and not knowing the result.',
+    say: ['"I\'d like it like this photo, please."', '"I\'m sensitive to noise. Could you use scissors instead of clippers?"', '"I prefer not to chat. I\'m not being rude, it just helps me relax."'],
+    do: ['Bring a photo.', 'Book the quietest time (often a weekday morning).', 'Bring headphones if allowed.'],
+    avoid: ['Staying silent about something painful (water too hot, pulling).'],
+    why: 'Hairdressers prefer to know your preferences upfront. Asking for quiet is common and fine.',
+    practice: {
+      line: '"So, what are we doing today? Busy week?"',
+      choices: [
+        { text: '"Like this photo, please. And I\'d rather not chat, it helps me relax. Thanks!"', best: true, note: 'Friendly and clear.' },
+        { text: 'Nod along and feel stressed for 30 minutes.', best: false, note: 'You can ask for what you need.' },
+      ],
+    },
+  },
+  {
+    id: 'customer-service-call',
+    cat: 'services',
+    title: 'Disputing a bill',
+    otherRole: 'a phone company agent',
+    situation: 'Your bill is higher than expected and you think it is wrong.',
+    say: ['"My bill for [month] is [amount], but my plan is [amount]. Can you explain the difference?"', '"Can you remove that charge, please?"', '"Can I have a reference number for this call?"'],
+    do: ['Have the bill in front of you.', 'Write down names, dates and reference numbers.'],
+    avoid: ['Agreeing to a new plan you did not ask for.'],
+    why: 'Billing errors are common. Specific numbers make them easy to check and fix.',
+    practice: {
+      line: '"How can I help with your account today?"',
+      choices: [
+        { text: '"My March bill is £62 but my plan is £35. Can you explain the extra £27?"', best: true, note: 'Exact numbers make this easy to solve.' },
+        { text: '"You\'ve overcharged me again."', best: false, note: 'Give the numbers so they can find it.' },
+      ],
+    },
+  },
+
+  // ── Dating & Relationships ───────────────────────────────────────────────
+  {
+    id: 'ask-out',
+    cat: 'dating',
+    title: 'Asking someone on a date',
+    otherRole: 'someone you like',
+    situation: 'You like someone and want to ask them out.',
+    say: ['"I really enjoy talking to you. Would you like to get coffee with me on Saturday?"'],
+    do: ['Ask clearly, with a specific plan (what and when).', 'Accept any answer calmly.', 'If they say no or "maybe" without a time, take it as no and stay kind.'],
+    avoid: ['Asking again after a no.', 'Asking in front of a group.'],
+    why: 'A clear question gives the other person an easy way to say yes or no. Respecting a no shows you are safe to be around.',
+    practice: {
+      line: '"Thanks, I had fun at the workshop today."',
+      choices: [
+        { text: '"Me too. Would you like to get coffee with me on Saturday?"', best: true, note: 'Clear, specific, and low pressure.' },
+        { text: '"We should hang out sometime maybe if you want or not."', best: false, note: 'A specific plan is clearer for both of you.' },
+      ],
+    },
+  },
+  {
+    id: 'consent',
+    cat: 'dating',
+    title: 'Checking consent and boundaries',
+    otherRole: 'your date',
+    situation: 'You are with a partner or date and things may become physical.',
+    say: ['"Is this okay?"', '"Do you want to keep going, or stop?"', '"I\'d like to stop now."'],
+    do: ['Ask before touching, and keep checking.', 'Stop straight away if they say no, hesitate, or go quiet.', 'Say your own limits too. You can stop at any time.'],
+    avoid: ['Taking silence as a yes.', 'Pressuring after a no.'],
+    why: 'Consent must be clear, freely given, and can be taken back at any time. Asking directly is respectful and safe.',
+    practice: {
+      line: '(They go quiet and pull back slightly.)',
+      choices: [
+        { text: 'Stop and ask, "Are you okay? Do you want to stop?"', best: true, note: 'Exactly right. Silence or pulling back means stop and check.' },
+        { text: 'Keep going because they didn\'t say no.', best: false, note: 'Only a clear yes is a yes.' },
+      ],
+    },
+  },
+  {
+    id: 'tell-partner-needs',
+    cat: 'dating',
+    title: 'Telling a partner what you need',
+    otherRole: 'your partner',
+    situation: 'You need something from your partner (quiet time, clearer plans, less touch) but have not said it.',
+    say: ['"When I get home from work I need 30 minutes of quiet. It\'s not about you. After that I\'d love to hear about your day."', '"Could you tell me plans a day ahead? Sudden changes are hard for me."'],
+    do: ['Pick a calm moment, not during a disagreement.', 'Explain what you need and why.', 'Ask what they need too.'],
+    avoid: ['Expecting them to guess.'],
+    why: 'Partners cannot read minds. Saying your needs clearly prevents misunderstandings like "they don\'t want to see me".',
+    practice: {
+      line: '"You always disappear when you get home. Is something wrong?"',
+      choices: [
+        { text: '"Nothing\'s wrong. I need some quiet to recover after work. Can I have 30 minutes, then we\'ll catch up?"', best: true, note: 'Clear, kind, and with a plan.' },
+        { text: '"I\'m fine."', best: false, note: 'They are worried. Explaining helps them understand.' },
+      ],
+    },
+  },
+  {
+    id: 'disclose-autism',
+    cat: 'dating',
+    title: 'Telling someone you are autistic',
+    otherRole: 'a new friend',
+    situation: 'You want to tell a friend, date or coworker that you are autistic.',
+    say: ['"I want to tell you something about me: I\'m autistic. For me that means [one or two examples]. It helps if you [request]."'],
+    do: ['Give one or two personal examples.', 'Say what helps you.', 'Choose when, and whether, to tell. It is your decision.'],
+    avoid: ['Feeling you must explain everything at once.'],
+    why: 'People have different ideas about autism. Your own examples show what it means for you.',
+    practice: {
+      line: '"You seem quiet sometimes. Is everything okay?"',
+      choices: [
+        { text: '"Yes! I\'m autistic, so busy places drain me and I get quiet. Texting me is a great way to keep in touch."', best: true, note: 'Personal, clear, and tells them what helps.' },
+        { text: '"I\'m just weird, sorry."', best: false, note: 'You are not weird. A short explanation helps people understand you.' },
+      ],
+    },
+  },
+
+  // ── Family & Home ────────────────────────────────────────────────────────
+  {
+    id: 'family-gathering',
+    cat: 'home',
+    title: 'Getting through a family gathering',
+    otherRole: 'a relative',
+    situation: 'A holiday or family event that is long, loud and full of questions.',
+    say: ['"I\'m going to step outside for a few minutes."', '"I\'d rather not talk about that today. How is your garden doing?"', '"Thanks for having me. I\'m going to head home now."'],
+    do: ['Plan your arrival and leaving times in advance.', 'Find a quiet room you can use for breaks.', 'Prepare answers to the usual questions (work, relationships).'],
+    avoid: ['Staying until you are completely drained.'],
+    why: 'Taking breaks and leaving on time lets you take part without a meltdown or burnout afterwards.',
+    practice: {
+      line: '"So, when are you going to get a proper job?"',
+      choices: [
+        { text: '"I\'m happy with what I\'m doing right now. How\'s your new car going?"', best: true, note: 'Calm, and you changed the subject.' },
+        { text: 'A long argument about your career choices.', best: false, note: 'You do not have to defend your choices at a dinner.' },
+      ],
+    },
+  },
+  {
+    id: 'flatmate',
+    cat: 'home',
+    title: 'Talking to a flatmate about a problem',
+    otherRole: 'your flatmate',
+    situation: 'A flatmate leaves dishes, is loud at night, or uses your things.',
+    say: ['"Can we talk about the kitchen? When dishes are left out, I find it hard to cook. Could we wash them the same day?"', '"Could we agree quiet hours after 11 pm on weeknights?"'],
+    do: ['Talk at a calm time, in person or by message.', 'Describe the problem, its effect, and a suggestion.', 'Agree something specific and write it down.'],
+    avoid: ['Notes left on the fridge (can feel passive-aggressive).', 'Bringing up many problems at once.'],
+    why: 'Problem + effect + suggestion is a simple structure that feels fair and solvable to the other person.',
+    practice: {
+      line: '"Hey, you wanted to talk?"',
+      choices: [
+        { text: '"Yes. Music after midnight wakes me up and I\'m exhausted at work. Could we keep it down after 11 on weeknights?"', best: true, note: 'Problem, effect, suggestion. Fair and clear.' },
+        { text: '"You\'re so inconsiderate."', best: false, note: 'Describe the behaviour, not the person.' },
+      ],
+    },
+  },
+  {
+    id: 'routine-change',
+    cat: 'home',
+    title: 'A sudden change of plans',
+    otherRole: 'a family member',
+    situation: 'Someone changes a plan at the last minute and you feel upset or thrown.',
+    say: ['"I need a minute. Sudden changes are hard for me."', '"Can you tell me the new plan step by step?"', '"Next time, could you tell me as early as possible?"'],
+    do: ['Take a short break before responding.', 'Ask for the new plan in clear steps.', 'Write or picture the new plan.'],
+    avoid: ['Responding while you are at peak upset, if you can wait a moment.'],
+    why: 'Changes cost autistic people extra energy. Asking for time and details makes the new plan feel predictable again.',
+    practice: {
+      line: '"Change of plan! We\'re going to Grandma\'s instead of the cinema. Leaving in five minutes!"',
+      choices: [
+        { text: '"Okay, I need a minute. What time will we get back?"', best: true, note: 'You asked for time and the key detail.' },
+        { text: 'Shout that it is not fair.', best: false, note: 'Your feelings are valid. A minute to reset and a question about details usually helps more.' },
+      ],
+    },
+  },
+  {
+    id: 'parent-independence',
+    cat: 'home',
+    title: 'Asking parents for more independence',
+    otherRole: 'your parent',
+    situation: 'You are an adult and want to make more of your own decisions.',
+    say: ['"I want to try handling my own appointments. Can I do it, and ask you if I get stuck?"', '"I appreciate your help. I\'d like to try this myself first."'],
+    do: ['Start with one specific thing.', 'Agree how you will ask for help if needed.'],
+    avoid: ['Rejecting all help at once.'],
+    why: 'Parents may worry. A step-by-step plan with a back-up shows you have thought it through.',
+    practice: {
+      line: '"I\'ll call the dentist for you, don\'t worry."',
+      choices: [
+        { text: '"Thanks, but I\'d like to try. I\'ll ask you if I get stuck."', best: true, note: 'Kind and confident.' },
+        { text: '"Stop treating me like a child!"', best: false, note: 'Your frustration makes sense. A calm request is more likely to work.' },
+      ],
+    },
+  },
+];
+
+export const FREE_SAVE_LIMIT = 3;
+
+export function scenarioById(id) {
+  return SCENARIOS.find((s) => s.id === id);
+}

@@ -22,10 +22,10 @@ const techniques = [
         body: `Cognitive Behavioural Therapy (CBT) is a structured, practical therapy that explores the connection between your thoughts, feelings, and behaviours. The central idea is that our thoughts about a situation — not the situation itself — drive how we feel and act.
 
 For example:
-• Situation: A friend doesn't reply to your message.
-• Unhelpful thought: "They hate me. I always say the wrong thing."
-• Feeling: Anxiety, shame.
-• Behaviour: Avoid them next time.
+– Situation: A friend doesn't reply to your message.
+– Unhelpful thought: "They hate me. I always say the wrong thing."
+– Feeling: Anxiety, shame.
+– Behaviour: Avoid them next time.
 
 CBT teaches you to notice these automatic thought patterns and test whether they are accurate.`,
       },
@@ -33,11 +33,11 @@ CBT teaches you to notice these automatic thought patterns and test whether they
         heading: 'CBT adapted for ASD',
         body: `Standard CBT has been adapted to be more effective for autistic people:
 
-• More visual and concrete: Instead of abstract emotional exploration, adapted CBT uses worksheets, diagrams, and structured formats.
-• Explicit rule teaching: Social rules and expected behaviours are explained directly rather than assumed.
-• Emotion education: Building vocabulary for feelings before exploring them.
-• Special interests integration: Therapy themes can be connected to a person's interests for better engagement.
-• Longer timelines: Adapted CBT often runs longer to allow for processing.`,
+– More visual and concrete: Instead of abstract emotional exploration, adapted CBT uses worksheets, diagrams, and structured formats.
+– Explicit rule teaching: Social rules and expected behaviours are explained directly rather than assumed.
+– Emotion education: Building vocabulary for feelings before exploring them.
+– Special interests integration: Therapy themes can be connected to a person's interests for better engagement.
+– Longer timelines: Adapted CBT often runs longer to allow for processing.`,
       },
       {
         heading: 'Core CBT tools you can use now',
@@ -45,10 +45,10 @@ CBT teaches you to notice these automatic thought patterns and test whether they
 Write down: What happened? What did I think? How did I feel? What is the evidence FOR this thought? What is the evidence AGAINST? What is a more balanced thought?
 
 2. Cognitive Distortions Checklist
-• All-or-nothing thinking: "I always fail at this."
-• Mind-reading: "I know they're judging me."
-• Catastrophising: "If I make a mistake, it will be a disaster."
-• Personalisation: "It's my fault they're in a bad mood."
+– All-or-nothing thinking: "I always fail at this."
+– Mind-reading: "I know they're judging me."
+– Catastrophising: "If I make a mistake, it will be a disaster."
+– Personalisation: "It's my fault they're in a bad mood."
 
 3. Behavioural Experiments
 Test your predictions. If you think "If I speak up, everyone will laugh at me" — note that prediction, then try it and record what actually happened.
@@ -59,10 +59,10 @@ Designate 15 minutes per day as 'worry time'. If worries come outside that windo
       {
         heading: 'Finding a CBT therapist',
         body: `Look for a therapist who:
-• Has experience working with autistic adults or adolescents
-• Uses adapted CBT protocols (not just standard adult CBT)
-• Communicates directly and explains the rationale for each exercise
-• Is willing to adjust their style to your communication preferences
+– Has experience working with autistic adults or adolescents
+– Uses adapted CBT protocols (not just standard adult CBT)
+– Communicates directly and explains the rationale for each exercise
+– Is willing to adjust their style to your communication preferences
 
 Ask in the initial consultation: "Do you have experience adapting CBT for autistic people?" A good therapist will welcome this question.`,
       },
@@ -81,11 +81,11 @@ Ask in the initial consultation: "Do you have experience adapting CBT for autist
       {
         heading: 'What is DBT?',
         body: `DBT was developed by Dr Marsha Linehan originally for people with intense emotional experiences. It has since been adapted for ASD and is particularly useful for:
-• Intense emotional reactions (meltdowns, shutdowns)
-• Impulsive behaviour
-• Relationship difficulties
-• Self-harm or crisis behaviour
-• Emotional dysregulation
+– Intense emotional reactions (meltdowns, shutdowns)
+– Impulsive behaviour
+– Relationship difficulties
+– Self-harm or crisis behaviour
+– Emotional dysregulation
 
 DBT teaches specific, learnable skills organised into four modules.`,
       },
@@ -94,21 +94,21 @@ DBT teaches specific, learnable skills organised into four modules.`,
         body: `The foundation of all DBT skills. Mindfulness means observing your thoughts and feelings without judgment, in the present moment.
 
 Key skills:
-• Observe: Notice your experience without reacting. "I notice I am feeling overwhelmed."
-• Describe: Put words to what you observe. "My heart is racing. My thoughts are moving very fast."
-• Participate: Fully engage in current activity without self-consciousness.
-• Non-judgmentally: Describe facts, not evaluations. Not "I'm being stupid" but "I made an error."
-• One-mindfully: Do one thing at a time, with full attention.`,
+– Observe: Notice your experience without reacting. "I notice I am feeling overwhelmed."
+– Describe: Put words to what you observe. "My heart is racing. My thoughts are moving very fast."
+– Participate: Fully engage in current activity without self-consciousness.
+– Non-judgmentally: Describe facts, not evaluations. Not "I'm being stupid" but "I made an error."
+– One-mindfully: Do one thing at a time, with full attention.`,
       },
       {
         heading: 'Module 2: Distress Tolerance',
         body: `Skills for managing crisis moments without making things worse.
 
 TIPP skills (for rapid calm):
-• Temperature: Splash cold water on your face to activate the dive response.
-• Intense exercise: 20 minutes of aerobic exercise burns off stress hormones.
-• Paced breathing: Breathe out longer than you breathe in (e.g. inhale 4 sec, exhale 6 sec).
-• Progressive muscle relaxation: Tense and release muscle groups systematically.
+– Temperature: Splash cold water on your face to activate the dive response.
+– Intense exercise: 20 minutes of aerobic exercise burns off stress hormones.
+– Paced breathing: Breathe out longer than you breathe in (e.g. inhale 4 sec, exhale 6 sec).
+– Progressive muscle relaxation: Tense and release muscle groups systematically.
 
 ACCEPTS (distraction skills):
 Activities, Contributing, Comparisons, Emotions (opposite), Pushing away, Thoughts (distraction), Sensations.
@@ -124,11 +124,11 @@ Check the facts: Ask "Does my emotional response fit the actual facts, or am I r
 Opposite action: If your emotion is urging you to do something (anger → confront, shame → withdraw) — deliberately do the opposite when the emotion is unjustified.
 
 PLEASE skills (physical wellbeing):
-• treat PhysicaL illness
-• Eat balanced meals
-• Avoid mood-altering substances
-• Sleep regular hours
-• Exercise regularly
+– treat PhysicaL illness
+– Eat balanced meals
+– Avoid mood-altering substances
+– Sleep regular hours
+– Exercise regularly
 
 Build Mastery: Do one thing each day that makes you feel competent.
 
@@ -139,25 +139,25 @@ Build Positive Experiences: Actively schedule pleasant events — positive emoti
         body: `Scripts and strategies for navigating relationships.
 
 DEAR MAN (asking for what you need):
-• Describe the situation factually
-• Express how you feel ("I feel...")
-• Assert what you want or need clearly
-• Reinforce — explain the benefit to them too
-• Mindful — stay focused on your goal
-• Appear confident even if nervous
-• Negotiate — be willing to find a middle ground
+– Describe the situation factually
+– Express how you feel ("I feel...")
+– Assert what you want or need clearly
+– Reinforce — explain the benefit to them too
+– Mindful — stay focused on your goal
+– Appear confident even if nervous
+– Negotiate — be willing to find a middle ground
 
 GIVE (keeping relationships):
-• Gentle — no attacks or criticism
-• Interested — listen actively
-• Validate — acknowledge their perspective
-• Easy manner — use a light touch
+– Gentle — no attacks or criticism
+– Interested — listen actively
+– Validate — acknowledge their perspective
+– Easy manner — use a light touch
 
 FAST (self-respect):
-• Fair to yourself and others
-• no Apologies for having needs
-• Stick to your values
-• Truthful`,
+– Fair to yourself and others
+– no Apologies for having needs
+– Stick to your values
+– Truthful`,
       },
     ],
   },
@@ -174,30 +174,30 @@ FAST (self-respect):
       {
         heading: 'What are Social Stories?',
         body: `Social Stories were developed by Carol Gray in 1990. They are short, carefully written narratives that:
-• Describe a specific social situation in clear, concrete terms
-• Explain what typically happens and why
-• Include the perspectives of others involved
-• Suggest appropriate responses or behaviours
-• Are written in first person and tailored to the individual
+– Describe a specific social situation in clear, concrete terms
+– Explain what typically happens and why
+– Include the perspectives of others involved
+– Suggest appropriate responses or behaviours
+– Are written in first person and tailored to the individual
 
 They work by making implicit social knowledge explicit — converting the invisible social script into readable text.`,
       },
       {
         heading: 'Who are they for?',
         body: `While originally developed for children, Social Stories are used across all ages. They are particularly helpful when:
-• A new or confusing social situation is coming up (first day at work, medical appointment, party)
-• A recurring situation causes consistent distress
-• You want to understand why others behave a certain way
-• You are preparing for a difficult conversation
-• You want to practise a social interaction before it happens`,
+– A new or confusing social situation is coming up (first day at work, medical appointment, party)
+– A recurring situation causes consistent distress
+– You want to understand why others behave a certain way
+– You are preparing for a difficult conversation
+– You want to practise a social interaction before it happens`,
       },
       {
         heading: 'How to write your own Social Story',
         body: `A good Social Story has these sentence types in roughly this ratio:
-• Descriptive (what happens): Most sentences. Factual, objective.
-• Perspective (why/how others feel): About 1 in 4 sentences.
-• Directive (what I can do): Suggested actions, not commands.
-• Affirmative (shared values): Validate the importance of the skill.
+– Descriptive (what happens): Most sentences. Factual, objective.
+– Perspective (why/how others feel): About 1 in 4 sentences.
+– Directive (what I can do): Suggested actions, not commands.
+– Affirmative (shared values): Validate the importance of the skill.
 
 Example — Entering a Meeting Late:
 "Sometimes I arrive at a meeting after it has started. When this happens, other people are already talking and listening. They have already arranged their attention. If I enter quietly and sit down quickly, people can continue without being too distracted. I can ask a colleague for notes later. Many people have arrived late to meetings and handled it well. I can too."
@@ -227,11 +227,11 @@ When someone criticises my work:
       {
         heading: 'Mindfulness and ASD: what the research says',
         body: `Growing evidence supports mindfulness-based interventions for autistic people. Benefits include:
-• Reduced anxiety and rumination
-• Improved emotional regulation
-• Better ability to notice internal body states (interoception)
-• Reduced reactivity to sensory triggers
-• Improved sleep quality
+– Reduced anxiety and rumination
+– Improved emotional regulation
+– Better ability to notice internal body states (interoception)
+– Reduced reactivity to sensory triggers
+– Improved sleep quality
 
 Importantly, mindfulness does not require changing who you are — it is about observing experience without judgment.`,
       },
@@ -239,12 +239,12 @@ Importantly, mindfulness does not require changing who you are — it is about o
         heading: 'Adapting mindfulness for autistic brains',
         body: `Standard mindfulness is often too ambiguous. These adaptations work better:
 
-• Anchor to a physical sensation: Focus on your hands, feet, or breath instead of vague "present moment awareness."
-• Use movement: Walking meditation, body scan, or gentle yoga can be easier than still sitting.
-• Shorter sessions: Start with 3–5 minutes, not 20.
-• Structure each session: Have a consistent beginning, middle, and end.
-• Headphones or nature sounds: Block distracting background noise.
-• Avoid "clear your mind" instructions: Try "observe thoughts like passing clouds" instead.`,
+– Anchor to a physical sensation: Focus on your hands, feet, or breath instead of vague "present moment awareness."
+– Use movement: Walking meditation, body scan, or gentle yoga can be easier than still sitting.
+– Shorter sessions: Start with 3–5 minutes, not 20.
+– Structure each session: Have a consistent beginning, middle, and end.
+– Headphones or nature sounds: Block distracting background noise.
+– Avoid "clear your mind" instructions: Try "observe thoughts like passing clouds" instead.`,
       },
       {
         heading: 'Exercises you can try now',
@@ -265,10 +265,10 @@ Choose one everyday activity (washing hands, making tea) and do it with complete
       },
       {
         heading: 'Mindfulness apps suited to autistic users',
-        body: `• Headspace: Structured, visual, consistent format. Good for beginners.
-• Calm: Wide variety of lengths and types. Sleep stories are particularly useful.
-• Insight Timer: Free, extensive library. Good for finding sensory-friendly or ASD-specific sessions.
-• Smiling Mind: Designed for younger users but very accessible and clear.
+        body: `– Headspace: Structured, visual, consistent format. Good for beginners.
+– Calm: Wide variety of lengths and types. Sleep stories are particularly useful.
+– Insight Timer: Free, extensive library. Good for finding sensory-friendly or ASD-specific sessions.
+– Smiling Mind: Designed for younger users but very accessible and clear.
 
 Look for sessions labelled "grounding," "anxiety," or "stress" — these tend to be most practical.`,
       },
@@ -293,54 +293,54 @@ Sensory Integration Therapy — usually delivered by occupational therapists —
       {
         heading: 'Hyper vs. Hyposensitivity',
         body: `Hypersensitivity (over-responsive):
-• Sounds seem too loud, even ordinary ones
-• Lights are too bright or hurt your eyes
-• Strong smells cause nausea or headaches
-• Tags or certain fabrics cause significant discomfort
-• Unexpected touch is startling or painful
-• Rooms feel too hot even when others are comfortable
+– Sounds seem too loud, even ordinary ones
+– Lights are too bright or hurt your eyes
+– Strong smells cause nausea or headaches
+– Tags or certain fabrics cause significant discomfort
+– Unexpected touch is startling or painful
+– Rooms feel too hot even when others are comfortable
 
 Hyposensitivity (under-responsive):
-• Seeking out intense sensory experiences
-• Difficulty knowing where your body is in space
-• High pain tolerance (not noticing injuries)
-• Needing strong flavours or textures to feel satisfied
-• Craving movement, spinning, or rocking
-• Appearing clumsy or not noticing things in your environment
+– Seeking out intense sensory experiences
+– Difficulty knowing where your body is in space
+– High pain tolerance (not noticing injuries)
+– Needing strong flavours or textures to feel satisfied
+– Craving movement, spinning, or rocking
+– Appearing clumsy or not noticing things in your environment
 
 Many autistic people are a mix of both across different senses.`,
       },
       {
         heading: 'Building your sensory toolkit',
         body: `For hypersensitivity:
-• Noise-cancelling headphones or ear defenders
-• Tinted glasses or sunglasses for light sensitivity
-• Seamless clothing and removing clothing labels
-• Maintaining a predictable sensory environment at home
-• Fragrance-free products
-• Communicating needs: "I need a quiet room for 20 minutes"
+– Noise-cancelling headphones or ear defenders
+– Tinted glasses or sunglasses for light sensitivity
+– Seamless clothing and removing clothing labels
+– Maintaining a predictable sensory environment at home
+– Fragrance-free products
+– Communicating needs: "I need a quiet room for 20 minutes"
 
 For hyposensitivity / sensory seeking:
-• Weighted blankets (provide deep pressure)
-• Compression clothing
-• Chewable jewellery or gum
-• Fidget tools (textured, different shapes)
-• Foot rollers or sensory cushions
-• Regular scheduled movement breaks
+– Weighted blankets (provide deep pressure)
+– Compression clothing
+– Chewable jewellery or gum
+– Fidget tools (textured, different shapes)
+– Foot rollers or sensory cushions
+– Regular scheduled movement breaks
 
 General regulation strategies:
-• Identify your personal sensory "warning signs" — what physical sensations precede overload?
-• Build a sensory "safe space" at home with your preferred inputs
-• Schedule sensory recovery time after demanding activities`,
+– Identify your personal sensory "warning signs" — what physical sensations precede overload?
+– Build a sensory "safe space" at home with your preferred inputs
+– Schedule sensory recovery time after demanding activities`,
       },
       {
         heading: 'Sensory overload and what to do',
         body: `Sensory overload happens when input exceeds the nervous system's ability to process it. Warning signs:
-• Increasing irritability or distress
-• Difficulty concentrating
-• Physical symptoms (headache, nausea, ringing in ears)
-• Strong urge to leave the environment
-• Increased stimming
+– Increasing irritability or distress
+– Difficulty concentrating
+– Physical symptoms (headache, nausea, ringing in ears)
+– Strong urge to leave the environment
+– Increased stimming
 
 When overload is building:
 1. Identify the primary sensory trigger (noise, light, crowding?)
@@ -368,14 +368,14 @@ Prevention: monitor your sensory load throughout the day, not just when it peaks
         heading: 'What is executive function?',
         body: `Executive function (EF) is a set of cognitive processes managed primarily by the prefrontal cortex. They include:
 
-• Planning: Breaking tasks into steps and sequencing them
-• Organisation: Keeping track of materials, ideas, and information
-• Task initiation: Getting started on tasks — even ones you want to do
-• Working memory: Holding information in mind while using it
-• Cognitive flexibility: Shifting between tasks or adjusting when plans change
-• Impulse control: Inhibiting immediate reactions
-• Emotional regulation: Managing feelings to achieve goals
-• Time management: Estimating time and managing deadlines
+– Planning: Breaking tasks into steps and sequencing them
+– Organisation: Keeping track of materials, ideas, and information
+– Task initiation: Getting started on tasks — even ones you want to do
+– Working memory: Holding information in mind while using it
+– Cognitive flexibility: Shifting between tasks or adjusting when plans change
+– Impulse control: Inhibiting immediate reactions
+– Emotional regulation: Managing feelings to achieve goals
+– Time management: Estimating time and managing deadlines
 
 EF differences in ASD can make daily life significantly harder — not because of lack of intelligence or motivation.`,
       },
@@ -383,53 +383,53 @@ EF differences in ASD can make daily life significantly harder — not because o
         heading: 'Task initiation strategies',
         body: `Task initiation — getting started — is often the hardest step. Strategies:
 
-• The 2-Minute Rule: If a task takes under 2 minutes, do it immediately. This prevents piles of small tasks.
+– The 2-Minute Rule: If a task takes under 2 minutes, do it immediately. This prevents piles of small tasks.
 
-• Body Doubling: Work in the physical or virtual presence of another person. Surprisingly effective for many autistic people — the social presence helps regulate attention.
+– Body Doubling: Work in the physical or virtual presence of another person. Surprisingly effective for many autistic people — the social presence helps regulate attention.
 
-• Temptation Bundling: Only allow yourself a special activity (podcast, favourite drink, playlist) while doing the difficult task.
+– Temptation Bundling: Only allow yourself a special activity (podcast, favourite drink, playlist) while doing the difficult task.
 
-• "First, then" framing: "First I will do 15 minutes of the report, then I get to check my phone." Concrete and reward-linked.
+– "First, then" framing: "First I will do 15 minutes of the report, then I get to check my phone." Concrete and reward-linked.
 
-• Lowering the bar: "I'll just open the document" or "I'll just write one sentence." Starting is usually the hardest part. Once started, momentum carries you.
+– Lowering the bar: "I'll just open the document" or "I'll just write one sentence." Starting is usually the hardest part. Once started, momentum carries you.
 
-• External accountability: Tell someone else your start time/plan.`,
+– External accountability: Tell someone else your start time/plan.`,
       },
       {
         heading: 'Organisation systems',
         body: `External systems compensate for internal EF difficulties:
 
 For to-do lists:
-• Capture everything in ONE system (don't use multiple apps, notebooks, and sticky notes)
-• Write tasks as specific actions, not vague goals ("Email Dr Smith" not "admin")
-• Break large projects into next physical actions
+– Capture everything in ONE system (don't use multiple apps, notebooks, and sticky notes)
+– Write tasks as specific actions, not vague goals ("Email Dr Smith" not "admin")
+– Break large projects into next physical actions
 
 For time management:
-• Time-blocking: Assign specific tasks to specific time slots — not just a to-do list
-• Analogue clocks and visual timers (e.g. Time Timer) are often better than digital for perceiving time passing
-• "Time buffers": Always schedule 30% more time than you think you need
-• Set alarms not just for appointments but for transitions ("Leave in 20 minutes")
+– Time-blocking: Assign specific tasks to specific time slots — not just a to-do list
+– Analogue clocks and visual timers (e.g. Time Timer) are often better than digital for perceiving time passing
+– "Time buffers": Always schedule 30% more time than you think you need
+– Set alarms not just for appointments but for transitions ("Leave in 20 minutes")
 
 For physical spaces:
-• Everything has a designated home. Return items to their home immediately after use.
-• "Outbox" tray for things that need to leave the room
-• Reduce visual clutter — visual chaos increases cognitive load`,
+– Everything has a designated home. Return items to their home immediately after use.
+– "Outbox" tray for things that need to leave the room
+– Reduce visual clutter — visual chaos increases cognitive load`,
       },
       {
         heading: 'Managing transitions and flexibility',
         body: `Transitions — moving from one activity or context to another — are a significant EF challenge.
 
 Strategies:
-• Transition warnings: Give yourself advance notice ("In 10 minutes I'll stop and get ready")
-• Rituals: A consistent transition ritual (making tea before starting work, changing shoes when you arrive home) helps the brain shift modes
-• End tasks before transitions: Reach a natural stopping point rather than stopping mid-task
-• Prepare for tomorrow tonight: Lay out clothes, pack bag, write tomorrow's first task. This reduces morning EF demands.
-• Expect transition difficulty to be worse when tired, overwhelmed, or unwell.
+– Transition warnings: Give yourself advance notice ("In 10 minutes I'll stop and get ready")
+– Rituals: A consistent transition ritual (making tea before starting work, changing shoes when you arrive home) helps the brain shift modes
+– End tasks before transitions: Reach a natural stopping point rather than stopping mid-task
+– Prepare for tomorrow tonight: Lay out clothes, pack bag, write tomorrow's first task. This reduces morning EF demands.
+– Expect transition difficulty to be worse when tired, overwhelmed, or unwell.
 
 On plans changing unexpectedly:
-• Have a mental "plan B" for common situations
-• Notice the physical reaction in your body when plans change — it's a neurological response, not a character flaw
-• STOP → BREATHE → ASSESS: "What specifically has changed? What options do I have right now?"`,
+– Have a mental "plan B" for common situations
+– Notice the physical reaction in your body when plans change — it's a neurological response, not a character flaw
+– STOP → BREATHE → ASSESS: "What specifically has changed? What options do I have right now?"`,
       },
     ],
   },
@@ -447,11 +447,11 @@ On plans changing unexpectedly:
         heading: 'Emotional regulation and ASD',
         body: `Autistic people often experience emotions with greater intensity than neurotypical people. This is sometimes called "emotional hyperreactivity." Contributing factors include:
 
-• Interoception difficulties: Difficulty reading internal body signals until they become intense
-• Alexithymia: Reduced ability to identify and describe one's own emotions (affects ~50% of autistic people)
-• Anxiety: Chronic background anxiety amplifies all emotional responses
-• Masking fatigue: Suppressing emotional expression during the day leads to greater intensity when released
-• Sensory overload: Physical sensory stress intensifies emotional responses
+– Interoception difficulties: Difficulty reading internal body signals until they become intense
+– Alexithymia: Reduced ability to identify and describe one's own emotions (affects ~50% of autistic people)
+– Anxiety: Chronic background anxiety amplifies all emotional responses
+– Masking fatigue: Suppressing emotional expression during the day leads to greater intensity when released
+– Sensory overload: Physical sensory stress intensifies emotional responses
 
 Important: intense emotions are not a flaw. They are a real experience that deserves appropriate support.`,
       },
@@ -472,34 +472,34 @@ Practice: Check in with your number several times per day, especially before and
         heading: 'Before the storm: preventive strategies',
         body: `Preventive regulation is far more effective than crisis management.
 
-• Regular sleep: Emotional regulation is dramatically worse on poor sleep
-• Physical exercise: One of the most effective natural emotion regulators
-• Adequate alone time: Social and sensory recovery time is not optional — it is maintenance
-• Reduce ongoing stressors where possible: Unaddressed anxiety is a constant drain on regulatory capacity
-• Know your triggers: Identify the specific situations, people, or sensory inputs that reliably increase your emotional load
+– Regular sleep: Emotional regulation is dramatically worse on poor sleep
+– Physical exercise: One of the most effective natural emotion regulators
+– Adequate alone time: Social and sensory recovery time is not optional — it is maintenance
+– Reduce ongoing stressors where possible: Unaddressed anxiety is a constant drain on regulatory capacity
+– Know your triggers: Identify the specific situations, people, or sensory inputs that reliably increase your emotional load
 
 Regulation bank account metaphor: Think of your regulatory capacity as a bank account. Each demand makes a withdrawal. Rest, pleasant activities, and predictability make deposits. Meltdowns happen when the account hits zero.`,
       },
       {
         heading: 'In-the-moment regulation strategies',
         body: `Physical first (at 7+):
-• Cold water on wrists and face (activates parasympathetic nervous system)
-• Box breathing (in 4, hold 4, out 4, hold 4)
-• Intense brief exercise (jumping jacks, running on the spot)
-• Weighted blanket or firm pressure (proprioceptive input)
-• Leave the environment if possible
-• Stim without judgment — it is regulating
+– Cold water on wrists and face (activates parasympathetic nervous system)
+– Box breathing (in 4, hold 4, out 4, hold 4)
+– Intense brief exercise (jumping jacks, running on the spot)
+– Weighted blanket or firm pressure (proprioceptive input)
+– Leave the environment if possible
+– Stim without judgment — it is regulating
 
 Cognitive (at 4–6):
-• Label it: "I am feeling [emotion]. It is at [number]."
-• STOP: Stop → Take a breath → Observe what's happening → Proceed mindfully
-• Reality check: "Is this an emergency? What is the worst realistic outcome?"
-• Reframe urgency: "I feel like I need to respond immediately, but I have time."
+– Label it: "I am feeling [emotion]. It is at [number]."
+– STOP: Stop → Take a breath → Observe what's happening → Proceed mindfully
+– Reality check: "Is this an emergency? What is the worst realistic outcome?"
+– Reframe urgency: "I feel like I need to respond immediately, but I have time."
 
 After a meltdown/shutdown:
-• Rest — recovery is required, not optional
-• Be gentle with yourself — shaming yourself for a meltdown makes the next one more likely
-• Identify what led to it: what was the build-up? What could be adjusted?`,
+– Rest — recovery is required, not optional
+– Be gentle with yourself — shaming yourself for a meltdown makes the next one more likely
+– Identify what led to it: what was the build-up? What could be adjusted?`,
       },
     ],
   },
@@ -518,11 +518,11 @@ After a meltdown/shutdown:
         body: `Special interests (also called "hyperfocuses" or "passionate interests") are intense, enduring interests in a specific topic, activity, or domain. They are a defining and often joyful feature of the autistic experience.
 
 Research shows that special interests:
-• Provide intense positive emotions — a natural mood regulator
-• Create a reliable source of joy and meaning
-• Support stress recovery (engaging with a special interest after a hard day)
-• Can become the basis for expertise, career, and community
-• Offer a framework for connecting with others who share the interest
+– Provide intense positive emotions — a natural mood regulator
+– Create a reliable source of joy and meaning
+– Support stress recovery (engaging with a special interest after a hard day)
+– Can become the basis for expertise, career, and community
+– Offer a framework for connecting with others who share the interest
 
 The outdated view that special interests should be limited or discouraged is not supported by evidence — and contradicts what most autistic people report as vital to their wellbeing.`,
       },
@@ -531,31 +531,31 @@ The outdated view that special interests should be limited or discouraged is not
         body: `Special interests can be a vehicle for learning nearly anything:
 
 Social skills through interest:
-• Join clubs, online communities, or local groups around your interest
-• Shared interest provides an automatic conversation topic and social lubricant
-• The structure of interest-based interaction (talking about a shared topic) is often more accessible than unstructured socialising
+– Join clubs, online communities, or local groups around your interest
+– Shared interest provides an automatic conversation topic and social lubricant
+– The structure of interest-based interaction (talking about a shared topic) is often more accessible than unstructured socialising
 
 Academic and professional connection:
-• Many autistic people thrive academically and professionally when their work connects to their special interest
-• Identifying career pathways that overlap with special interests can dramatically increase job satisfaction and performance
-• Deep expertise developed through special interests is genuinely valued in many fields
+– Many autistic people thrive academically and professionally when their work connects to their special interest
+– Identifying career pathways that overlap with special interests can dramatically increase job satisfaction and performance
+– Deep expertise developed through special interests is genuinely valued in many fields
 
 Emotional regulation:
-• Engaging with a special interest can bring a nervous system out of overload
-• Interest-based activities can serve as scheduled "recovery" between demanding tasks`,
+– Engaging with a special interest can bring a nervous system out of overload
+– Interest-based activities can serve as scheduled "recovery" between demanding tasks`,
       },
       {
         heading: 'Managing the balance',
         body: `While special interests are a strength, there are situations where managing their expression helps:
 
 In professional settings:
-• Gauge the social context — not everyone wants to hear every detail about your interest
-• Look for signs the other person is still engaged (eye contact, responsive body language, questions)
-• A useful rule: share 2–3 minutes, then pause and ask "Are you interested in this?" — this gives others a graceful exit and shows social awareness
+– Gauge the social context — not everyone wants to hear every detail about your interest
+– Look for signs the other person is still engaged (eye contact, responsive body language, questions)
+– A useful rule: share 2–3 minutes, then pause and ask "Are you interested in this?" — this gives others a graceful exit and shows social awareness
 
 When an interest becomes avoidance:
-• Sometimes hyperfocusing on an interest is used to avoid difficult tasks or emotions
-• Check in with yourself: "Is this genuinely enjoyable right now, or am I using it to avoid something I need to face?"
+– Sometimes hyperfocusing on an interest is used to avoid difficult tasks or emotions
+– Check in with yourself: "Is this genuinely enjoyable right now, or am I using it to avoid something I need to face?"
 
 Finding balance is about self-awareness, not restricting the interest itself.`,
       },
@@ -564,14 +564,14 @@ Finding balance is about self-awareness, not restricting the interest itself.`,
         body: `Special interests are one of the most effective pathways to genuine social connection for autistic people.
 
 Online:
-• Reddit communities for almost every interest exist and often provide low-pressure social interaction
-• Discord servers for interests are active and interest-focused — less small talk, more substance
-• YouTube, forums, and wikis allow you to engage at your own pace
+– Reddit communities for almost every interest exist and often provide low-pressure social interaction
+– Discord servers for interests are active and interest-focused — less small talk, more substance
+– YouTube, forums, and wikis allow you to engage at your own pace
 
 In person:
-• Local clubs (board games, tabletop RPGs, astronomy, coding, craft) attract people who value the activity over socialising for its own sake
-• Volunteering in areas connected to your interest combines contribution with community
-• Classes and workshops provide structured interaction around shared content
+– Local clubs (board games, tabletop RPGs, astronomy, coding, craft) attract people who value the activity over socialising for its own sake
+– Volunteering in areas connected to your interest combines contribution with community
+– Classes and workshops provide structured interaction around shared content
 
 Many autistic people find their deepest, most stable friendships through shared interests — this is not a lesser form of connection, it is a natural one.`,
       },

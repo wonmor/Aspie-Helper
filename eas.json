@@ -10,20 +10,33 @@
     "preview": {
       "distribution": "internal"
     },
-"production": {
+    "production": {
       "ios": {
-        "image": "macos-sequoia-15.3-xcode-16.2"
+        "image": "latest"
+      },
+      "android": {
+        "image": "latest"
       }
+    },
+    "simulator": {
+      "extends": "production",
+      "ios": {
+        "simulator": true,
+        "image": "latest"
+      },
+      "distribution": "internal"
     }
   },
   "submit": {
     "production": {
       "ios": {
-        "ascAppId": "6467200668"
+        "ascAppId": "6466399113",
+        "appleTeamId": "Z64KRUX3W3"
       },
       "android": {
         "serviceAccountKeyPath": "./google-service-account.json",
-        "track": "production"
+        "track": "internal",
+        "releaseStatus": "draft"
       }
     }
   }

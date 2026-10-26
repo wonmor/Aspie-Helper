@@ -533,7 +533,7 @@ function SensoryProfileQuiz({ quiz, onBack }) {
         <Text style={styles.suggestionsTitle}>Strategies to consider:</Text>
         {p.suggestions.map((s, i) => (
           <View key={i} style={styles.suggestionRow}>
-            <Text style={styles.bulletDot}>•</Text>
+            <Text style={styles.bulletDot}>–</Text>
             <Text style={styles.suggestionText}>{s}</Text>
           </View>
         ))}
