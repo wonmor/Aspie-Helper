@@ -55,7 +55,8 @@
             "enableProguardInReleaseBuilds": true,
             "compileSdkVersion": 36,
             "targetSdkVersion": 36,
-            "android16KBPageSize": true
+            "android16KBPageSize": true,
+            "kotlinVersion": "2.0.21"
           },
           "ios": {
             "deploymentTarget": "15.1"
