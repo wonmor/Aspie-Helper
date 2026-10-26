@@ -406,6 +406,11 @@ function ContentScreen({ route }) {
 
 // ─── Drawer navigator ─────────────────────────────────────────────────────────
 
+// Screenshot builds only: optional start params for the demo route.
+const DEMO_PARAMS = process.env.EXPO_PUBLIC_DEMO_PARAMS
+  ? JSON.parse(process.env.EXPO_PUBLIC_DEMO_PARAMS)
+  : undefined;
+
 const Drawer = createDrawerNavigator();
 
 const drawerLabelStyle = { fontFamily: "Quicksand_600SemiBold" };
@@ -468,6 +473,7 @@ export default function App() {
         <Drawer.Screen
           name="Situation Scripts"
           component={ScriptsScreen}
+          initialParams={DEMO_PARAMS}
           options={{ drawerLabel: makeLabel("Situation Scripts") }}
         />
         <Drawer.Screen

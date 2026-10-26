@@ -37,7 +37,7 @@ export default function ScriptsScreen({ navigation, route }) {
     const id = route?.params?.scenarioId;
     if (id && scenarioById(id)) {
       setOpenId(id);
-      setMode('detail');
+      setMode(route?.params?.mode === 'practice' ? 'practice' : 'detail');
     }
   }, [route?.params?.scenarioId]);
 
