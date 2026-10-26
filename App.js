@@ -439,7 +439,7 @@ export default function App() {
   return (
     <NavigationContainer independent={true}>
       <Drawer.Navigator
-        initialRouteName="Home"
+        initialRouteName={process.env.EXPO_PUBLIC_DEMO_ROUTE || "Home"}
         screenOptions={{ headerTitleStyle: { fontFamily: "Quicksand_600SemiBold" } }}
       >
         {/* ── Main screens ─────────────────────────────── */}

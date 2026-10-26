@@ -25,6 +25,21 @@
         "image": "latest"
       },
       "distribution": "internal"
+    },
+    "screenshots": {
+      "extends": "production",
+      "distribution": "internal",
+      "env": {
+        "EXPO_PUBLIC_DEMO_OFFERS": "1"
+      },
+      "ios": {
+        "simulator": true,
+        "image": "latest"
+      },
+      "android": {
+        "buildType": "apk",
+        "image": "latest"
+      }
     }
   },
   "submit": {
