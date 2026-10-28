@@ -28,7 +28,7 @@
         "backgroundColor": "#ffffff"
       },
       "package": "com.johnseong.aspiehelper",
-      "versionCode": 9,
+      "versionCode": 10,
       "permissions": [
         "com.android.vending.BILLING"
       ]
@@ -54,9 +54,7 @@
           "android": {
             "enableProguardInReleaseBuilds": true,
             "compileSdkVersion": 36,
-            "targetSdkVersion": 36,
-            "android16KBPageSize": true,
-            "kotlinVersion": "2.0.21"
+            "targetSdkVersion": 36
           },
           "ios": {
             "deploymentTarget": "15.1"
@@ -73,7 +71,10 @@
         }
       ],
       "expo-iap",
-      "./plugins/withPodDeploymentTarget"
-    ]
+      "./plugins/withPodDeploymentTarget",
+      "expo-asset",
+      "expo-font"
+    ],
+    "newArchEnabled": false
   }
 }
